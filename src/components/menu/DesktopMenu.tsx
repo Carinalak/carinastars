@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, DARKPURPLE, LIGHTERPURPLE, WHITE } from "../styled/Variables";
 import { NavLink, useLocation } from "react-router-dom";
-import arrowIcon from "../../assets/icons/arrow_white_down.png";
+//import arrowIcon from "../../assets/icons/arrow_white_down.png";
 import { useState } from "react";
 import { MenuLinks } from "./MenuLinks";
 
@@ -46,10 +46,10 @@ export const DesktopNav = styled.nav`
       //flex-grow: 1;
       text-align: center;
         -webkit-tap-highlight-color: transparent; // Tar bort blå markering på mobila enheter
-
+/*
       &:hover > ul {
         display: flex;
-      }
+      }*/
     }
 
     a {
@@ -116,7 +116,7 @@ export const DesktopNav = styled.nav`
     /* ------------------  Submenu -------------------- */
 
     ul.submenu {
-      display: none;
+      //display: none;
       position: absolute;
       top: 100%;
       left: 50%;
@@ -178,12 +178,14 @@ export const DesktopMenu = () => {
   const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null);
   const location = useLocation();
 
+
+  /*
   // Toggle submenu när användaren klickar på pilikonen
   const handleArrowClick = (e: React.MouseEvent, index: number) => {
     e.preventDefault(); // Förhindra navigation när pilen klickas
     setActiveSubMenu(activeSubMenu === index ? null : index); // Växla undermenyn
   };
-
+*/
   // Hantera klick på länkar och scrolla till toppen
   const handleLinkClick = () => {
     const topElement = document.getElementById("top");
@@ -209,8 +211,11 @@ export const DesktopMenu = () => {
         {MenuLinks.map((link, index) => (
           <li
             key={link.path}
-            onMouseEnter={() => setActiveSubMenu(index)}
+            //onMouseEnter={() => setActiveSubMenu(index)}
             onMouseLeave={() => setActiveSubMenu(null)}
+            onClick={() =>
+            setActiveSubMenu(activeSubMenu === index ? null : index)
+         }
           >
             
              {link.target === "_blank" ? (  // Markerad ändring
@@ -234,14 +239,6 @@ export const DesktopMenu = () => {
               </NavLink>
             )}
 
-            {link.subLinks && (
-              <img
-                src={arrowIcon}
-                alt="arrow icon"
-                className="icon"
-                onClick={(e) => handleArrowClick(e, index)}
-              />
-            )}
 
             {link.subLinks && activeSubMenu === index && (
               <ul className="submenu">

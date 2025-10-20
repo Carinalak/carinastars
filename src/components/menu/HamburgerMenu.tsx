@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BREAKPOINT_TABLET, DARKPURPLE, LIGHTERPURPLE, WHITE, } from '../styled/Variables';
+import { BREAKPOINT_TABLET, DARKESTPURPLE, DARKPURPLE, LIGHTERPURPLE, WHITE, } from '../styled/Variables';
 import { useState, useEffect } from 'react';
 import myCustomArrow from "../../assets/icons/arrow_white_down.png";
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -21,8 +21,8 @@ const HamburgerButton = styled.div`
   right: 30px;
   margin-right: 0;
   margin-top: 0;
-  width: 40px;
-  height: 35px;
+  width: 38px;
+  height: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -32,14 +32,14 @@ const HamburgerButton = styled.div`
 
   .line {
     width: 100%;
-    height: 5px;
+    height: 4px;
     background-color: ${WHITE};
     border-radius: 10px;
     transition: transform 0.3s, opacity 0.3s;
   }
 
   &.open div:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 16px);
+    transform: rotate(45deg) translate(4px, 14px);
   }
 
   &.open div:nth-child(2) {
@@ -47,7 +47,7 @@ const HamburgerButton = styled.div`
   }
 
   &.open div:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -16px);
+    transform: rotate(-45deg) translate(4px, -14px);
   }
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
@@ -66,7 +66,7 @@ const MenuList = styled.ul<{ $isOpen: boolean }>`
   padding-top: 60px;
   padding-bottom: 100px;
   margin-bottom: 100px;
-  background: transparent;
+  background: ${DARKESTPURPLE};
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -99,7 +99,7 @@ const MenuList = styled.ul<{ $isOpen: boolean }>`
       -webkit-tap-highlight-color: transparent; // Tar bort blå markering på mobila enheter
 
       &:hover {
-        color: ${DARKPURPLE};
+        color: ${LIGHTERPURPLE};
         border-radius: 5px;
       }
     }

@@ -10,6 +10,7 @@ const MainContainer = styled.main`
   //width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
+  //margin-left: 0;
  // padding-bottom: 30px;
  border: 1px solid red;
 `;
@@ -18,7 +19,7 @@ const MainContainer = styled.main`
 const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Gör att hela sidan alltid fyller hela höjden */
+  min-height: 100vh; /* Gör att hela sidan alltid fyller hela höjden, måste vara i kombination med <BackgroundOriginal> på sidan */
   overflow-x: hidden;
   //border: 1px solid yellow;
    //width: 100vw;
