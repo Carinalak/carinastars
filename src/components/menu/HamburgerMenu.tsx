@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { BREAKPOINT_TABLET, DARKPURPLE, GAMMELROSA, POOLBLA, WHITE, } from '../styled/Variables';
+import { BREAKPOINT_TABLET, DARKPURPLE, LIGHTERPURPLE, WHITE, } from '../styled/Variables';
 import { useState, useEffect } from 'react';
 import myCustomArrow from "../../assets/icons/arrow_white_down.png";
-import pawWhite from "../../assets/icons/paw_white.png";
 import { NavLink, useNavigate } from 'react-router-dom';
 import { MenuLinks } from './MenuLinks';
 
@@ -67,7 +66,7 @@ const MenuList = styled.ul<{ $isOpen: boolean }>`
   padding-top: 60px;
   padding-bottom: 100px;
   margin-bottom: 100px;
-  background: ${GAMMELROSA};
+  background: transparent;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -82,7 +81,6 @@ const MenuList = styled.ul<{ $isOpen: boolean }>`
     width: 100%;
     padding-top: 3px;
     padding-bottom: 3px;
-    cursor: url(${new URL("../../assets/icons/paw_white.png", import.meta.url).href}), auto;
 
     span,
     a {
@@ -97,7 +95,6 @@ const MenuList = styled.ul<{ $isOpen: boolean }>`
       justify-content: space-between;
       align-items: center;
       position: relative;
-      cursor: url(${pawWhite}), auto;
 
       -webkit-tap-highlight-color: transparent; // Tar bort blå markering på mobila enheter
 
@@ -109,7 +106,7 @@ const MenuList = styled.ul<{ $isOpen: boolean }>`
 
     span:active,
     a:active {
-      color: ${POOLBLA};
+      color: ${LIGHTERPURPLE};
       border-radius: 5px;
     }
 
@@ -122,7 +119,7 @@ const MenuList = styled.ul<{ $isOpen: boolean }>`
     display: none;
     flex-direction: column;
     padding-left: 50px;
-    color: ${GAMMELROSA};
+    color: ${DARKPURPLE};
   }
 
   .submenu.open {

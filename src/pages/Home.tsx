@@ -1,5 +1,7 @@
+import { H1Banner } from "../components/styled/Fonts";
+
 export const Home = () => {
 
-return (  <><h1>Carina Stars - Home</h1></>
+return (  <><H1Banner>Home</H1Banner></>
  
 )};

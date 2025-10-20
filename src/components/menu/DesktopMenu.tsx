@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, DARKPURPLE, GAMMELROSA,POOLBLA, WHITE } from "../styled/Variables";
+import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, DARKPURPLE, LIGHTERPURPLE, WHITE } from "../styled/Variables";
 import { NavLink, useLocation } from "react-router-dom";
 import arrowIcon from "../../assets/icons/arrow_white_down.png";
 import { useState } from "react";
@@ -12,6 +12,7 @@ export const NavigationContainer = styled.section`
   align-items: center;
   padding: 5px;
   width: 100%;
+
 `;
 
 export const DesktopNav = styled.nav`
@@ -21,6 +22,7 @@ export const DesktopNav = styled.nav`
     width: 50%;
     //padding-left: 10px;
     //padding-right: 10px;
+    
 
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
     align-items: flex-end;
@@ -32,7 +34,7 @@ export const DesktopNav = styled.nav`
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 5px;
+      gap: 20px;
       width: 95%;
       padding: 0;
       margin: 0;
@@ -41,7 +43,7 @@ export const DesktopNav = styled.nav`
 
     li {
       position: relative;
-      flex-grow: 1;
+      //flex-grow: 1;
       text-align: center;
         -webkit-tap-highlight-color: transparent; // Tar bort blå markering på mobila enheter
 
@@ -51,8 +53,10 @@ export const DesktopNav = styled.nav`
     }
 
     a {
-      font-size: 1rem;
-      font-weight: 600;
+      font-family: "Esteban", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 20px;
       color: ${WHITE};
       text-decoration: none;
       display: flex;
@@ -63,21 +67,18 @@ export const DesktopNav = styled.nav`
       height: 60px; // link height
       padding: 0;
       cursor: pointer;
-      cursor: url(${new URL("../../assets/icons/paw_white.png", import.meta.url).href}), auto;
 
       @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-        font-size: 1rem;
+        font-size: 20px;
     }
 
-    @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
-      font-size: 1.2rem;
-    }
-    
-    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
-      font-size: 1.8rem;
-    }
-
-
+      @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+        font-size: 20px;
+      }
+      
+      @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+        font-size: 25px;
+      }
     }
 
     a > span {
@@ -101,15 +102,15 @@ export const DesktopNav = styled.nav`
     }
 
     li a:hover {
-      color: ${DARKPURPLE}; 
+      color: ${WHITE}; 
     }
 
     li a:active:focus {
-      color: ${POOLBLA};
+      color: ${LIGHTERPURPLE};
     }
 
     li a:hover:active {
-      color: ${POOLBLA};
+      color: ${LIGHTERPURPLE};
     }
 
     /* ------------------  Submenu -------------------- */
@@ -120,7 +121,7 @@ export const DesktopNav = styled.nav`
       top: 100%;
       left: 50%;
       transform: translateX(-50%);
-      background-color: ${GAMMELROSA};
+      background-color: ${LIGHTERPURPLE};
       list-style: none;
       padding: 30px 25px;
       margin-left: 0;
@@ -133,7 +134,7 @@ export const DesktopNav = styled.nav`
       flex-direction: column;
       // justify-content: center;
       z-index: 99;
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      //box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     ul.submenu li {
@@ -167,7 +168,7 @@ export const DesktopNav = styled.nav`
     }
 
     ul.submenu li a:active {
-      color: ${POOLBLA};
+      color: ${LIGHTERPURPLE};
     }
   }
 `;
