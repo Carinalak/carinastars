@@ -12,7 +12,7 @@ const MainContainer = styled.main`
   overflow-y: hidden;
   //margin-left: 0;
  // padding-bottom: 30px;
- border: 1px solid red;
+ //border: 1px solid red;
 `;
 
 

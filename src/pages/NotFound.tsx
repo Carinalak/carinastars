@@ -1,6 +1,8 @@
-//import NotFoundImage from '../assets/images/LpsTuvaOgg.png';
+//import NotFoundImage from '../assets/images/CarinaStarsOgg.png';
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
+import { BackgroundOriginal } from "../components/styled/Wrappers";
+import { H1White } from "../components/styled/Fonts";
 
 export const NotFoundImg = styled.img `
 width: 300px;
@@ -8,33 +10,28 @@ margin-bottom: 50px;
 `;
 
 
-export const WrapperTransparent2 = styled.section`
-  width: 95%;
+export const NotFoundWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: transparent;
-  padding-top: 10px;
-  //padding-bottom: 10px;
-  //border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 0;
-  font-family: "Playpen Sans", serif;
-  margin: 0 auto;
   gap: 20px;
-  margin-bottom: 100px;
-  //border: 1px solid black;
+  height: 100vh;
+  width: 100vw;
 `;
 
 export const NotFound = () => {
   return (
       <>
-
-      <h1>404 Not Found</h1>
-          <h4>Ooops, nu har du kommit fel!</h4>
-          {/**<NotFoundImg src={NotFoundImage}/>*/}
-          <Link to={"/"} >Gå tillbaka till sidan. </Link>
-
+      <BackgroundOriginal>
+        <NotFoundWrapper>
+          <H1White>404 Not Found</H1White>
+          
+            {/**<NotFoundImg src={NotFoundImage}/>*/}
+          <Link to={"/"} >Back</Link>
+        </NotFoundWrapper>
+      </BackgroundOriginal>
       </>
   )
 }

@@ -5,7 +5,9 @@ export const H1White = styled.h1 `
     padding: 0;
     color: ${WHITE};
     font-size: 2rem;
-    font-family: "Playpen Sans", serif;
+    font-family: "Esteban", serif;
+    font-weight: 400;
+    font-style: normal;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     line-height: 0.3;
     text-align: center;
