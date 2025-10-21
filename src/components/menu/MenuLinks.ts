@@ -13,7 +13,7 @@ type MenuLinks = {
 
 export const MenuLinks = [
   { path: "/", 
-    label: "Home" 
+    label: "News" 
   },
   { 
     path: "/music",

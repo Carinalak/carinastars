@@ -67,7 +67,7 @@ export const H3Black = styled.h3 `
     line-height: 0.3;
     text-align: center;
       @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-        font-size: 2.2rem;
+
       }
       @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
         font-size: 2.4rem;

@@ -1,10 +1,11 @@
 :root {
   background: linear-gradient(to bottom, #4e0771, #170420ff);
   /*background-attachment: fixed;*/
-  /*font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  tab-size: 12px;
+  /*line-height: 1.5;
   font-weight: 400;*/
-  font-family: "Esteban", serif;
+  /*font-family: "Esteban", serif;*/
   font-weight: 400;
   font-style: normal;
 

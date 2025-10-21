@@ -17,18 +17,15 @@ export const BackgroundOriginal = styled.div `
 `;
 
 export const Banner = styled.div `
-display: flex;
-flex-direction: row;
-align-items: left;
-justify-content: left;
-padding-top: 0;
-background-image: url(${CarinaPic});
-background-size: cover;
-background-repeat: no-repeat;
-background-position: 50% 25%;
-
-
-//background: ${DARKESTPURPLE};
-min-width: 100%;
-
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: left;
+  padding-top: 0;
+  background-image: url(${CarinaPic});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+  //background: ${DARKESTPURPLE};
+  min-width: 100%;
 `;

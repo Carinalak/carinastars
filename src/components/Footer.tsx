@@ -9,18 +9,19 @@ import { BREAKPOINT_BIGGER_DESKTOP, WHITE } from "./styled/Variables";
 
 const FooterContainer = styled.footer`
 background-color: transparent;
-padding: 10px;
 text-align: center;
 margin-top: auto; /* Flyttar footern längst ner */
 margin-bottom: 0 !important;
 max-width: 100%;
-height: 60px;
+height: 30px;
 display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: center;
 gap: 40px;
 color: ${WHITE};
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 12px;
 
   @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
     height: 100px;
