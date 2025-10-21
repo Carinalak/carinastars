@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DARKESTPURPLE } from "./Variables";
+import { LIGHTPURPLE } from "./Variables";
 import CarinaPic from "../../assets/images/bluebanner.png"
 
 
@@ -22,10 +22,10 @@ export const Banner = styled.div `
   align-items: left;
   justify-content: left;
   padding-top: 0;
-  background-image: url(${CarinaPic});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 25%;
-  //background: ${DARKESTPURPLE};
+  //background-image: url(${CarinaPic});
+  //background-size: cover;
+  //background-repeat: no-repeat;
+  //background-position: 50% 25%;
+  background: ${LIGHTPURPLE};
   min-width: 100%;
 `;

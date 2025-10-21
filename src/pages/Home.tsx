@@ -1,5 +1,5 @@
 
-import { BackgroundOriginal } from "../components/styled/Wrappers";
+import { BackgroundOriginal, Banner } from "../components/styled/Wrappers";
 import BackgroundJade from "../assets/images/carina/Jade_akustisk.jpg"
 import VisionLp from "../assets/images/lp/Vision_of_life.png"
 import CarinaReturn from "../assets/images/carina/carina_return.jpg"
@@ -7,7 +7,7 @@ import LuckySoulDreaming from "../assets/images/carina/LuckySoulDreaming.jpg"
 import AmISick from "../assets/images/carina/AmISick.jpg"
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, LIGHTPURPLE } from "../components/styled/Variables";
-import { H3Black } from "../components/styled/Fonts";
+import { H2Banner, H3Black } from "../components/styled/Fonts";
 
 export const NewsLpImage = styled.img `
  width: 300px;
@@ -31,6 +31,17 @@ export const BackImg = styled.div`
   height: 100vh;
   //margin-top: 20px;
   background-image: url(${BackgroundJade});
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+export const BackImgSecond = styled.div`
+  width: 100vw;
+  height: 100vh;
+  //margin-top: 20px;
+  background-image: url(${LuckySoulDreaming});
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -63,6 +74,7 @@ export const NewsContainer = styled.div `
     }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
       margin: 0;
+      margin-top: 20px;
       margin-bottom: 20px;
       gap: 10px;
     }
@@ -95,12 +107,12 @@ export const NewsArticleFirst = styled.div `
 
 export const NewsArticleSecond = styled(NewsArticleFirst) `
   //background-color: #eb80eda8;
-  background-color: ${LIGHTPURPLE};
+  background-color: ${LIGHTERPURPLE};
 `;
 
 export const NewsArticleThird = styled(NewsArticleFirst)`
   //background-color: #344fc8a8;
-  background-color: ${LIGHTERPURPLE};
+  background-color: ${LIGHTPURPLE};
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
     width: 600px;
@@ -156,6 +168,9 @@ export const Home = () => {
 
 
 return (  <>
+  <Banner>
+    <H2Banner>News</H2Banner>
+  </Banner> 
   <BackgroundOriginal>
       <NewsContainer>
 
@@ -196,16 +211,12 @@ return (  <>
             <InnerTextLeft> Titta på Carina Stars musikvideos. Du hittar dem på YouTube.
             </InnerTextLeft>
 
-            
-
             </NewsArticleTextContainer>
 
         </NewsArticleThird>
       </NewsContainer>
-  <BackImg>
-
-
-  </BackImg>
+  <BackImg />
+  <BackImgSecond />
 
   </BackgroundOriginal>
 </>
