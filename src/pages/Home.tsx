@@ -142,8 +142,8 @@ return (  <>
             Låtarna spelades in under sommaren samma år. All musik på plattan är skriven på 90-talet. 
             "Jag har en hel låtskatt att ta ifrån som är skriven på den tiden" säger Carina Stars. Men hon 
             skriver fortfarande ny musik. "Det kan komma en låt på svenska snart", säger hon. Hon jobbar redan på nästa platta. 
-            Om allt går som hon vill är den ute nästa år. "Det finns så mycket jag vill hinna med, jag har så många idéer. Ibland 
-            önskar jag att dagarna gick långsammare" säger hon.</InnerTextLeft>
+            Om allt går som hon vill är den ute nästa år. "Det finns så mycket jag vill hinna med, jag har så många 
+            idéer" säger hon.</InnerTextLeft>
           </NewsArticleTextContainer>
         </NewsArticleFirst>
           
