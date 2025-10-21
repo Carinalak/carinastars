@@ -43,14 +43,15 @@ export const HeaderTitle = styled(H1White) `
 font-family: "Cormorant SC", serif;
 font-weight: 600;
 font-style: normal;
-font-size: 50px;
+font-size: 48px;
 padding-left: 5px; // Beroende av loggans position: ;
 z-index: 87;
-position: relative;
+//position: relative;
 margin: 25px;
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
       padding-left: 20px;
       margin: 0;
+      font-size: 50px;
     }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
       margin: 0;
@@ -61,7 +62,7 @@ margin: 25px;
 export const H3Black = styled.h3 `
     padding: 0;
     color: ${BLACK};
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -71,6 +72,6 @@ export const H3Black = styled.h3 `
 
       }
       @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
-        font-size: 2.4rem;
+        font-size: 2rem;
       }
 `;
