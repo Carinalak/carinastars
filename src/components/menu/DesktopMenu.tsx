@@ -13,6 +13,11 @@ export const NavigationContainer = styled.section`
   padding: 5px;
   width: 100%;
 
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+      margin-top: 5px;
+      align-items: baseline;
+    }
+
 `;
 
 export const DesktopNav = styled.nav`
