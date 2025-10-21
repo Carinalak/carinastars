@@ -84,9 +84,9 @@ const MenuList = styled.ul<{ $isOpen: boolean }>`
 
     span,
     a {
-      font-size: 1.5rem;
+      font-size: 1rem;
       line-height: 1rem;
-      font-weight: 600;
+      font-weight: 500;
       padding: 10px 15px;
       padding-left: 10px;
       color: #FFFFFF;

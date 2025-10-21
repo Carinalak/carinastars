@@ -56,7 +56,7 @@ export const DesktopNav = styled.nav`
       font-family: "Esteban", serif;
       font-weight: 400;
       font-style: normal;
-      font-size: 20px;
+      font-size: 1rem;
       color: ${WHITE};
       text-decoration: none;
       display: flex;
@@ -69,15 +69,15 @@ export const DesktopNav = styled.nav`
       cursor: pointer;
 
       @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-        font-size: 20px;
+        font-size: 1rem;
     }
 
       @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
-        font-size: 20px;
+        font-size: 1.2rem;
       }
       
       @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
-        font-size: 25px;
+        font-size: 1.3rem;
       }
     }
 
