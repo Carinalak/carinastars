@@ -7,7 +7,7 @@ import LuckySoulDreaming from "../assets/images/carina/LuckySoulDreaming.jpg"
 import AmISick from "../assets/images/carina/AmISick.jpg"
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, LIGHTPURPLE } from "../components/styled/Variables";
-import { H2Banner, H3Black } from "../components/styled/Fonts";
+import { H2Banner, H3Black, H3White } from "../components/styled/Fonts";
 
 export const NewsLpImage = styled.img `
  width: 300px;
@@ -147,6 +147,7 @@ export const InnerTextCenter = styled.div `
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
 `;
@@ -190,7 +191,7 @@ return (  <>
 
 
         <NewsArticleSecond>
-          <H3Black>Vem är Carina Stars?</H3Black>
+          <H3Black>Om Carina Stars</H3Black>
           <NewsArticleTextContainer>
             <InnerTextCenter><NewsLpImage src={CarinaReturn} /></InnerTextCenter>
             <InnerTextLeft> Carina Stars är text och musikkompositör. Hon har varit verksam sedan 90-talet 
@@ -204,11 +205,11 @@ return (  <>
         </NewsArticleSecond>
 
         <NewsArticleThird>
-          <H3Black>Musikvideos</H3Black>
+          <H3White>Musikvideos</H3White>
           <NewsArticleTextContainer>
             <InnerTextCenter><NewsLpImageSecond src={AmISick} loading="lazy"/></InnerTextCenter>
             <InnerTextCenter><NewsLpImage src={LuckySoulDreaming} loading="lazy"/></InnerTextCenter>
-            <InnerTextLeft> Titta på Carina Stars musikvideos. Du hittar dem på YouTube.
+            <InnerTextLeft>Titta på Carina Stars musikvideos. Du hittar dem på YouTube.
             </InnerTextLeft>
 
             </NewsArticleTextContainer>

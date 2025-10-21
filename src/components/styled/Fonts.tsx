@@ -71,3 +71,9 @@ export const H3Black = styled.h3 `
         font-size: 2rem;
       }
 `;
+
+export const H3White = styled(H3Black) `
+
+    color: ${WHITE};
+
+`;
