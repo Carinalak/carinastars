@@ -1,6 +1,6 @@
 
 import { BackgroundOriginal, Banner } from "../components/styled/Wrappers";
-import BackgroundJade from "../assets/images/carina/Jade_akustisk.jpg"
+import BackgroundJade from "../assets/images/background/Jade_akustisk_back.webp"
 import VisionLp from "../assets/images/lp/Vision_of_life.png"
 import CarinaReturn from "../assets/images/carina/carina_return.jpg"
 import LuckySoulDreaming from "../assets/images/carina/LuckySoulDreaming.jpg"
@@ -177,7 +177,7 @@ return (  <>
         <NewsArticleFirst>
           <H3Black>Ny skiva</H3Black>
           <NewsArticleTextContainer>
-          <InnerTextCenter><NewsLpImage src={VisionLp} /></InnerTextCenter>
+          <InnerTextCenter><NewsLpImage src={VisionLp} loading="lazy"/></InnerTextCenter>
           <InnerTextLeft> Senaste skivan "Vision of Life" släpptes i september 2025. 
             Låtarna spelades in under sommaren samma år. All musik på plattan är skriven på 90-talet. 
             "Jag har en hel låtskatt att ta ifrån som är skriven på den tiden" säger Carina Stars. Men hon 
@@ -206,8 +206,8 @@ return (  <>
         <NewsArticleThird>
           <H3Black>Musikvideos</H3Black>
           <NewsArticleTextContainer>
-            <InnerTextCenter><NewsLpImageSecond src={AmISick} /></InnerTextCenter>
-            <InnerTextCenter><NewsLpImage src={LuckySoulDreaming} /></InnerTextCenter>
+            <InnerTextCenter><NewsLpImageSecond src={AmISick} loading="lazy"/></InnerTextCenter>
+            <InnerTextCenter><NewsLpImage src={LuckySoulDreaming} loading="lazy"/></InnerTextCenter>
             <InnerTextLeft> Titta på Carina Stars musikvideos. Du hittar dem på YouTube.
             </InnerTextLeft>
 
@@ -216,7 +216,6 @@ return (  <>
         </NewsArticleThird>
       </NewsContainer>
   <BackImg />
-  <BackImgSecond />
 
   </BackgroundOriginal>
 </>
