@@ -7,9 +7,12 @@ import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET
 import { H3Black } from "../components/styled/Fonts";
 
 export const NewsLpImage = styled.img `
- width: 200px;
+ width: 300px;
  //margin-top: 20px;
 
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+       width: 200px;
+    }
 `;
 export const BackImg = styled.div`
   width: 100vw;
@@ -41,6 +44,7 @@ export const NewsContainer = styled.div `
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
       flex-direction: row;
       flex-wrap: wrap;
+      align-items: start;
     }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
       margin: 0;
@@ -51,19 +55,21 @@ export const NewsContainer = styled.div `
 `;
 
 export const NewsArticleFirst = styled.div `
-  height: 300px;
   width: 90%;
   //background: linear-gradient(to bottom, #ffffffa8, #bcb5b5a8);
   //background-color: #ffffffa8;
   background-color: ${WHITE};
   border: 1px solid black;
   border-radius: 5px;
-  //padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: justify;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
+      width: 600px;
+    }
+        @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
       width: 600px;
       width: calc(50% - 20px);  /* två per rad */
     }
@@ -71,11 +77,9 @@ export const NewsArticleFirst = styled.div `
 
 export const NewsArticleSecond = styled(NewsArticleFirst) `
   background-color: #eb80eda8;
-
 `;
 
 export const NewsArticleThird = styled(NewsArticleFirst)`
-
   background-color: #344fc8a8;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
@@ -87,15 +91,36 @@ export const NewsArticleTextContainer = styled.div `
   width: 95%;
   height: 80%;
   background-color: #ffffffa8;
-  margin-bottom: 10px;
-  border: 1px solid grey;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  //border: 1px solid grey;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
       flex-direction: row;
+      align-items: start;
+      gap: 10px;
   }
+`;
+
+export const InnerTextCenter = styled.div `
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+`;
+
+export const InnerTextLeft = styled.div `
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 300px;
 `;
 
 
@@ -105,16 +130,20 @@ export const Home = () => {
 return (  <>
   <BackgroundOriginal>
       <NewsContainer>
-        <NewsArticleFirst>
-          <H3Black>Latest release</H3Black>
-          <NewsArticleTextContainer>
-          <NewsLpImage src={VisionLp} />
-          <NewsArticleTextContainer> adsfasdf</NewsArticleTextContainer>
-         
 
+        <NewsArticleFirst>
+          <H3Black>Senaste skivan</H3Black>
+          <NewsArticleTextContainer>
+          <InnerTextCenter><NewsLpImage src={VisionLp} /></InnerTextCenter>
+          <InnerTextLeft> Senaste skivan "Vision of Life" släpptes september 2025. 
+            Låtarna spelades in under sommaren samma år, men all musik på plattan är skriven på 90-talet. 
+            "Jag har en hel låtskatt att ta ifrån som är skriven på den tiden" säger Carina Stars. Men hon 
+            skriver fortfarande ny musik. "Det kan komma en låt på svenska snart", säger hon.</InnerTextLeft>
           </NewsArticleTextContainer>
         </NewsArticleFirst>
           
+
+
         <NewsArticleSecond>adsfasdf</NewsArticleSecond>
         <NewsArticleThird>adsfasdf</NewsArticleThird>
       </NewsContainer>

@@ -44,11 +44,12 @@ font-family: "Cormorant SC", serif;
 font-weight: 600;
 font-style: normal;
 font-size: 50px;
-padding-left: 20px; // Beroende av loggans position: ;
+padding-left: 5px; // Beroende av loggans position: ;
 z-index: 87;
 position: relative;
 margin: 25px;
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+      padding-left: 20px;
       margin: 0;
     }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
