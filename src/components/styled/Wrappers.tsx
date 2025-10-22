@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { LIGHTPURPLE } from "./Variables";
+import { DARKESTPURPLE } from "./Variables";
 import CarinaPic from "../../assets/images/bluebanner.png"
 
 
@@ -26,6 +26,6 @@ export const Banner = styled.div `
   //background-size: cover;
   //background-repeat: no-repeat;
   //background-position: 50% 25%;
-  background: ${LIGHTPURPLE};
+  background: ${DARKESTPURPLE};
   min-width: 100%;
 `;

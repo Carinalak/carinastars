@@ -15,6 +15,8 @@ export const DARKESTPURPLE = "#2e0443ff";
 export const DARKPURPLE = "#4e0771"; // BackgroundColor on main page Hover-link in desktopMenu
 export const LIGHTPURPLE = "#743495ff"; 
 export const LIGHTERPURPLE = "#c5a1d7ff"; // hover on links
+export const EVENLIGHTERPURPLE = "#efd4fdff"; // hover on links
+export const DARKPINK = "#e120a7ff"; // hover on links
 
 
 // ------------------ FONTS --------------------- //

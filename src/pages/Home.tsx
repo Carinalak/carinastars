@@ -7,7 +7,7 @@ import LuckySoulDreaming from "../assets/images/carina/LuckySoulDreaming.jpg"
 import AmISick from "../assets/images/carina/AmISick.jpg"
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, LIGHTPURPLE } from "../components/styled/Variables";
-import { H2Banner, H3Black, H3White } from "../components/styled/Fonts";
+import { H2Banner, H3Black, H3White, PurpleLink } from "../components/styled/Fonts";
 
 export const NewsLpImage = styled.img `
  width: 300px;
@@ -65,7 +65,6 @@ export const NewsContainer = styled.div `
   align-items: center;
   gap: 10px;
 
-
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
       flex-direction: row;
       flex-wrap: wrap;
@@ -117,6 +116,7 @@ export const NewsArticleThird = styled(NewsArticleFirst)`
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
     width: 600px;
+    height: fit-content;
   }
       @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
     width: calc(100% - 35px);
@@ -218,14 +218,16 @@ return (  <>
           <NewsArticleTextContainer>
             <InnerTextCenter><NewsLpImageSecond src={AmISick} loading="lazy"/></InnerTextCenter>
             <InnerTextCenter><NewsLpImage src={LuckySoulDreaming} loading="lazy"/></InnerTextCenter>
-            <InnerTextLeft>Titta på Carina Stars musikvideos. Du hittar dem på YouTube.
+            <InnerTextLeft>Titta på Carina Stars&nbsp;
+              <PurpleLink to="https://www.youtube.com/@carinastars1" target="_blank"> musikvideos</PurpleLink>.
+              
             </InnerTextLeft>
 
             </NewsArticleTextContainer>
 
         </NewsArticleThird>
       </NewsContainer>
-  <BackImg />
+        <BackImg />
 
   </BackgroundOriginal>
 </>

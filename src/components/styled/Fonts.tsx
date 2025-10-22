@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { BREAKPOINT_TABLET, BREAKPOINT_DESKTOP, WHITE, BLACK } from "./Variables";
+import { BREAKPOINT_TABLET, BREAKPOINT_DESKTOP, WHITE, BLACK, LIGHTPURPLE } from "./Variables";
+import { Link } from "react-router-dom";
 
 export const H1White = styled.h1 `
     padding: 0;
@@ -58,8 +59,8 @@ z-index: 87;
 export const H3Black = styled.h3 `
     padding: 0;
     color: ${BLACK};
-    font-size: 1.8rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    //font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     font-style: normal;
     line-height: 0.3;
@@ -77,3 +78,27 @@ export const H3White = styled(H3Black) `
     color: ${WHITE};
 
 `;
+
+// -------------------------- LINKS ---------------------------------- //
+
+export const PurpleLink = styled(Link)`
+  && {
+    //gap: 5px;
+    text-decoration: none;
+    color: ${LIGHTPURPLE};
+    cursor: pointer;
+
+
+    &:hover {
+      color: ${BLACK};
+      text-decoration: underline;
+    }
+    &:focus {
+      color: ${WHITE};
+      text-decoration: none;
+    }
+
+
+  }
+`;
+// -------------------------- END LINKS -------------------------------- //
