@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { BREAKPOINT_TABLET, DARKESTPURPLE, DARKPURPLE, LIGHTERPURPLE, WHITE, } from '../styled/Variables';
 import { useState, useEffect } from 'react';
-import myCustomArrow from "../../assets/icons/arrow_white_down.png";
+//import myCustomArrow from "../../assets/icons/arrow_white_down.png";
 import { NavLink, useNavigate } from 'react-router-dom';
 import { MenuLinks } from './MenuLinks';
 
@@ -95,6 +95,7 @@ const MenuList = styled.ul<{ $isOpen: boolean }>`
       justify-content: space-between;
       align-items: center;
       position: relative;
+      cursor: pointer;
 
       -webkit-tap-highlight-color: transparent; // Tar bort blå markering på mobila enheter
 
@@ -130,7 +131,7 @@ const MenuList = styled.ul<{ $isOpen: boolean }>`
     display: none;
   }
 `;
-
+/*
 type ArrowIconProps = {
   isOpen: boolean;
 };
@@ -148,7 +149,7 @@ const ArrowIcon: React.FC<ArrowIconProps> = ({ isOpen }) => (
       verticalAlign: 'middle',
     }}
   />
-);
+);*/
 
 export const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -203,9 +204,9 @@ export const HamburgerMenu = () => {
             {link.subLinks ? (
               <span onClick={() => toggleSubMenu(link.path)}>
                 {link.label}
-                <ArrowIcon isOpen={openSubMenu === link.path} />
+                {/*<ArrowIcon isOpen={openSubMenu === link.path} />*/}
               </span>
-            ) : (
+            ) : ( 
               <NavLink 
                 to={link.path} 
                 onClick={() => { scrollToTop(); closeMenu(); }}
@@ -217,7 +218,7 @@ export const HamburgerMenu = () => {
 
             )}
 
-            {link.subLinks && (
+            {/**{link.subLinks && (
               <ul className={`submenu ${openSubMenu === link.path ? 'open' : ''}`}>
                 {link.subLinks.map((subLink) => (
                   <li key={subLink.path}>
@@ -233,7 +234,7 @@ export const HamburgerMenu = () => {
                   </li>
                 ))}
               </ul>
-            )}
+            )}*/}
           </li>
         ))}
       </MenuList>

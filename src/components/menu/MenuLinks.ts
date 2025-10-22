@@ -20,7 +20,7 @@ export const MenuLinks = [
     label: "Music",
     target: "_blank?",
     subLinks: [
-            { path: "/testingtesting", label: "TestingTesting", target: "top" },
+    { path: "/testingtesting", label: "TestingTesting", target: "top" },
     ],
   },
 

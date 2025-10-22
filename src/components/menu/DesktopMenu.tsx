@@ -218,9 +218,9 @@ export const DesktopMenu = () => {
             key={link.path}
             //onMouseEnter={() => setActiveSubMenu(index)}
             onMouseLeave={() => setActiveSubMenu(null)}
-            onClick={() =>
-            setActiveSubMenu(activeSubMenu === index ? null : index)
-         }
+            //onClick={() =>                                            // Tog bort denna rad tillfälligt för att dölja submenu
+            //setActiveSubMenu(activeSubMenu === index ? null : index)  // Tog bort denna rad tillfälligt för att dölja submenu
+        // }                                                            // Tog bort denna rad tillfälligt för att dölja submenu
           >
             
              {link.target === "_blank" ? (  // Markerad ändring

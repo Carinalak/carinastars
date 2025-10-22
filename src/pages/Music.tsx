@@ -7,7 +7,7 @@ import LuckySoulLp from "../assets/images/lp/LP-Carina1.jpg"
 import DisappearLp from "../assets/images/lp/Disappear.jpg"
 
 import styled from "styled-components";
-import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE } from "../components/styled/Variables";
+import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, WHITE } from "../components/styled/Variables";
 
 export const LpImage = styled.img `
   width: 300px;
@@ -26,7 +26,7 @@ export const AllLpContainer = styled.div `
   width: 90%;
   //height: 300px;
   border-radius: 5px;
-  margin-top: 60px;
+  margin-top: 20px;
   margin-bottom: 20px;
   padding: 5px;
   color: ${BLACK};
@@ -60,6 +60,19 @@ export const AllLpContainer = styled.div `
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
       margin: 0;
     }
+`;
+
+export const OverLpContainerText = styled.div `
+  color: ${WHITE};
+  padding-top: 20px;
+  width: 360px;
+        @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+          width: 400px;
+    }
+        @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+          width: 500px;
+    }
+
 `;
 
 export const OneLpContainer = styled.div `
@@ -120,8 +133,12 @@ export const InnerLpLeft = styled.div `
 export const Music = () => {
 
 return (  <>
-  <Banner><H2Banner>Music</H2Banner></Banner> 
+  <Banner><H2Banner>Music - Diskografi</H2Banner></Banner> 
   <BackgroundOriginal>
+    <OverLpContainerText>Carina släppte sin första skiva 2019. Du kan se alla skivorna hon släppt här.
+      De går att hitta på Spotify, Itunes, YouTube och andra ställen. 
+      Du kan även beställa vissa av dem på CD-skiva om du kontaktar Carina Stars.
+    </OverLpContainerText>
     <AllLpContainer>
 
       <OneLpContainer>
