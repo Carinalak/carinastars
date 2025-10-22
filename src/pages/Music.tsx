@@ -76,7 +76,7 @@ export const OverLpContainerText = styled.div `
 `;
 
 export const OneLpContainer = styled.div `
-  width: 400px; // Går efter bildstorleken som är 300px i mobilläge och 150px i tablet
+  width: 350px; // Går efter bildstorleken som är 300px i mobilläge och 150px i tablet
   background-color: ${LIGHTERPURPLE};
   border: 1px solid black;
   border-radius: 5px;

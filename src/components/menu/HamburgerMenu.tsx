@@ -81,6 +81,7 @@ const MenuList = styled.ul<{ $isOpen: boolean }>`
     width: 100%;
     padding-top: 3px;
     padding-bottom: 3px;
+    cursor: pointer;
 
     span,
     a {
@@ -102,6 +103,7 @@ const MenuList = styled.ul<{ $isOpen: boolean }>`
       &:hover {
         color: ${LIGHTERPURPLE};
         border-radius: 5px;
+        cursor: pointer;
       }
     }
 
@@ -202,7 +204,7 @@ export const HamburgerMenu = () => {
         {MenuLinks.map((link) => (
           <li key={link.path}>
             {link.subLinks ? (
-              <span onClick={() => toggleSubMenu(link.path)}>
+              <span style={{ cursor: 'pointer' }} onClick={() => toggleSubMenu(link.path)}>
                 {link.label}
                 {/*<ArrowIcon isOpen={openSubMenu === link.path} />*/}
               </span>
