@@ -37,6 +37,7 @@ export const BackImg = styled.div`
   flex-direction: row;
   justify-content: center;
 `;
+
 export const BackImgSecond = styled.div`
   width: 100vw;
   height: 100vh;
@@ -64,6 +65,7 @@ export const NewsContainer = styled.div `
   justify-content: center;
   align-items: center;
   gap: 10px;
+
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
       flex-direction: row;
@@ -96,6 +98,7 @@ export const NewsArticleFirst = styled.div `
   align-items: center;
   text-align: justify;
 
+
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
       width: 600px;
     }
@@ -108,6 +111,7 @@ export const NewsArticleFirst = styled.div `
 export const NewsArticleSecond = styled(NewsArticleFirst) `
   //background-color: #eb80eda8;
   background-color: ${LIGHTERPURPLE};
+
 `;
 
 export const NewsArticleThird = styled(NewsArticleFirst)`
@@ -143,7 +147,7 @@ export const NewsArticleTextContainer = styled.div `
       margin-left: 5%;
       margin-right: 5%;
       gap: 5%;
-      //align-items: start;
+      align-items: start;
   }
 `;
 
@@ -154,7 +158,7 @@ export const InnerTextCenter = styled.div `
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  align-self: flex-start;
+  //align-self: flex-start;
 `;
 
 export const InnerTextLeft = styled.div `
@@ -163,8 +167,8 @@ export const InnerTextLeft = styled.div `
   justify-content: left;
   width: 300px;
   padding-top: 10px;
-  padding-bottom: 10px;
-  align-self: flex-start;
+  padding-bottom: 15px;
+  //align-self: flex-start;
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
     width: 45%;
   }
