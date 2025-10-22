@@ -71,6 +71,7 @@ export const NewsContainer = styled.div `
       flex-wrap: wrap;
       align-items: start;
       gap: 5px;
+      align-items: stretch; // Gör så att "barnen" bli lika höga.
     }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
       margin: 0;
@@ -139,6 +140,9 @@ export const NewsArticleTextContainer = styled.div `
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
       flex-direction: row;
+      margin-left: 5%;
+      margin-right: 5%;
+      gap: 5%;
       //align-items: start;
   }
 `;
@@ -150,6 +154,7 @@ export const InnerTextCenter = styled.div `
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  align-self: flex-start;
 `;
 
 export const InnerTextLeft = styled.div `
@@ -160,9 +165,11 @@ export const InnerTextLeft = styled.div `
   padding-top: 10px;
   padding-bottom: 10px;
   align-self: flex-start;
+    @media screen and (min-width: ${BREAKPOINT_TABLET}){
+    width: 45%;
+  }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
-      width: 250px;
-      
+
     }
 `;
 
