@@ -52,7 +52,7 @@ export const Footer = () => {
 
 return (
   <FooterContainer>
-    <div>&copy; Carina Stars 2025</div>
+    <div>Copyright &copy; Carina Stars 2025 All rights reserved</div>
   {/** 
     <FooterTextWhite>&copy; Carina Stars 2025 - <StyledLinkHalloween to="/webmaster"> Webmaster </StyledLinkHalloween></FooterTextWhite>
     <SocialMediaWrapper>
