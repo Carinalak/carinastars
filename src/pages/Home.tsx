@@ -139,7 +139,7 @@ export const NewsArticleTextContainer = styled.div `
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
       flex-direction: row;
-      align-items: start;
+      //align-items: start;
   }
 `;
 
@@ -159,8 +159,10 @@ export const InnerTextLeft = styled.div `
   width: 300px;
   padding-top: 10px;
   padding-bottom: 10px;
+  align-self: flex-start;
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
       width: 250px;
+      
     }
 `;
 
