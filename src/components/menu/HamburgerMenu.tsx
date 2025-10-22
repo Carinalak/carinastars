@@ -182,7 +182,8 @@ export const HamburgerMenu = () => {
     if (openSubMenu === path) {
       setOpenSubMenu(null);
     } else {
-      setOpenSubMenu(path);
+      closeMenu();
+      //setOpenSubMenu(path);
       navigate(path); // Navigera till huvudlänken
     }
   };
