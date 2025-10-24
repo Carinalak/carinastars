@@ -1,13 +1,11 @@
 import { H2Banner } from "../components/styled/Fonts";
 import { Banner, BackgroundOriginal } from "../components/styled/Wrappers";
-import VisionLp from "../assets/images/lp/Vision_of_life.png"
-import AlligatorLp from "../assets/images/lp/alligator.jpg"
-import ReturnLp from "../assets/images/lp/carinastars.jpg"
-import LuckySoulLp from "../assets/images/lp/LP-Carina1.jpg"
-import DisappearLp from "../assets/images/lp/Disappear.jpg"
+
+
 
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, WHITE } from "../components/styled/Variables";
+import { useLpInfo } from "../components/useLpInfo";
 
 export const LpImage = styled.img `
   width: 300px;
@@ -84,6 +82,8 @@ export const OneLpContainer = styled.div `
   flex-direction: column;
   align-items: center;
   text-align: justify;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
       width: 200px;
@@ -129,8 +129,8 @@ export const InnerLpLeft = styled.div `
     }
 `;
 
-
 export const Music = () => {
+  const lps = useLpInfo();
 
 return (  <>
   <Banner><H2Banner>Music - Diskografi</H2Banner></Banner> 
@@ -139,37 +139,19 @@ return (  <>
       De går att hitta på Spotify, Itunes, YouTube och andra ställen. 
       Du kan även beställa vissa av dem på CD-skiva om du kontaktar Carina Stars.
     </OverLpContainerText>
-    <AllLpContainer>
-
-      <OneLpContainer>
-        <InnerLpCenter><LpImage src={VisionLp} loading="lazy"/></InnerLpCenter>
-        <InnerLpLeft><div>Vision of Life</div><div>2025</div></InnerLpLeft>
-      </OneLpContainer>
-
-      <OneLpContainer>
-        <InnerLpCenter><LpImage src={AlligatorLp} loading="lazy"/></InnerLpCenter>
-        <InnerLpLeft><div>Sweet Alligator</div><div>2023</div></InnerLpLeft>
-      </OneLpContainer>
-
-      <OneLpContainer>
-        <InnerLpCenter><LpImage src={DisappearLp} loading="lazy"/></InnerLpCenter>
-        <InnerLpLeft><div>Disappear</div><div>2022</div></InnerLpLeft>
-      </OneLpContainer>
-
-      <OneLpContainer>
-        <InnerLpCenter><LpImage src={ReturnLp} loading="lazy"/></InnerLpCenter>
-        <InnerLpLeft><div>Return to the Sun</div><div>2019</div></InnerLpLeft>
-      </OneLpContainer>
-
-      <OneLpContainer>
-        <InnerLpCenter><LpImage src={LuckySoulLp} loading="lazy"/></InnerLpCenter>
-        <InnerLpLeft><div>Lucky Soul</div><div>2019</div></InnerLpLeft>
-      </OneLpContainer>
-
-
-
-
-    </AllLpContainer>
+       <AllLpContainer>
+        {lps.map(lp => (
+          <OneLpContainer key={lp.name}>
+            <InnerLpCenter>
+              <LpImage src={lp.src} alt={lp.alt} loading="lazy" />
+            </InnerLpCenter>
+            <InnerLpLeft>
+              <div>{lp.name}</div>
+              <div>{lp.year}</div>
+            </InnerLpLeft>
+          </OneLpContainer>
+        ))}
+      </AllLpContainer>
   </BackgroundOriginal></>
  
 )};
