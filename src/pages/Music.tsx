@@ -116,12 +116,10 @@ export const InnerLpLeft = styled.div `
   color: ${BLACK};
   padding-top: 0;
   margin-top: 0;
-  font-weight: 600;
-  font-size: 20px;
+  //font-size: 12px;
   text-align: justify;
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
     width: 150px;     // samma bredd som lp-bilden
-      font-size: 18px;
   }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
 
@@ -134,9 +132,9 @@ export const Music = () => {
 return (  <>
   <Banner><H2Banner>Music - Diskografi</H2Banner></Banner> 
   <BackgroundOriginal>
-    <OverLpContainerText>Carina släppte sin första skiva 2019. Du kan se alla skivorna hon släppt här.
-      De går att hitta på Spotify, Itunes, YouTube och andra ställen. 
-      Du kan även beställa musiken på CD om du kontaktar Carina Stars.
+    <OverLpContainerText> Se diskografi på alla Carinas skivor.
+      De finns på Spotify, Itunes och YouTube bland annat.
+      De går även beställa på CD om du kontaktar Carina Stars.
     </OverLpContainerText>
      <AllLpContainer>
         {lps.map(lp => (
@@ -147,7 +145,7 @@ return (  <>
             alt={lp.alt}
             name={lp.name}
             year={lp.year}
-            tracks={lp.tracks}
+
           />
         ))}
       </AllLpContainer>

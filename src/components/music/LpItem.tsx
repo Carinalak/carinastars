@@ -1,6 +1,11 @@
-// LpItem.tsx
 import { Link } from "react-router-dom";
 import { InnerLpCenter, InnerLpLeft, LpImage, OneLpContainer } from "../../pages/Music";
+import styled from "styled-components";
+
+type Track = {
+  title: string;
+  duration: string;
+};
 
 
 type Props = {
@@ -9,8 +14,25 @@ type Props = {
   alt: string;
   name: string;
   year: number;
-  tracks?: string[];
+  tracks?: Track[];
 };
+
+const TrackAndLength = styled.ul`
+
+  margin-top: 5px;
+  //padding-left: 0px;
+  padding-left: "20px"; 
+  list-style: none;
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42px;
+    padding: 0 0;
+
+  }
+    
+`;
 
 export const LpItem = ({ slug, src, alt, name, year , tracks}: Props) => {
   return (
@@ -23,10 +45,16 @@ export const LpItem = ({ slug, src, alt, name, year , tracks}: Props) => {
       <InnerLpLeft>
         <div>{name}</div>
         <div>{year}</div>
+
         {tracks && tracks.length > 0 && (
-          <div style={{ fontSize: "14px", marginTop: "5px" }}>
-            {tracks[0]}{/* visar bara första track */}
-          </div>
+          <TrackAndLength>
+            {tracks.map((track, index) => (
+              <li key={index} style={{ display: "flex", justifyContent: "space-between" }}>
+                <span>{track.title}</span>
+                <span>{track.duration}</span>
+              </li>
+            ))}
+          </TrackAndLength>
         )}
       </InnerLpLeft>
     </OneLpContainer>

@@ -74,9 +74,11 @@ export const H3Black = styled.h3 `
 `;
 
 export const H3White = styled(H3Black) `
-
     color: ${WHITE};
+`;
 
+export const BoldBlackText = styled.div `
+font-weight: 600;
 `;
 
 // -------------------------- LINKS ---------------------------------- //
@@ -97,8 +99,25 @@ export const PurpleLink = styled(Link)`
       color: ${WHITE};
       text-decoration: none;
     }
+  }
+`;
+
+export const WhiteLink = styled(Link)`
+  && {
+    //gap: 5px;
+    text-decoration: none;
+    color: ${WHITE};
+    cursor: pointer;
 
 
+    &:hover {
+      color: ${LIGHTPURPLE};
+      text-decoration: underline;
+    }
+    &:focus {
+      color: ${LIGHTPURPLE};
+      text-decoration: none;
+    }
   }
 `;
 // -------------------------- END LINKS -------------------------------- //

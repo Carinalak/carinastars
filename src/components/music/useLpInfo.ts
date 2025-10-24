@@ -13,40 +13,69 @@ const LpInfo = [
     src: VisionLp, 
     name: "Vision of Life", 
     year: 2025, 
-    tracks: ["Vision of Life", "Angelwings", "She Said He Looked Sweet", "Tears of a Wizard", "Niagara Falls"],
-    alt: "Vision of Life"
+    alt: "Vision of Life",
+    tracks: [
+      { title: "Vision of Life", duration: "3:46" },
+      { title: "Angelwings", duration: "2:12" },
+      { title: "She Said He Looked Sweet", duration: "3:15" },
+      { title: "Tears of a Wizard", duration: "3:27" },
+      { title: "Niagara Falls", duration: "3:20" },
+    ],
   },
   { 
     slug: "sweet-alligator", 
     src: AlligatorLp, 
     name: "Sweet Alligator", 
     year: 2023, 
-    tracks: ["Sweet Alligator", "You Wont't Walk Alone", "Am I sick?"],
-    alt: "Sweet Alligator"
+    alt: "Sweet Alligator",
+        tracks: [
+      { title: "Sweet Alligator", duration: "3:12" },
+      { title: "You Wont't Walk Alone", duration: "2:45" },
+      { title: "Am I sick?", duration: "2:50" }
+    ],
   },
   { 
     slug: "disappear", 
     src: DisappearLp, 
     name: "Disappear", 
+    alt: "Disappear",
     year: 2022, 
-    tracks: ["Disappear"],
-    alt: "Disappear"
+        tracks: [
+      { title: "Disappear", duration: "4:24" }
+    ],
+
   },
   { 
     slug: "return-to-the-sun", 
     src: ReturnLp, 
     name: "Return to the sun", 
     year: 2019, 
-    tracks: ["Return to the Sun", "Little Polly", "The World Around", "Castle of Tears", "Moving out"],
-    alt: "Return to the Sun"
+    alt: "Return to the Sun",
+    tracks: [
+      { title: "Return to the Sun", duration: "3:15" },
+      { title: "Little Polly", duration: "2:25" },
+      { title: "The World Around", duration: "3:06" },
+      { title: "Castle of Tears", duration: "3:06" },
+      { title: "Moving out", duration: "1:08" }
+    ],
+
   },
   { 
     slug: "lucky-soul", 
     src: LuckySoulLp, 
     name: "Lucky Soul", 
     year: 2019, 
-    tracks: ["Lucky Soul", "Since the Day I came Back", "Jade", "Crown of Sun", "Lilla tjej", "Albin", "Hösten är här"],
-    alt: "Lucky Soul"
+    alt: "Lucky Soul",
+    tracks: [
+      { title: "Lucky Soul", duration: "2:35" },
+      { title: "Since the Day I came Back", duration: "2:37" },
+      { title: "Jade", duration: "4:29" },
+      { title: "Crown of Sun", duration: "2:30" },
+      { title: "Lilla tjej", duration: "3:46" },
+      { title: "Albin", duration: "3:27" },
+      { title: "Hösten är här", duration: "3:28" }
+  ],
+
   },
 
 

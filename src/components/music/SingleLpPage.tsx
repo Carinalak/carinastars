@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-import { H2Banner } from "../styled/Fonts";
+import { BoldBlackText, H2Banner, WhiteLink } from "../styled/Fonts";
 import { Banner, BackgroundOriginal } from "../styled/Wrappers";
 import { useLpInfo } from "./useLpInfo";
 import styled from "styled-components";
@@ -51,11 +51,21 @@ export const SingleInnerContainer = styled.div`
 
 const TrackList = styled.ul`
   margin-top: 10px;
-  padding-left: 20px;
+  padding-left: 0px;
+  list-style: none;
   li {
-    margin-bottom: 8px;
-    line-height: 1.4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42px;
+    padding: 0 0;
+
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    //font-size: 16px;
   }
+      li:last-child {
+      border-bottom: none;   /* ingen linje efter sista */
+    }
 `;
 
 export const TrackListContainer = styled.div`
@@ -63,9 +73,10 @@ export const TrackListContainer = styled.div`
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  //border: 1px solid red;
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-    max-width: 300px;
+    width: 250px;
   }
 `;
 
@@ -87,23 +98,25 @@ export const SingleLpPage = () => {
   }
   return (
     <>
-      <Banner><H2Banner>{lp.name}</H2Banner></Banner>
+      <Banner><H2Banner><WhiteLink to= "/music">Music</WhiteLink> - {lp.name}</H2Banner></Banner>
 <BackgroundOriginal>
   <InfoWrapper>
     <SingleLpImage src={lp.src} alt={lp.alt} />
     <SingleInnerContainer>
-      <div style={{ fontSize: "24px", fontWeight: 600 }}>{lp.name}</div>
-      <div style={{ fontSize: "16px", marginBottom: "10px" }}>Utgiven: {lp.year}</div>
+      <BoldBlackText>{lp.name}</BoldBlackText>
+      <div>{lp.year}</div>
 
       {lp.tracks && lp.tracks.length > 0 && (
         <TrackListContainer>
-          {/* Tracklist-rubrik som H2/H3 */}
+          {/* 
           <div style={{ fontSize: "20px", fontWeight: 600, marginBottom: "10px" }}>
-            Tracklist
-          </div>
+            Låtar
+          </div>*/}
           <TrackList>
             {lp.tracks.map((track, index) => (
-              <li key={index}>{track}</li>
+              <li key={index}>
+                {track.title} <span style={{ float: "right" }}>{track.duration}</span>
+              </li>
             ))}
           </TrackList>
         </TrackListContainer>

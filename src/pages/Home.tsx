@@ -96,7 +96,7 @@ export const NewsArticleFirst = styled.div `
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: justify;
+  //text-align: justify;
 
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
