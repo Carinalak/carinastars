@@ -104,7 +104,8 @@ export const SingleLpPage = () => {
     <SingleLpImage src={lp.src} alt={lp.alt} />
     <SingleInnerContainer>
       <BoldBlackText>{lp.name}</BoldBlackText>
-      <div>{lp.year}</div>
+      
+      <div>{lp.date} {lp.year}</div>
 
       {lp.tracks && lp.tracks.length > 0 && (
         <TrackListContainer>
