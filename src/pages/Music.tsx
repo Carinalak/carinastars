@@ -24,16 +24,17 @@ export const AllLpContainer = styled.div `
   //border: 1px solid red;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+      //background-color: ${WHITE};
       //display: grid;
       //grid-template-columns: repeat(2, 200px);   // 3 på första raden
       //justify-content: start;                    // vänsterankra griden
       justify-content: center; 
-      width: 90%;
+      width: 600px;
       //flex-wrap: wrap;
       //align-items: start;
-      gap: 15px;
+
+
       align-items: center; // Gör så att "barnen" bli lika höga.
-      //flex-direction: row;
 
     }/*
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {

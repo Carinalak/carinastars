@@ -40,7 +40,7 @@ export const OneLpContainer = styled.div `
   padding: 4px;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
-      width: 90%;
+      width: 400px;
     }
         @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
     }

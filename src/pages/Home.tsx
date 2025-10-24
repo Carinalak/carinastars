@@ -163,7 +163,7 @@ export const InnerTextCenter = styled.div `
 
 export const InnerTextLeft = styled.div `
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: left;
   width: 300px;
   padding-top: 10px;
@@ -193,11 +193,14 @@ return (  <>
           <NewsArticleTextContainer>
           <InnerTextCenter><NewsLpImage src={VisionLp} loading="lazy"/></InnerTextCenter>
           <InnerTextLeft> Senaste skivan "Vision of Life" släpptes i september 2025. 
-            Låtarna spelades in under sommaren samma år. All musik på plattan är skriven på 90-talet. 
+            Låtarna spelades in under sommaren samma år. All musik på plattan är skriven på 90-talet.
+
             "Jag har en hel låtskatt att ta ifrån som är skriven på den tiden" säger Carina Stars. Men hon 
-            skriver fortfarande ny musik. "Det kan komma en låt på svenska snart", säger hon. Hon jobbar redan på nästa platta. 
+            skriver fortfarande ny musik. "Det kan komma en låt på svenska snart", säger hon. 
+            
+            <p>Hon jobbar redan på nästa platta. 
             Om allt går som hon vill är den ute nästa år. "Det finns så mycket jag vill hinna med, jag har så många 
-            idéer" säger hon.</InnerTextLeft>
+            idéer" säger hon.</p></InnerTextLeft>
           </NewsArticleTextContainer>
         </NewsArticleFirst>
           
@@ -208,11 +211,12 @@ return (  <>
           <NewsArticleTextContainer>
             <InnerTextCenter><NewsLpImage src={CarinaReturn} /></InnerTextCenter>
             <InnerTextLeft> Carina Stars är text och musikkompositör. Hon har varit verksam sedan 90-talet 
-              och släppte sin första skiva Lucky Soul 2019. Hennes musik är främst på engelska men hon har även 
-              några svenska låtar. Bland annat den populära "Albin" som finns på första skivan. 
+              men släppte sin första skiva Lucky Soul 2019. Hennes musik är främst på engelska men hon har även 
+              några svenska låtar. Bland annat den populära "Albin" som finns på första skivan.
+              <p>
               Hon är uppvuxen norr om Stockholm och var redan som liten fascinerad av musik. 1992 var hon med i 
-              hårdrocksbandet Iguanas där hon spelade komp och sologitarr, och senare blev hon singer 
-              songwriter artist.
+              svenska hårdrocksbandet Iguanas där hon spelade komp och sologitarr, och senare blev hon singer 
+              songwriter artist.</p>
             </InnerTextLeft>
             </NewsArticleTextContainer>
         </NewsArticleSecond>
