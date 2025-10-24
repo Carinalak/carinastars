@@ -1,11 +1,10 @@
 import { H2Banner } from "../components/styled/Fonts";
 import { Banner, BackgroundOriginal } from "../components/styled/Wrappers";
 
-
-
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, WHITE } from "../components/styled/Variables";
-import { useLpInfo } from "../components/useLpInfo";
+import { useLpInfo } from "../components/music/useLpInfo";
+import { LpItem } from "../components/music/LpItem";
 
 export const LpImage = styled.img `
   width: 300px;
@@ -137,19 +136,19 @@ return (  <>
   <BackgroundOriginal>
     <OverLpContainerText>Carina släppte sin första skiva 2019. Du kan se alla skivorna hon släppt här.
       De går att hitta på Spotify, Itunes, YouTube och andra ställen. 
-      Du kan även beställa vissa av dem på CD-skiva om du kontaktar Carina Stars.
+      Du kan även beställa musiken på CD om du kontaktar Carina Stars.
     </OverLpContainerText>
-       <AllLpContainer>
+     <AllLpContainer>
         {lps.map(lp => (
-          <OneLpContainer key={lp.name}>
-            <InnerLpCenter>
-              <LpImage src={lp.src} alt={lp.alt} loading="lazy" />
-            </InnerLpCenter>
-            <InnerLpLeft>
-              <div>{lp.name}</div>
-              <div>{lp.year}</div>
-            </InnerLpLeft>
-          </OneLpContainer>
+          <LpItem
+            key={lp.slug}
+            slug={lp.slug}
+            src={lp.src}
+            alt={lp.alt}
+            name={lp.name}
+            year={lp.year}
+            tracks={lp.tracks}
+          />
         ))}
       </AllLpContainer>
   </BackgroundOriginal></>
