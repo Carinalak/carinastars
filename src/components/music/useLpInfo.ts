@@ -28,9 +28,9 @@ const LpInfo = [
     name: "Sweet Alligator", 
     year: 2023, 
     alt: "Sweet Alligator",
-        tracks: [
+    tracks: [
       { title: "Sweet Alligator", duration: "3:12" },
-      { title: "You Wont't Walk Alone", duration: "2:45" },
+      { title: "You Won't Walk Alone", duration: "2:45" },
       { title: "Am I sick?", duration: "2:50" }
     ],
   },
@@ -40,7 +40,7 @@ const LpInfo = [
     name: "Disappear", 
     alt: "Disappear",
     year: 2022, 
-        tracks: [
+    tracks: [
       { title: "Disappear", duration: "4:24" }
     ],
 
@@ -74,7 +74,7 @@ const LpInfo = [
       { title: "Lilla tjej", duration: "3:46" },
       { title: "Albin", duration: "3:27" },
       { title: "Hösten är här", duration: "3:28" }
-  ],
+    ],
 
   },
 

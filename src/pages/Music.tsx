@@ -2,25 +2,14 @@ import { H2Banner } from "../components/styled/Fonts";
 import { Banner, BackgroundOriginal } from "../components/styled/Wrappers";
 
 import styled from "styled-components";
-import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, WHITE } from "../components/styled/Variables";
+import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE } from "../components/styled/Variables";
 import { useLpInfo } from "../components/music/useLpInfo";
 import { LpItem } from "../components/music/LpItem";
-
-export const LpImage = styled.img `
-  width: 300px;
- //margin-top: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-      width: 150px;
-    }
-`;
 
 
 export const AllLpContainer = styled.div `
   background-color: transparent;
-  width: 90%;
+  width: 360px;
   //height: 300px;
   border-radius: 5px;
   margin-top: 20px;
@@ -35,18 +24,18 @@ export const AllLpContainer = styled.div `
   //border: 1px solid red;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-      display: grid;
-      grid-template-columns: repeat(2, 200px);   // 3 på första raden
-      justify-content: start;                    // vänsterankra griden
+      //display: grid;
+      //grid-template-columns: repeat(2, 200px);   // 3 på första raden
+      //justify-content: start;                    // vänsterankra griden
       justify-content: center; 
       width: 90%;
       //flex-wrap: wrap;
       //align-items: start;
       gap: 15px;
-      align-items: stretch; // Gör så att "barnen" bli lika höga.
+      align-items: center; // Gör så att "barnen" bli lika höga.
       //flex-direction: row;
 
-    }
+    }/*
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
       grid-template-columns: repeat(3, 200px); 
       margin: 0;
@@ -56,7 +45,7 @@ export const AllLpContainer = styled.div `
     }
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
       margin: 0;
-    }
+    }*/
 `;
 
 export const OverLpContainerText = styled.div `
@@ -72,59 +61,6 @@ export const OverLpContainerText = styled.div `
 
 `;
 
-export const OneLpContainer = styled.div `
-  width: 350px; // Går efter bildstorleken som är 300px i mobilläge och 150px i tablet
-  background-color: ${LIGHTERPURPLE};
-  border: 1px solid black;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: justify;
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-    @media screen and (min-width: ${BREAKPOINT_TABLET}){
-      width: 200px;
-      /*transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
-      &:hover {
-        transform: scale(1.1);
-      }*/
-    }
-        @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
-    }
-`;
-
-export const InnerLpCenter = styled.div `
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-`;
-
-export const InnerLpLeft = styled.div `
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  width: 300px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  //border: 1px solid black;
-  color: ${BLACK};
-  padding-top: 0;
-  margin-top: 0;
-  //font-size: 12px;
-  text-align: justify;
-    @media screen and (min-width: ${BREAKPOINT_TABLET}){
-    width: 150px;     // samma bredd som lp-bilden
-  }
-    @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
-
-    }
-`;
 
 export const Music = () => {
   const lps = useLpInfo();
