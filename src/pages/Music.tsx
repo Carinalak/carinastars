@@ -7,8 +7,8 @@ import { useLpInfo } from "../components/music/useLpInfo";
 import { LpItem } from "../components/music/LpItem";
 
 
-export const AllLpContainer = styled.div `
-  background-color: transparent;
+export const AllLpContainer = styled.div `      // ------------------------------------- !
+  background-color: ${WHITE};
   width: 360px;
   //height: 300px;
   border-radius: 5px;
@@ -18,18 +18,15 @@ export const AllLpContainer = styled.div `
   color: ${BLACK};
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  //border: 1px solid red;
+  justify-content: start;
+  align-items: start;
+  border: 1px solid blue;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-      //background-color: ${WHITE};
-      //display: grid;
-      //grid-template-columns: repeat(2, 200px);   // 3 på första raden
-      //justify-content: start;                    // vänsterankra griden
-      justify-content: center; 
+      justify-content: start; 
       width: 600px;
+      height: 600px;
+
       //flex-wrap: wrap;
       //align-items: start;
 

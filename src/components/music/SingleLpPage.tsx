@@ -62,13 +62,19 @@ const TrackList = styled.ul`
 
     border-bottom: 1px solid rgba(0,0,0,0.2);
     //font-size: 16px;
+    
   }
-      li:last-child {
-      border-bottom: none;   /* ingen linje efter sista */
+    li:first-child {
+      border-top: 1px solid rgba(0,0,0,0.2);   // linje före första
     }
+    /*
+      li:last-child {
+      border-bottom: none;   // ingen linje efter sista 
+    }*/
+    
 `;
 
-export const TrackListContainer = styled.div`
+export const TrackListContainer = styled.div`     // -------------------- !
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -76,7 +82,8 @@ export const TrackListContainer = styled.div`
   //border: 1px solid red;
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-    width: 250px;
+    width: 300px;
+    height: 600px;
   }
 `;
 

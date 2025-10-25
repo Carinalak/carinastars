@@ -32,17 +32,19 @@ export const LpImage = styled.img `
 export const OneLpContainer = styled.div `
   width: 350px; // Går efter bildstorleken som är 300px i mobilläge och 150px i tablet
   background-color: ${WHITE};
-  border: 1px solid black;
-  border-radius: 5px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 4px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+    div:last-child {
+      border-bottom: none;   /* ingen linje efter sista */
+    }
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
-      width: 400px;
+      width: 550px;
     }
-        @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
+    @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
     }
 `;
 
