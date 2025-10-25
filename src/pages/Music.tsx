@@ -9,7 +9,7 @@ import { LpItem } from "../components/music/LpItem";
 
 export const AllLpContainer = styled.div `      // ------------------------------------- !
   background-color: ${WHITE};
-  width: 360px;
+  width: 350px;
   //height: 300px;
   border-radius: 5px;
   margin-top: 20px;
@@ -20,7 +20,7 @@ export const AllLpContainer = styled.div `      // -----------------------------
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  border: 1px solid blue;
+  //border: 1px solid blue;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
       justify-content: start; 
@@ -62,6 +62,16 @@ export const OverLpContainerText = styled.div `
 
 export const Music = () => {
   const lps = useLpInfo();
+
+  // --------------------- This code enables the page to be in right position when opened ---------------------- // 
+  // It is used together with <div id="top"></div> in index.html.
+  setTimeout(() => {
+    const topElement = document.getElementById("top");
+    if (topElement) {
+      topElement.scrollIntoView({ behavior: "auto" });
+    }
+  }, 0);
+  // ---------------------------------------- End of position code ---------------------------------------------- //
 
 return (  <>
   <Banner><H2Banner>Music - Diskografi</H2Banner></Banner> 

@@ -71,7 +71,7 @@ const TrackList = styled.ul`
       li:last-child {
       border-bottom: none;   // ingen linje efter sista 
     }*/
-    
+
 `;
 
 export const TrackListContainer = styled.div`     // -------------------- !
@@ -103,6 +103,17 @@ export const SingleLpPage = () => {
       </>
     );
   }
+
+  // --------------------- This code enables the page to be in right position when opened ---------------------- // 
+  // It is used together with <div id="top"></div> in index.html.
+  setTimeout(() => {
+    const topElement = document.getElementById("top");
+    if (topElement) {
+      topElement.scrollIntoView({ behavior: "auto" });
+    }
+  }, 0);
+  // ---------------------------------------- End of position code ---------------------------------------------- //
+
   return (
     <>
       <Banner><H2Banner><WhiteLink to= "/music">Music</WhiteLink> - {lp.name}</H2Banner></Banner>

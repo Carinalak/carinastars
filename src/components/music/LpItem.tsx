@@ -30,7 +30,7 @@ export const LpImage = styled.img `
 
 
 export const OneLpContainer = styled.div `
-  width: 350px; // Går efter bildstorleken som är 300px i mobilläge och 150px i tablet
+  width: 340px; // Går efter bildstorleken som är 300px i mobilläge och 150px i tablet
   background-color: ${WHITE};
   display: flex;
   flex-direction: row;
@@ -89,12 +89,13 @@ const TrackAndLength = styled.ul`
 
 export const LpItem = ({ slug, src, alt, name, year , tracks}: Props) => {
   return (
+          <Link to={`/music/${slug}`}>
     <OneLpContainer>
-      <Link to={`/music/${slug}`}>
+
         <InnerLpLeft>
           <LpImage src={src} alt={alt} loading="lazy" />
         </InnerLpLeft>
-      </Link>
+
       <InnerLpRight>
         <div>{name}</div>
         <div>{year}</div>
@@ -111,5 +112,6 @@ export const LpItem = ({ slug, src, alt, name, year , tracks}: Props) => {
         )}
       </InnerLpRight>
     </OneLpContainer>
+          </Link>
   );
 };
