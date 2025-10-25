@@ -1,8 +1,8 @@
 
 import { BackgroundOriginal, Banner } from "../components/styled/Wrappers";
 import BackgroundJade from "../assets/images/background/Jade_akustisk_back.webp"
-import VisionLp from "../assets/images/lp/Vision_of_life.png"
-import CarinaReturn from "../assets/images/carina/carina_return.jpg"
+import VisionLp from "../assets/images/lp/png/vision_of_life.png"
+import CarinaReturn from "../assets/images/carina/carina_return.webp"
 import LuckySoulDreaming from "../assets/images/carina/LuckySoulDreaming.jpg"
 import AmISick from "../assets/images/carina/AmISick.jpg"
 import styled from "styled-components";

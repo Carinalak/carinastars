@@ -1,8 +1,8 @@
-import VisionLp from "../../assets/images/lp/Vision_of_life.png"
-import AlligatorLp from "../../assets/images/lp/alligator.jpg"
-import DisappearLp from "../../assets/images/lp/Disappear.jpg"
-import ReturnLp from "../../assets/images/lp/carinastars.jpg"
-import LuckySoulLp from "../../assets/images/lp/LP-Carina1.jpg"
+import VisionLp from "../../assets/images/lp/png/vision_of_life.png"
+import AlligatorLp from "../../assets/images/lp/png/sweet_alligator.png"
+import DisappearLp from "../../assets/images/lp/png/disappear.png"
+import ReturnLp from "../../assets/images/lp/png/return_to_the_sun.png"
+import LuckySoulLp from "../../assets/images/lp/png/lucky_soul.png"
 
 
 const LpInfo = [
