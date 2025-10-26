@@ -11,12 +11,17 @@ meta.name = 'version'
 meta.content = import.meta.env.VITE_APP_VERSION
 document.head.appendChild(meta)
 
+
+let hasReloaded = false
 // AUTO RELOAD när SW uppdateras
 registerSW({
   immediate: true,
   onNeedRefresh() {
-    window.location.reload()
-  },
+    if (!hasReloaded) {
+      hasReloaded = true
+      window.location.reload()
+    }
+  }
 })
 
 
