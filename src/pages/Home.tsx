@@ -232,7 +232,7 @@ return (  <>
         </NewsArticleSecond>
 
         <NewsArticleThird>
-          <H3White>Musikvideos</H3White>
+          <H3White>Musikvideos...</H3White>
           <NewsArticleTextContainer>
             <InnerTextCenter><NewsLpImageSecond src={AmISick} loading="lazy"/></InnerTextCenter>
             <InnerTextCenter><NewsLpImage src={LuckySoulDreaming} loading="lazy"/></InnerTextCenter>

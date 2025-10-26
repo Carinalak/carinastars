@@ -5,6 +5,7 @@ import { version } from './package.json';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/',
   plugins: [react(),
     VitePWA({
     registerType: 'autoUpdate', // Uppdaterar automatiskt när ny version finns
@@ -28,7 +29,7 @@ export default defineConfig({
     })
 
   ],
-  base: '/',
+
   define: {
   'import.meta.env.VITE_APP_VERSION': JSON.stringify(version),
 },
