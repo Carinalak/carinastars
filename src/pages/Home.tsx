@@ -225,9 +225,9 @@ return (  <>
               men släppte sin första skiva Lucky Soul 2019. Hennes musik är främst på engelska men hon har även 
               några svenska låtar. Bland annat den populära "Albin" som finns på första skivan.
               <p>
-              Hon är uppvuxen norr om Stockholm och var redan som liten fascinerad av musik. 1992 var hon med i 
-              svenska hårdrocksbandet Iguanas där hon spelade komp och sologitarr, och senare blev hon singer 
-              songwriter artist.</p>
+              Hon är uppvuxen norr om Stockholm och var redan som liten fascinerad av musik. I början på 90-talet 
+              var hon med i svenska hårdrocksbandet Iguanas där hon spelade komp och sologitarr, och senare 
+              blev hon soloartist.</p>
             </InnerTextLeft>
             </NewsArticleTextContainer>
         </NewsArticleSecond>
