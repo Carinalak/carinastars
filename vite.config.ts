@@ -10,8 +10,8 @@ export default defineConfig({
     VitePWA({
     registerType: 'autoUpdate', // Uppdaterar automatiskt när ny version finns
     workbox: {                  // till autoupload
-      clientsClaim: true,               // till autoupload
-      skipWaiting: true,               // till autoupload
+    clientsClaim: true,               // till autoupload
+    skipWaiting: true,               // till autoupload
   },
     //includeAssets: ['robots.txt'], // valfria statiska filer
     manifest: {
@@ -21,10 +21,11 @@ export default defineConfig({
       display: "standalone",
       background_color: "#ffffff",
       theme_color: "#ffffff",
-      icons: [
+      
+      /*icons: [
         { src: "icon-192.png", sizes: "192x192", type: "image/png" },
         { src: "icon-512.png", sizes: "512x512", type: "image/png" }
-      ]
+      ]*/
       }
     })
 
