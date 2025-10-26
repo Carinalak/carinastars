@@ -4,6 +4,12 @@ import './index.css'
 import App from './App.tsx'
 import { registerSW } from 'virtual:pwa-register'
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(regs => {
+    regs.forEach(reg => reg.unregister())
+  })
+}
+
 // Lägg till meta-taggen med versionen dynamiskt
 const meta = document.createElement('meta')
 meta.name = 'version'
@@ -17,6 +23,7 @@ registerSW({
     window.location.reload()
   },
 })
+
 
 
 createRoot(document.getElementById('root')!).render(
