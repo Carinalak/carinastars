@@ -24,6 +24,7 @@ export const NewsLpImageSecond = styled(NewsLpImage) `
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
       display: block;
     }
+    
 `;
 
 export const BackImg = styled.div`

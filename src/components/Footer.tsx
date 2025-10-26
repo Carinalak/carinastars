@@ -32,7 +32,7 @@ return (
   <FooterContainer>
     <div style={{ display: "flex", gap: "10px", color: "white", fontSize: "24px"}}>
       <a href="https://open.spotify.com/artist/55qk3HvZGmJNg98ChI6MdJ" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faSpotify} /></a>
-      <a href="https://www.youtube.com/@carinastars1/videos?view=0&sort=dd&shelf_id=1" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faYoutube} /></a>
+      <a href="https://www.youtube.com/channel/UCEyZ9frD4s1VmFoYOk4sM8w" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faYoutube} /></a>
       <a href="https://www.instagram.com/carinastars/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
       {/*<a href="https://www.tiktok.com/search?q=carina%20stars&t=1761372933835" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTiktok} /></a>*/}
     </div>
