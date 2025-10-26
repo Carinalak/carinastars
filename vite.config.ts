@@ -13,7 +13,7 @@ export default defineConfig({
       clientsClaim: true,               // till autoupload
       skipWaiting: true,               // till autoupload
   },
-    includeAssets: ['robots.txt'], // valfria statiska filer
+    //includeAssets: ['robots.txt'], // valfria statiska filer
     manifest: {
       name: "Music",
       short_name: "Music",
