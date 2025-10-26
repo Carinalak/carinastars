@@ -237,7 +237,7 @@ return (  <>
             <InnerTextCenter><NewsLpImageSecond src={AmISick} loading="lazy"/></InnerTextCenter>
             <InnerTextCenter><NewsLpImage src={LuckySoulDreaming} loading="lazy"/></InnerTextCenter>
             <InnerTextLeft>Titta på Carina Stars&nbsp;
-              <PurpleLink to="https://www.youtube.com/@carinastars1" target="_blank"> musikvideos.</PurpleLink>
+              <PurpleLink to="https://www.youtube.com/@carinastars1" target="_blank"> musikvideos...</PurpleLink>
               
             </InnerTextLeft>
 
