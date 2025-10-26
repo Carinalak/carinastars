@@ -10,8 +10,13 @@ meta.name = 'version'
 meta.content = import.meta.env.VITE_APP_VERSION
 document.head.appendChild(meta)
 
-// Registrera service worker
-registerSW({ immediate: true })
+// AUTO RELOAD när SW uppdateras
+registerSW({
+  immediate: true,
+  onNeedRefresh() {
+    window.location.reload()
+  },
+})
 
 
 createRoot(document.getElementById('root')!).render(
