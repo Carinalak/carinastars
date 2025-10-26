@@ -217,7 +217,7 @@ return (  <>
           
 
         <NewsArticleSecond>
-          <H3Black>Om Carina Stars...</H3Black>
+          <H3Black>Om Carina Stars</H3Black>
           <NewsArticleTextContainer>
             <InnerTextCenter><NewsLpImage src={CarinaReturn} /></InnerTextCenter>
             <InnerTextLeft> Carina Stars är text och musikkompositör. Hon har varit verksam sedan 90-talet 
