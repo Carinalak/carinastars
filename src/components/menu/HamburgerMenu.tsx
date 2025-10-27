@@ -20,7 +20,7 @@ const MenuContainer = styled.div`
 const HamburgerButton = styled.div`
   position: relative;
   top: 0;
-  right: 30px;
+  right: 10px;
   margin-right: 0;
   margin-top: 0;
   width: 38px;
@@ -164,7 +164,7 @@ export const MenuHeader = styled.div`
   justify-content: flex-end;
   width: 100%;
   padding: 0 10px;
-  gap: 60px;
+  gap: 50px;
 
   /* Endast visa flaggan på mobiler */
   .language-flag {
@@ -176,8 +176,6 @@ export const MenuHeader = styled.div`
     }
   }
 `;
-
-
 
 export const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);

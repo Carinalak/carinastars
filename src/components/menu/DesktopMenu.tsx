@@ -13,7 +13,7 @@ export const NavigationContainer = styled.section`
   justify-content: space-between;
   align-items: center;
   padding: 5px;
-  width: 100%;
+  //width: 100%;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
       margin-top: 5px;
@@ -25,14 +25,18 @@ export const NavigationContainer = styled.section`
 export const DesktopNav = styled.nav`
   display: none;
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-    display: block;
-    width: 50%;
-    //padding-left: 10px;
-    //padding-right: 10px;
+    //display: block;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 30px;
+    //border: 1px solid red;
+    align-items: flex-end;
     
 
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
-    align-items: flex-end;
+
 
   }
 
@@ -42,7 +46,7 @@ export const DesktopNav = styled.nav`
       justify-content: center;
       align-items: center;
       gap: 20px;
-      width: 95%;
+      //width: 95%;
       padding: 0;
       margin: 0;
       list-style: none;

@@ -39,7 +39,7 @@ export const HeaderTitle = styled(H1White) `
 font-family: "Cormorant SC", serif;
 font-weight: 500;
 font-style: normal;
-font-size: 40px;
+font-size: 45px;
 padding-left: 5;
 z-index: 87;
 //position: relative;
@@ -48,11 +48,12 @@ z-index: 87;
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
       padding-left: 10px;
       margin: 0;
-
+      font-size: 50px;
     }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
       margin: 0;
-      font-size: 50px;
+
+
     }
 `;
 
