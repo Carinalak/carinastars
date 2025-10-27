@@ -16,8 +16,9 @@ export const NavigationContainer = styled.section`
   //width: 100%;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-      margin-top: 5px;
+      margin-top: 10px;
       align-items: baseline;
+
     }
 
 `;
@@ -34,11 +35,6 @@ export const DesktopNav = styled.nav`
     //border: 1px solid red;
     align-items: flex-end;
     
-
-    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
-
-
-  }
 
     ul {
       display: flex;

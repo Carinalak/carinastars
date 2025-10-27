@@ -164,7 +164,7 @@ export const MenuHeader = styled.div`
   justify-content: flex-end;
   width: 100%;
   padding: 0 10px;
-  gap: 50px;
+  gap: 35px;
 
   /* Endast visa flaggan på mobiler */
   .language-flag {
