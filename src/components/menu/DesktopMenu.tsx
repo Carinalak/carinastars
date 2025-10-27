@@ -4,6 +4,7 @@ import { NavLink, useLocation } from "react-router-dom";
 //import arrowIcon from "../../assets/icons/arrow_white_down.png";
 import { useState } from "react";
 import { MenuLinks } from "./MenuLinks";
+import { LanguageFlag } from "../LanguageFlag";
 
 export const NavigationContainer = styled.section`
   display: flex;
@@ -175,6 +176,9 @@ export const DesktopNav = styled.nav`
     ul.submenu li a:active {
       color: ${LIGHTERPURPLE};
     }
+    li:last-child {
+      padding-left: 10%;
+    }
   }
 `;
 
@@ -276,6 +280,9 @@ export const DesktopMenu = () => {
             )}
           </li>
         ))}
+          <li>
+            <LanguageFlag />
+          </li>
       </ul>
     </DesktopNav>
   );

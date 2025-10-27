@@ -83,24 +83,22 @@ font-weight: 600;
 
 // -------------------------- LINKS ---------------------------------- //
 
-export const PurpleLink = styled(Link)`
-  && {
-    //gap: 5px;
-    text-decoration: none;
-    color: ${LIGHTPURPLE};
-    cursor: pointer;
+export const PurpleLink = styled.a`
+  display: inline !important;
+  color: ${LIGHTPURPLE} !important;
+  text-decoration: none !important;
+  cursor: pointer;
 
-
-    &:hover {
-      color: ${BLACK};
-      text-decoration: underline;
-    }
-    &:focus {
-      color: ${WHITE};
-      text-decoration: none;
-    }
+  &:hover {
+    color: ${BLACK} !important;
+    text-decoration: underline !important;
+  }
+  &:focus {
+    color: ${WHITE} !important;
+    text-decoration: none !important;
   }
 `;
+
 
 export const WhiteLink = styled(Link)`
   && {

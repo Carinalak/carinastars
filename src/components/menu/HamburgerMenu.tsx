@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 //import myCustomArrow from "../../assets/icons/arrow_white_down.png";
 import { NavLink, useNavigate } from 'react-router-dom';
 import { MenuLinks } from './MenuLinks';
+import { LanguageFlag } from '../LanguageFlag';
 
 const MenuContainer = styled.div`
   display: flex;
@@ -153,6 +154,30 @@ const ArrowIcon: React.FC<ArrowIconProps> = ({ isOpen }) => (
   />
 );*/
 
+
+
+export const MenuHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 10px;
+  gap: 60px;
+
+  /* Endast visa flaggan på mobiler */
+  .language-flag {
+    display: block;
+    padding-top: 5px;
+
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+      display: none;
+    }
+  }
+`;
+
+
+
 export const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
@@ -196,11 +221,17 @@ export const HamburgerMenu = () => {
   };
   return (
     <MenuContainer>
-      <HamburgerButton onClick={toggleMenu} className={isOpen ? 'open' : ''}>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </HamburgerButton>
+  <MenuHeader>
+    <div className="language-flag">
+      <LanguageFlag /> 
+    </div>
+    <HamburgerButton onClick={toggleMenu} className={isOpen ? 'open' : ''}>
+      <div className="line"></div>
+      <div className="line"></div>
+      <div className="line"></div>
+    </HamburgerButton>
+  </MenuHeader>
+
       <MenuList $isOpen={isOpen}>
         {MenuLinks.map((link) => (
           <li key={link.path}>

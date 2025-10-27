@@ -6,6 +6,7 @@ import './index.css'
 import { registerSW } from 'virtual:pwa-register'
 import './swListener.js';
 import './versionCheck.js'
+import './i18n.ts'
 
 
 registerSW({

@@ -8,6 +8,8 @@ import AmISick from "../assets/images/carina/AmISick.jpg"
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, LIGHTPURPLE } from "../components/styled/Variables";
 import { H2Banner, H3Black, H3White, PurpleLink } from "../components/styled/Fonts";
+import { useTranslation } from 'react-i18next';
+
 
 export const NewsLpImage = styled.img `
  width: 300px;
@@ -142,7 +144,7 @@ export const NewsArticleTextContainer = styled.div `
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1px;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
       flex-direction: row;
@@ -159,20 +161,25 @@ export const InnerTextCenter = styled.div `
   align-items: center;
   justify-content: center;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 0;
   //align-self: flex-start;
+      @media screen and (min-width: ${BREAKPOINT_TABLET}){
+          padding-bottom: 10px;
+  }
 `;
 
 export const InnerTextLeft = styled.div `
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
+  display: block;
+  white-space: pre-line;
+  //flex-direction: column;
+  //justify-content: left;
   width: 300px;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 15px;
   //align-self: flex-start;
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
     width: 45%;
+    padding-top: 10px;
   }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
 
@@ -181,6 +188,7 @@ export const InnerTextLeft = styled.div `
 
 
 export const Home = () => {
+  const { t } = useTranslation();
 
   // --------------------- This code enables the page to be in right position when opened ---------------------- // 
   // It is used together with <div id="top"></div> in index.html.
@@ -195,7 +203,7 @@ export const Home = () => {
 
 return (  <>
   <Banner>
-    <H2Banner>News</H2Banner>
+    <H2Banner>{t("header.title")}</H2Banner>
   </Banner> 
   <BackgroundOriginal>
       <NewsContainer>
@@ -204,15 +212,7 @@ return (  <>
           <H3Black>Ny skiva</H3Black>
           <NewsArticleTextContainer>
           <InnerTextCenter><NewsLpImage src={VisionLp} loading="lazy"/></InnerTextCenter>
-          <InnerTextLeft> Senaste skivan "Vision of Life" släpptes i september 2025. 
-            Låtarna spelades in under sommaren samma år. All musik på plattan är skriven på 90-talet.
-
-            "Jag har en hel låtskatt att ta ifrån som är skriven på den tiden" säger Carina Stars. Men hon 
-            skriver fortfarande ny musik. "Det kan komma en låt på svenska snart", säger hon. 
-            
-            <p>Hon jobbar redan på nästa platta. 
-            Om allt går som hon vill är den ute nästa år. "Det finns så mycket jag vill hinna med, jag har så många 
-            idéer" säger hon.</p></InnerTextLeft>
+          <InnerTextLeft> {t('news_article_1')}</InnerTextLeft>
           </NewsArticleTextContainer>
         </NewsArticleFirst>
           
@@ -221,13 +221,7 @@ return (  <>
           <H3Black>Om Carina Stars</H3Black>
           <NewsArticleTextContainer>
             <InnerTextCenter><NewsLpImage src={CarinaReturn} /></InnerTextCenter>
-            <InnerTextLeft> Carina Stars är text och musikkompositör. Hon har varit verksam sedan 90-talet 
-              men släppte sin första skiva Lucky Soul 2019. Hennes musik är främst på engelska men hon har även 
-              några svenska låtar. Bland annat den populära "Albin" som finns på första skivan.
-              <p>
-              Hon är uppvuxen norr om Stockholm och var redan som liten fascinerad av musik. I början på 90-talet 
-              var hon med i svenska hårdrocksbandet Iguanas där hon spelade komp och sologitarr, och senare 
-              blev hon soloartist.</p>
+            <InnerTextLeft> {t('news_article_2')}
             </InnerTextLeft>
             </NewsArticleTextContainer>
         </NewsArticleSecond>
@@ -237,9 +231,12 @@ return (  <>
           <NewsArticleTextContainer>
             <InnerTextCenter><NewsLpImageSecond src={AmISick} loading="lazy"/></InnerTextCenter>
             <InnerTextCenter><NewsLpImage src={LuckySoulDreaming} loading="lazy"/></InnerTextCenter>
-            <InnerTextLeft>Titta på Carina Stars&nbsp;
-              <PurpleLink to="https://www.youtube.com/@carinastars1" target="_blank"> musikvideos.</PurpleLink>
-              
+            <InnerTextLeft>
+              {t("news_article_3_part1")}
+              <PurpleLink href="https://www.youtube.com/@carinastars1" target="_blank" rel="noopener noreferrer">
+                {t("news_article_3_link")}
+              </PurpleLink>
+              {t("news_article_3_part2")}
             </InnerTextLeft>
 
             </NewsArticleTextContainer>
