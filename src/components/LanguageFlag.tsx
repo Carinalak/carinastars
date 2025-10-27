@@ -10,6 +10,7 @@ const FlagButton = styled.img`
   cursor: pointer;
   border-radius: 4px;
   transition: transform 0.2s;
+        -webkit-tap-highlight-color: transparent; // Tar bort blå markering på mobila enheter
 
   &:hover {
     transform: scale(1.1);

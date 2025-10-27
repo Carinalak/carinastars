@@ -89,7 +89,7 @@ export const NewsContainer = styled.div `
 `;
 
 export const NewsArticleFirst = styled.div `
-  width: 85%;
+  width: 90%;
   //background: linear-gradient(to bottom, #ffffffa8, #bcb5b5a8);
   //background-color: #ffffffa8;
   //background-color: #f5f2f5a8;
