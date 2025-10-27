@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import { H2Banner } from "../components/styled/Fonts";
 import { BackgroundOriginal, Banner } from "../components/styled/Wrappers";
 import { OverLpContainerText } from "./Music";
+import { useTranslation } from "react-i18next";
 
 export const Contact = () => {
+    const { t } = useTranslation();
 
     // --------------------- This code enables the page to be in right position when opened ---------------------- // 
   // It is used together with <div id="top"></div> in index.html.
@@ -17,7 +19,7 @@ export const Contact = () => {
 
 return (  <>
   <Banner>
-    <H2Banner>Contact</H2Banner>
+    <H2Banner>{t("header.titleContact")}</H2Banner>
   </Banner> 
   <BackgroundOriginal>
 

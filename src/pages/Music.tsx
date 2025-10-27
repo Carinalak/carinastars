@@ -76,7 +76,7 @@ export const Music = () => {
   // ---------------------------------------- End of position code ---------------------------------------------- //
 
 return (  <>
-  <Banner><H2Banner>Music - Diskografi</H2Banner></Banner> 
+  <Banner><H2Banner>{t("header.titleMusic")}</H2Banner></Banner> 
   <BackgroundOriginal>
     <OverLpContainerText> {t("discography.about")}
     </OverLpContainerText>
