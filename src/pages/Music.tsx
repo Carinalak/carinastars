@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE } from "../components/styled/Variables";
 import { useLpInfo } from "../components/music/useLpInfo";
 import { LpItem } from "../components/music/LpItem";
+import { useTranslation } from "react-i18next";
 
 
 export const AllLpContainer = styled.div `      // ------------------------------------- !
@@ -62,6 +63,7 @@ export const OverLpContainerText = styled.div `
 
 export const Music = () => {
   const lps = useLpInfo();
+  const { t } = useTranslation();
 
   // --------------------- This code enables the page to be in right position when opened ---------------------- // 
   // It is used together with <div id="top"></div> in index.html.
@@ -76,9 +78,7 @@ export const Music = () => {
 return (  <>
   <Banner><H2Banner>Music - Diskografi</H2Banner></Banner> 
   <BackgroundOriginal>
-    <OverLpContainerText> Se diskografi på alla Carinas skivor.
-      De finns på Spotify, Itunes och YouTube bland annat.
-      De går även beställa på CD om du kontaktar Carina Stars.
+    <OverLpContainerText> {t("discography.about")}
     </OverLpContainerText>
      <AllLpContainer>
         {lps.map(lp => (
