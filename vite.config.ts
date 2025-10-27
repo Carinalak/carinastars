@@ -9,10 +9,10 @@ export default defineConfig({
   plugins: [react(),
     VitePWA({
     registerType: 'autoUpdate', // Uppdaterar automatiskt när ny version finns
-    workbox: {                  // till autoupload
-    clientsClaim: true,               // till autoupload
-    skipWaiting: true,               // till autoupload
-  },
+    //workbox: {                  // till autoupload
+    //clientsClaim: true,               // till autoupload
+    //skipWaiting: true,               // till autoupload
+  //},
     //includeAssets: ['robots.txt'], // valfria statiska filer
     manifest: {
       name: "Music",

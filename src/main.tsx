@@ -1,33 +1,28 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
+import './index.css'
 import { registerSW } from 'virtual:pwa-register'
+import './swListener.js';
+import './versionCheck.js'
 
-
-// Lägg till meta-taggen med versionen dynamiskt
-const meta = document.createElement('meta')
-meta.name = 'version'
-meta.content = import.meta.env.VITE_APP_VERSION
-document.head.appendChild(meta)
-
-
-let hasReloaded = false
-// AUTO RELOAD när SW uppdateras
+/*
 registerSW({
-  immediate: true,
   onNeedRefresh() {
-    if (!hasReloaded) {
-      hasReloaded = true
-      window.location.reload()
-    }
-  }
+    // Ladda om sidan direkt när ny version upptäcks
+    window.location.reload()
+  },
+  immediate: true, // starta direkt
+})*/
+
+registerSW({
+  immediate: true, // aktivera direkt
 })
 
 
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
+  </React.StrictMode>
 )
