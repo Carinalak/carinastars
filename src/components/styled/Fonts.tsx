@@ -37,21 +37,22 @@ export const H2Banner = styled.h1 `
 export const HeaderTitle = styled(H1White) `
 
 font-family: "Cormorant SC", serif;
-font-weight: 600;
+font-weight: 500;
 font-style: normal;
-font-size: 48px;
+font-size: 40px;
 padding-left: 5; // Beroende av loggans position: ;
 z-index: 87;
 //position: relative;
 
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-      padding-left: 20px;
+      padding-left: 10px;
       margin: 0;
-      font-size: 50px;
+
     }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
       margin: 0;
+      font-size: 50px;
     }
 `;
 
