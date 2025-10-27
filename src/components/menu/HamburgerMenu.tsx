@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { MenuLinks } from './MenuLinks';
 import { LanguageFlag } from '../LanguageFlag';
+import { useTranslation } from 'react-i18next';
 
 const MenuContainer = styled.div`
   display: flex;
@@ -182,6 +183,7 @@ export const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -237,7 +239,7 @@ export const HamburgerMenu = () => {
           <li key={link.path}>
             {link.subLinks ? (
               <span style={{ cursor: 'pointer' }} onClick={() => toggleSubMenu(link.path)}>
-                {link.label}
+                {t(link.labelKey)}
                 {/*<ArrowIcon isOpen={openSubMenu === link.path} />*/}
               </span>
             ) : ( 
@@ -247,7 +249,7 @@ export const HamburgerMenu = () => {
                 target={link.target || undefined} // Lägg till target här
                 rel={link.target === '_blank' ? 'noopener noreferrer' : undefined} // Sätt rel för externa länkar
               >
-                {link.label}
+                {t(link.labelKey)}
               </NavLink>
 
             )}

@@ -5,6 +5,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { MenuLinks } from "./MenuLinks";
 import { LanguageFlag } from "../LanguageFlag";
+import { useTranslation } from "react-i18next";
 
 export const NavigationContainer = styled.section`
   display: flex;
@@ -186,6 +187,7 @@ export const DesktopNav = styled.nav`
 export const DesktopMenu = () => {
   const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null);
   const location = useLocation();
+  const { t } = useTranslation();
 
 
   /*
@@ -234,7 +236,7 @@ export const DesktopMenu = () => {
                 rel="noopener noreferrer"  // Markerad ändring
                 onClick={() => handleLinkClick()}
               >
-                <span>{link.label}</span>
+                <span>{t(link.labelKey)}</span>
               </a>
             ) : (
               <NavLink
@@ -244,7 +246,7 @@ export const DesktopMenu = () => {
                   handleLinkClick();
                 }}
               >
-                <span>{link.label}</span>
+                <span>{t(link.labelKey)}</span>
               </NavLink>
             )}
 

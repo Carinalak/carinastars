@@ -40,7 +40,7 @@ font-family: "Cormorant SC", serif;
 font-weight: 500;
 font-style: normal;
 font-size: 40px;
-padding-left: 5; // Beroende av loggans position: ;
+padding-left: 5;
 z-index: 87;
 //position: relative;
 

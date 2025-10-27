@@ -6,5 +6,11 @@
   "news_article_2": "Carina Stars är text- och musikkompositör. Hon har varit verksam sedan 90-talet men släppte sin första skiva Lucky Soul 2019. Hennes musik är främst på engelska men hon har även några svenska låtar, bland annat den populära 'Albin' från första skivan. \n\nHon är uppvuxen norr om Stockholm och var redan som liten fascinerad av musik. I början på 90-talet var hon med i svenska hårdrocksbandet Iguanas där hon spelade komp och sologitarr, och senare blev hon soloartist.",
   "news_article_3_part1": "Titta på Carina Stars ",
   "news_article_3_link": "musikvideos",
-  "news_article_3_part2": "."
+  "news_article_3_part2": ".",
+
+  "menu": {
+    "news": "Nyheter",
+    "music": "Musik",
+    "contact": "Kontakt"
+  }
 }

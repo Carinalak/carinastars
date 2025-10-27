@@ -12,12 +12,10 @@ type MenuLinks = {
 };
 
 export const MenuLinks = [
-  { path: "/", 
-    label: "News" 
-  },
+  { path: "/", labelKey: "menu.news" },
   { 
     path: "/music",
-    label: "Music",
+    labelKey: "menu.music",
     target: "_blank?",
     subLinks: [
     { path: "/testingtesting", label: "TestingTesting", target: "top" },
@@ -25,5 +23,5 @@ export const MenuLinks = [
   },
 
   { path: "/contact", 
-    label: "Contact" },
+    labelKey: "menu.contact"},
 ];
