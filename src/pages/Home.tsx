@@ -87,7 +87,7 @@ export const NewsContainer = styled.div `
 `;
 
 export const NewsArticleFirst = styled.div `
-  width: 90%;
+  width: 85%;
   //background: linear-gradient(to bottom, #ffffffa8, #bcb5b5a8);
   //background-color: #ffffffa8;
   //background-color: #f5f2f5a8;
@@ -98,14 +98,15 @@ export const NewsArticleFirst = styled.div `
   flex-direction: column;
   align-items: center;
   //text-align: justify;
+  //border: 1px solid red;
 
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
       width: 600px;
     }
         @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
-      width: 600px;
-      width: calc(50% - 20px);  /* två per rad */
+      width: 550px;
+      width: calc(50% - 40px);  /* två per rad */
     }
 `;
 
@@ -124,7 +125,7 @@ export const NewsArticleThird = styled(NewsArticleFirst)`
     height: fit-content;
   }
       @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
-    width: calc(100% - 35px);
+    width: calc(100% - 70px);
   }
 `;
 
