@@ -209,7 +209,7 @@ return (  <>
       <NewsContainer>
 
         <NewsArticleFirst>
-          <H3Black>Ny skiva</H3Black>
+          <H3Black>{t("header.article_title1")}</H3Black>
           <NewsArticleTextContainer>
           <InnerTextCenter><NewsLpImage src={VisionLp} loading="lazy"/></InnerTextCenter>
           <InnerTextLeft> {t('news_article_1')}</InnerTextLeft>
@@ -218,7 +218,7 @@ return (  <>
           
 
         <NewsArticleSecond>
-          <H3Black>Om Carina Stars</H3Black>
+          <H3Black>{t("header.article_title2")}</H3Black>
           <NewsArticleTextContainer>
             <InnerTextCenter><NewsLpImage src={CarinaReturn} /></InnerTextCenter>
             <InnerTextLeft> {t('news_article_2')}
@@ -227,7 +227,7 @@ return (  <>
         </NewsArticleSecond>
 
         <NewsArticleThird>
-          <H3White>Musikvideos</H3White>
+          <H3White>{t("header.article_title3")}</H3White>
           <NewsArticleTextContainer>
             <InnerTextCenter><NewsLpImageSecond src={AmISick} loading="lazy"/></InnerTextCenter>
             <InnerTextCenter><NewsLpImage src={LuckySoulDreaming} loading="lazy"/></InnerTextCenter>
