@@ -26,11 +26,15 @@ export const H2Banner = styled.h1 `
     font-family: "Esteban", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     line-height: 0.3;
     text-align: left;
     padding-left: 20px;
+    
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+      font-size: 1.8rem;
+    }
 
 `;
 
@@ -39,7 +43,7 @@ export const HeaderTitle = styled(H1White) `
 font-family: "Cormorant SC", serif;
 font-weight: 500;
 font-style: normal;
-font-size: 45px;
+font-size: 40px;
 padding-left: 5;
 z-index: 87;
 //position: relative;
