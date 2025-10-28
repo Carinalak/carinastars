@@ -34,5 +34,8 @@
       "oct": "oktober",
       "nov": "november",
       "dec": "december"
-    }
+    },
+    "contact": {
+      "message": "Kontakta"
+  }
 }

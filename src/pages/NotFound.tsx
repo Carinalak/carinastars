@@ -30,7 +30,7 @@ export const NotFound = () => {
           <InnerTextCenter><NewsLpImage src={CarinaStars} loading="lazy"/></InnerTextCenter>
           <H1White>404 Not Found</H1White>
             {/**<NotFoundImg src={NotFoundImage}/>*/}
-         <div> Go to<WhiteLink to={"/"} > Carina Stars</WhiteLink>.</div>
+         <div> Go to <WhiteLink href={"/"} > Carina Stars</WhiteLink>.</div>
         </NotFoundWrapper>
       </BackgroundOriginal>
       </>

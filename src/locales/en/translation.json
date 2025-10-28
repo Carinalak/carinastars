@@ -34,6 +34,9 @@
       "oct": "October",
       "nov": "November",
       "dec": "December"
-    }
+    },
+      "contact": {
+        "message": "Contact"
+  }
   
 }
