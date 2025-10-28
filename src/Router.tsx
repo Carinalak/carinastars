@@ -2,7 +2,7 @@
 //import { NotFound } from "./pages/NotFound";
 import { NotFound } from "./pages/NotFound";
 import { Layout } from "./pages/Layout";
-import { Home } from "./pages/Home";
+import { News } from "./pages/News";
 import { Music } from "./pages/Music";
 import { Contact } from "./pages/Contact";
 import { SingleLpPage } from "./components/music/SingleLpPage";
@@ -17,7 +17,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home></Home>,
+                element: <News></News>,
             },
             {
                 path: "/music",

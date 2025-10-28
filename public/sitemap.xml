@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Hemsidan med OG-bild -->
+  <url>
+    <loc>https://carinastars.com/</loc>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://carinastars.com/</image:loc>
+      <image:caption>Carina Stars is a lyricist and music composer. She has been active since the 90s but released her first album Lucky Soul in 2019.</image:caption>
+      <image:title>CarinaStars</image:title>
+    </image:image>
+  </url>
+
+  <!-- Övriga sidor -->
+  <url>
+    <loc>https://carinastars.com/news</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://carinastars.com/music</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://carinastars.com/contact</loc>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

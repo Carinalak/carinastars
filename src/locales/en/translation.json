@@ -1,0 +1,24 @@
+{
+  "header": {
+    "title": "News",
+    "titleMusic": "Music - Discography",
+    "titleContact": "Contact",
+    "article_title1": "Latest Release",
+    "article_title2": "About Carina",
+    "article_title3": "Music Videos"
+  },
+  "news_article_1": "Latest album \"Vision of Life\" was released in September 2025. The songs were recorded during the summer of the same year. All music on the album was written in the 90s. 'I have a whole song catalog from that era,' says Carina Stars. But she is still writing new music. 'A song in Swedish might come soon,' she says. \n\nShe is already working on the next album. If everything goes as planned, it will be out next year. 'There is so much I want to accomplish, I have so many ideas,' she says.",
+  "news_article_2": "Carina Stars is a lyricist and music composer. She has been active since the 90s but released her first album Lucky Soul in 2019. Her music is mainly in English but she also has some Swedish songs, including the popular 'Albin' from the first album. \n\nShe grew up north of Stockholm and was fascinated by music from a young age. In the early 90s she was in the Swedish rock band Iguanas, playing rhythm and lead guitar, and later became a solo artist.",
+  "news_article_3_part1": "Watch Carina Stars' ", 
+  "news_article_3_link": "music videos", 
+  "news_article_3_part2": " on YouTube.",
+    
+  "menu": {
+    "news": "News",
+    "music": "Music",
+    "contact": "Contact"
+  },
+  "discography": {
+    "about": "See all of Carina’s albums. You can listen on Spotify, iTunes and YouTube, among others. They can also be ordered on CD if you contact Carina Stars."
+  }
+}

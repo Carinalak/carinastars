@@ -187,7 +187,7 @@ export const InnerTextLeft = styled.div `
 `;
 
 
-export const Home = () => {
+export const News = () => {
   const { t } = useTranslation();
 
   // --------------------- This code enables the page to be in right position when opened ---------------------- // 
