@@ -20,6 +20,19 @@
   },
     "discography": {
     "about": "Se alla Carinas skivor. Du kan lyssna på Spotify, Itunes och YouTube bland annat. De går även beställa på CD om du kontaktar Carina Stars."
-  }
-
+  },
+      "months": {
+      "jan": "januari",
+      "feb": "februari",
+      "mar": "mars",
+      "apr": "april",
+      "may": "maj",
+      "jun": "juni",
+      "jul": "juli",
+      "aug": "augusti",
+      "sep": "september",
+      "oct": "oktober",
+      "nov": "november",
+      "dec": "december"
+    }
 }

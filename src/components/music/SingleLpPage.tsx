@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 import { BoldBlackText, H2Banner, WhiteLink } from "../styled/Fonts";
 import { Banner, BackgroundOriginal } from "../styled/Wrappers";
 import { useLpInfo } from "./useLpInfo";
@@ -91,6 +91,8 @@ export const TrackListContainer = styled.div`     // -------------------- !
 export const SingleLpPage = () => {
   const { slug } = useParams();
   const lp = useLpInfo().find(x => x.slug === slug);
+  const { t } = useTranslation();
+
 
  
   if (!lp) {
@@ -123,7 +125,9 @@ export const SingleLpPage = () => {
     <SingleInnerContainer>
       <BoldBlackText>{lp.name}</BoldBlackText>
       
-      <div>{lp.date} {lp.year}</div>
+      <div>
+      {lp.date.day} {t(`months.${lp.date.month}`)} {lp.year}
+      </div>
 
       {lp.tracks && lp.tracks.length > 0 && (
         <TrackListContainer>

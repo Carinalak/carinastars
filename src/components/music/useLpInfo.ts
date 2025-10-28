@@ -12,7 +12,7 @@ const LpInfo = [
     slug: "vision-of-life", 
     src: VisionLp, 
     name: "Vision of Life", 
-    date: "12 september",
+    date: { day: 12, month: "sep" },
     year: 2025, 
     alt: "Vision of Life",
     tracks: [
@@ -27,7 +27,7 @@ const LpInfo = [
     slug: "sweet-alligator", 
     src: AlligatorLp, 
     name: "Sweet Alligator", 
-    date: "15 november",
+    date: { day: 15, month: "nov" },
     year: 2023, 
     alt: "Sweet Alligator",
     tracks: [
@@ -41,7 +41,7 @@ const LpInfo = [
     src: DisappearLp, 
     name: "Disappear", 
     alt: "Disappear",
-    date: "15 juni",
+    date: { day: 15, month: "jun" },
     year: 2022, 
     tracks: [
       { title: "Disappear", duration: "4:24" }
@@ -52,7 +52,7 @@ const LpInfo = [
     slug: "return-to-the-sun", 
     src: ReturnLp, 
     name: "Return to the sun", 
-    date: "9 oktober",
+    date: { day: 9, month: "oct" },
     year: 2019, 
     alt: "Return to the Sun",
     tracks: [
@@ -68,7 +68,7 @@ const LpInfo = [
     slug: "lucky-soul", 
     src: LuckySoulLp, 
     name: "Lucky Soul",
-    date: "8 april", 
+    date: { day: 8, month: "apr" },
     year: 2019, 
     alt: "Lucky Soul",
     tracks: [

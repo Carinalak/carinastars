@@ -20,5 +20,20 @@
   },
   "discography": {
     "about": "See all of Carina’s albums. You can listen on Spotify, iTunes and YouTube, among others. They can also be ordered on CD if you contact Carina Stars."
-  }
+  },
+    "months": {
+      "jan": "January",
+      "feb": "February",
+      "mar": "March",
+      "apr": "April",
+      "may": "May",
+      "jun": "June",
+      "jul": "July",
+      "aug": "August",
+      "sep": "September",
+      "oct": "October",
+      "nov": "November",
+      "dec": "December"
+    }
+  
 }

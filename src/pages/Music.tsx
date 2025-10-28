@@ -89,7 +89,6 @@ return (  <>
             alt={lp.alt}
             name={lp.name}
             year={lp.year}
-
           />
         ))}
       </AllLpContainer>
