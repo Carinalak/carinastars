@@ -2,7 +2,7 @@
 import { styled } from "styled-components";
 import { BackgroundOriginal } from "../components/styled/Wrappers";
 import { H1White, WhiteLink } from "../components/styled/Fonts";
-import CarinaStars from "../assets/images/carina/carinastars.png"
+import CarinaStars from "/carinastars.png"
 import { InnerTextCenter, NewsLpImage } from "./News";
 
 export const NotFoundImg = styled.img `
