@@ -6,5 +6,12 @@
     "/assets/*": {
       "cache-control": "max-age=31536000, immutable"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://carinastars.com/",
+      "status": 301
+    }
+  ]
 }
