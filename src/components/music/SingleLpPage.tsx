@@ -118,7 +118,7 @@ export const SingleLpPage = () => {
 
   return (
     <>
-      <Banner><H2Banner><WhiteLink to= "/music">Music</WhiteLink> - {lp.name}</H2Banner></Banner>
+      <Banner><H2Banner><WhiteLink href= "/music">Music</WhiteLink> - {lp.name}</H2Banner></Banner>
 <BackgroundOriginal>
   <InfoWrapper>
     <SingleLpImage src={lp.src} alt={lp.alt} />
