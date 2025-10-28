@@ -1,8 +1,9 @@
 //import NotFoundImage from '../assets/images/CarinaStarsOgg.png';
 import { styled } from "styled-components";
-import { Link } from "react-router-dom";
 import { BackgroundOriginal } from "../components/styled/Wrappers";
-import { H1White } from "../components/styled/Fonts";
+import { H1White, WhiteLink } from "../components/styled/Fonts";
+import CarinaStars from "../assets/images/carina/carinastars.png"
+import { InnerTextCenter, NewsLpImage } from "./News";
 
 export const NotFoundImg = styled.img `
 width: 300px;
@@ -26,10 +27,10 @@ export const NotFound = () => {
       <>
       <BackgroundOriginal>
         <NotFoundWrapper>
+          <InnerTextCenter><NewsLpImage src={CarinaStars} loading="lazy"/></InnerTextCenter>
           <H1White>404 Not Found</H1White>
-          
             {/**<NotFoundImg src={NotFoundImage}/>*/}
-          <Link to={"/"} >Back</Link>
+         <div> Go to<WhiteLink to={"/"} > Carina Stars</WhiteLink>.</div>
         </NotFoundWrapper>
       </BackgroundOriginal>
       </>

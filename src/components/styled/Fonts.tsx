@@ -112,6 +112,7 @@ export const WhiteLink = styled(Link)`
     text-decoration: none;
     color: ${WHITE};
     cursor: pointer;
+    display: inline;
 
 
     &:hover {
