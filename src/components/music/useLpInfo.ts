@@ -3,11 +3,24 @@ import AlligatorLp from "../../assets/images/lp/png/sweet_alligator.png"
 import DisappearLp from "../../assets/images/lp/png/disappear.png"
 import ReturnLp from "../../assets/images/lp/png/return_to_the_sun.png"
 import LuckySoulLp from "../../assets/images/lp/png/lucky_soul.png"
+import StjarnogaLp from "../../assets/images/lp/png/stjarnoga.png"
+import { SheSaidHeLookedSweet } from "./lyrics/VisionOfLife"
 
 
 const LpInfo = [
-
-
+  /*
+  { 
+    slug: "stjarnoga", 
+    src: StjarnogaLp, 
+    name: "Stjärnöga", 
+    date: { day: 23, month: "dec" },
+    year: 2025, 
+    alt: "Stjärnöga",
+    release_type: "Single",
+    tracks: [
+      { title: "Stjärnöga", duration: "3:20" }
+    ],
+  },*/
   { 
     slug: "vision-of-life", 
     src: VisionLp, 
@@ -19,7 +32,7 @@ const LpInfo = [
     tracks: [
       { title: "Vision of Life", duration: "3:46" },
       { title: "Angelwings", duration: "2:12" },
-      { title: "She Said He Looked Sweet", duration: "3:15" },
+      { title: "She Said He Looked Sweet", duration: "3:15", lyrics: SheSaidHeLookedSweet },
       { title: "Tears of a Wizard", duration: "3:27" },
       { title: "Niagara Falls", duration: "3:20" },
     ],

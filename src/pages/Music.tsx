@@ -12,7 +12,7 @@ import { useEffect } from "react";
 export const AllLpContainer = styled.div `      // ------------------------------------- !
   background-color: ${WHITE};
   width: 350px;
-  //height: 300px;
+  height: auto;
   border-radius: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -22,12 +22,12 @@ export const AllLpContainer = styled.div `      // -----------------------------
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  //border: 1px solid orange;
+  //border: 1px solid red;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
       justify-content: start; 
       width: 600px;
-      height: 100vh;
+      //height: 100vh;
       //flex-wrap: wrap;
       //align-items: start;
       align-items: center; // Gör så att "barnen" bli lika höga.

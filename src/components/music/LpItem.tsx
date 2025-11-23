@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE } from "../styled/Variables";
+import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET } from "../styled/Variables";
 
 type Track = {
   title: string;
@@ -34,13 +34,15 @@ export const LpImage = styled.img `
 
 
 export const OneLpContainer = styled.div `
-  width: 340px; // Går efter bildstorleken som är 300px i mobilläge och 150px i tablet
-  background-color: ${WHITE};
+  width: 320px; // Går efter bildstorleken som är 300px i mobilläge och 150px i tablet
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  align-self: center;
   padding: 10px;
   border-bottom: 1px solid rgba(0,0,0,0.2);
+  //border: 1px solid green;
     div:last-child {
       border-bottom: none;   /* ingen linje efter sista */
     }
