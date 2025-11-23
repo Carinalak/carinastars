@@ -9,6 +9,7 @@ import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, LIGHTPURPLE } from "../components/styled/Variables";
 import { H2Banner, H3Black, H3White, PurpleLink } from "../components/styled/Fonts";
 import { useTranslation } from 'react-i18next';
+import { useEffect } from "react";
 
 
 export const NewsLpImage = styled.img `
@@ -17,6 +18,9 @@ export const NewsLpImage = styled.img `
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
       width: 200px;
+    }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+      width: 300px;
     }
 `;
 
@@ -68,6 +72,7 @@ export const NewsContainer = styled.div `
   justify-content: center;
   align-items: center;
   gap: 10px;
+  //border: 1px solid red;
 
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
@@ -100,7 +105,7 @@ export const NewsArticleFirst = styled.div `
   flex-direction: column;
   align-items: center;
   //text-align: justify;
-  //border: 1px solid red;
+  //border: 1px solid yellow;
 
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
@@ -138,7 +143,7 @@ export const NewsArticleTextContainer = styled.div `
   margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  //border: 1px solid grey;
+  //border: 1px solid green;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -146,13 +151,16 @@ export const NewsArticleTextContainer = styled.div `
   align-items: center;
   gap: 1px;
 
-    @media screen and (min-width: ${BREAKPOINT_TABLET}){
+    @media screen and (min-width: ${BREAKPOINT_TABLET}){ 
       flex-direction: row;
       margin-left: 5%;
       margin-right: 5%;
       gap: 5%;
       align-items: start;
-  }
+    }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+      height: 500px;
+    }
 `;
 
 export const InnerTextCenter = styled.div `
@@ -163,9 +171,13 @@ export const InnerTextCenter = styled.div `
   padding-top: 10px;
   padding-bottom: 0;
   //align-self: flex-start;
-      @media screen and (min-width: ${BREAKPOINT_TABLET}){
-          padding-bottom: 10px;
+
+  @media screen and (min-width: ${BREAKPOINT_TABLET}){
+    padding-bottom: 10px;
   }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+      margin-top: 30px;
+    }
 `;
 
 export const InnerTextLeft = styled.div `
@@ -177,12 +189,16 @@ export const InnerTextLeft = styled.div `
   padding-top: 5px;
   padding-bottom: 15px;
   //align-self: flex-start;
+  //border: 1px solid orange;
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
     width: 45%;
     padding-top: 10px;
   }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
 
+    }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+        margin-top: 30px;
     }
 `;
 
@@ -191,13 +207,13 @@ export const News = () => {
   const { t } = useTranslation();
 
   // --------------------- This code enables the page to be in right position when opened ---------------------- // 
-  // It is used together with <div id="top"></div> in index.html.
-  setTimeout(() => {
-    const topElement = document.getElementById("top");
-    if (topElement) {
-      topElement.scrollIntoView({ behavior: "auto" });
-    }
-  }, 0);
+  // It is used together with <div id="top"></div> in index.html. Scrolls to top only with first mount, not in external clicks.
+  useEffect(() => {
+  const topElement = document.getElementById("top");
+  if (topElement) {
+    topElement.scrollIntoView({ behavior: "auto" });
+  }
+}, []); // Körs EN gång när sidan laddas
   // ---------------------------------------- End of position code ---------------------------------------------- //
 
 

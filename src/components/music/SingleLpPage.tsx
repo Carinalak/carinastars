@@ -5,6 +5,7 @@ import { Banner, BackgroundOriginal } from "../styled/Wrappers";
 import { useLpInfo } from "./useLpInfo";
 import styled from "styled-components";
 import { BREAKPOINT_TABLET, WHITE } from "../styled/Variables";
+import { useEffect } from "react";
 
 
 export const SingleLpImage = styled.img`
@@ -107,13 +108,14 @@ export const SingleLpPage = () => {
   }
 
   // --------------------- This code enables the page to be in right position when opened ---------------------- // 
-  // It is used together with <div id="top"></div> in index.html.
-  setTimeout(() => {
-    const topElement = document.getElementById("top");
-    if (topElement) {
-      topElement.scrollIntoView({ behavior: "auto" });
-    }
-  }, 0);
+  // It is used together with <div id="top"></div> in index.html. Scrolls to top only with first mount, not in external clicks.
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+  const topElement = document.getElementById("top");
+  if (topElement) {
+    topElement.scrollIntoView({ behavior: "auto" });
+  }
+}, []); // Körs EN gång när sidan laddas
   // ---------------------------------------- End of position code ---------------------------------------------- //
 
   return (
