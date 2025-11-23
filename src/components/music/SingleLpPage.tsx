@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { H2Banner, H3BlackSmaller, WhiteLink } from "../styled/Fonts";
-import { Banner, BackgroundOriginal } from "../styled/Wrappers";
+import { Banner, BackgroundOriginal, BackgroundAlbum } from "../styled/Wrappers";
 import { useLpInfo } from "./useLpInfo";
 import styled from "styled-components";
-import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE } from "../styled/Variables";
+import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE_TRANSPARENT } from "../styled/Variables";
 import { useEffect, useState } from "react";
 
 
@@ -14,10 +14,10 @@ export const SingleLpImage = styled.img`
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+  /*transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
       &:hover {
         transform: scale(1.1);
-      }
+      }*/
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     width: 250px;
@@ -32,16 +32,19 @@ export const SingleLpImage = styled.img`
 export const InfoWrapper = styled.div`
   width: 300px;
   max-width: 900px;
-  margin: 20px auto;
+
+  //margin: 20px auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 20px;
-  background-color: ${WHITE};
+  background-color: ${WHITE_TRANSPARENT};
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   color: black;
   //border: 1px solid orange;
+  margin-bottom: 40px;
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     width: 90%;
@@ -169,9 +172,6 @@ const ModalContent = styled.div`
 
 
 
-
-
-
 export const SingleLpPage = () => {
   const { slug } = useParams();
   const lp = useLpInfo().find(x => x.slug === slug);
@@ -237,7 +237,7 @@ useEffect(() => {
         <H2Banner><WhiteLink href="/music">Music</WhiteLink> - {lp.name}</H2Banner>
       </Banner>
 
-      <BackgroundOriginal>
+      <BackgroundAlbum bg={lp.src}>
         <InfoWrapper>
           <SingleLpImage
             src={lp.src}
@@ -251,9 +251,8 @@ useEffect(() => {
 
             <div>
               {t("LpReleaseDate.text")}
-              {lp.date.day} {t(`months.${lp.date.month}`)} {lp.year}
-            </div>
-            <div>{t("discography.ReleaseType")}{lp.release_type}</div>
+              {lp.date.day} {t(`months.${lp.date.month}`)} {lp.year} <br />
+            {t("discography.ReleaseType")}{lp.release_type}  <br /> </div>
 
             {lp.tracks && lp.tracks.length > 0 && (
               <TrackListContainer>
@@ -269,7 +268,7 @@ useEffect(() => {
             )}
           </SingleInnerContainer>
         </InfoWrapper>
-      </BackgroundOriginal>
+      </BackgroundAlbum>
 
       {/* ---------------- Modal rendering ---------------- */}
       {isModalOpen && selectedImage && (

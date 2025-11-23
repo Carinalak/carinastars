@@ -84,7 +84,7 @@ export const H3BlackSmaller = styled.h3 `
     //font-family: Verdana, Geneva, Tahoma, sans-serif;
     //font-weight: 600;
     font-style: normal;
-    line-height: 1;
+   margin-bottom: 0;
     text-align: center;
     margin-top: 0;
       @media screen and (min-width: ${BREAKPOINT_TABLET}) {

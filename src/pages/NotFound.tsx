@@ -3,13 +3,13 @@ import { styled } from "styled-components";
 import { BackgroundOriginal } from "../components/styled/Wrappers";
 import { H1White, WhiteLink } from "../components/styled/Fonts";
 import CarinaStars from "/carinastars.png"
-import { InnerTextCenter, NewsLpImage } from "./News";
+import { InnerTextCenter } from "./News";
+import { ContactImage } from "./Contact";
 
 export const NotFoundImg = styled.img `
 width: 300px;
 margin-bottom: 50px;
 `;
-
 
 export const NotFoundWrapper = styled.section`
   display: flex;
@@ -27,7 +27,7 @@ export const NotFound = () => {
       <>
       <BackgroundOriginal>
         <NotFoundWrapper>
-          <InnerTextCenter><NewsLpImage src={CarinaStars} loading="lazy"/></InnerTextCenter>
+          <InnerTextCenter><ContactImage src={CarinaStars} loading="lazy"/></InnerTextCenter>
           <H1White>404 Not Found</H1White>
             {/**<NotFoundImg src={NotFoundImage}/>*/}
          <div> Go to <WhiteLink href={"/"} > Carina Stars</WhiteLink>.</div>

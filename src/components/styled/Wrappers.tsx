@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { BREAKPOINT_BIGGER_DESKTOP, DARKESTPURPLE } from "./Variables";
-import CarinaPic from "../../assets/images/bluebanner.png"
 
 
 export const BackgroundOriginal = styled.div `
@@ -14,7 +13,59 @@ export const BackgroundOriginal = styled.div `
   padding-top: 0;
   padding-bottom: 60px;
   //border: 1px red solid;
+  padding-top: 20px;
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+      padding-top: 40px;
+    }
 `;
+
+/*
+export const BackgroundAlbum = styled.div `
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: center;
+  //padding: 10px;
+  padding-top: 0;
+  padding-bottom: 60px;
+  //border: 1px red solid;
+`;*/
+
+export const BackgroundAlbum = styled.div<{ bg: string }>`
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(${(props) => props.bg});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+
+
+  /* valfritt: gör bakgrunden dimmad */
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+  /* så att innehållet ligger över overlayen */
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+      @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+        padding-top: 40px;
+    }
+`;
+
 
 export const Banner = styled.div `
   display: flex;
@@ -22,15 +73,13 @@ export const Banner = styled.div `
   align-items: left;
   justify-content: left;
   padding-top: 0;
-  //background-image: url(${CarinaPic});
-  //background-size: cover;
-  //background-repeat: no-repeat;
-  //background-position: 50% 25%;
+
   background: ${DARKESTPURPLE};
   min-width: 100%;
+
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
         padding-top: 10px;
         padding-bottom: 10px;
-        margin-bottom: 40px;
+        //margin-bottom: 40px;
     }
 `;

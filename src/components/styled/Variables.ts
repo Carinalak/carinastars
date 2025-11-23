@@ -7,6 +7,7 @@ export const BREAKPOINT_BIGGER_DESKTOP = "1800px";
 // ------------------ COLORS --------------------- //
 
 export const WHITE = "#FFFFFF"; // 
+export const WHITE_TRANSPARENT = "#ffffffea"; // 
 export const CREAMYWHITE = "#ecdbdb";
 export const BLACK = "#000000"; 
 export const TRANSBLACK = "#000000da";

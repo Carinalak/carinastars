@@ -7,6 +7,7 @@ const FooterContainer = styled.footer`
 background-color: transparent;
 text-align: center;
 margin-top: auto; /* Flyttar footern längst ner */
+padding-top: 20px;
 margin-bottom: 0 !important;
 padding-bottom: 15px;
 max-width: 100%;
