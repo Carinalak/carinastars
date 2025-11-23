@@ -253,6 +253,7 @@ useEffect(() => {
               {t("LpReleaseDate.text")}
               {lp.date.day} {t(`months.${lp.date.month}`)} {lp.year}
             </div>
+            <div>{t("discography.ReleaseType")}{lp.release_type}</div>
 
             {lp.tracks && lp.tracks.length > 0 && (
               <TrackListContainer>

@@ -15,6 +15,7 @@ const LpInfo = [
     date: { day: 12, month: "sep" },
     year: 2025, 
     alt: "Vision of Life",
+    release_type: "EP",
     tracks: [
       { title: "Vision of Life", duration: "3:46" },
       { title: "Angelwings", duration: "2:12" },
@@ -30,6 +31,7 @@ const LpInfo = [
     date: { day: 15, month: "nov" },
     year: 2023, 
     alt: "Sweet Alligator",
+    release_type: "Single",
     tracks: [
       { title: "Sweet Alligator", duration: "3:12" },
       { title: "You Won't Walk Alone", duration: "2:45" },
@@ -41,6 +43,7 @@ const LpInfo = [
     src: DisappearLp, 
     name: "Disappear", 
     alt: "Disappear",
+    release_type: "Single",
     date: { day: 15, month: "jun" },
     year: 2022, 
     tracks: [
@@ -55,6 +58,7 @@ const LpInfo = [
     date: { day: 9, month: "oct" },
     year: 2019, 
     alt: "Return to the Sun",
+    release_type: "Single",
     tracks: [
       { title: "Return to the Sun", duration: "3:15" },
       { title: "Little Polly", duration: "2:25" },
@@ -71,6 +75,7 @@ const LpInfo = [
     date: { day: 8, month: "apr" },
     year: 2019, 
     alt: "Lucky Soul",
+    release_type: "Album",
     tracks: [
       { title: "Lucky Soul", duration: "2:35" },
       { title: "Since the Day I came Back", duration: "2:37" },

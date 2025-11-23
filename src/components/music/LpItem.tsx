@@ -13,6 +13,7 @@ type Props = {
   alt: string;
   name: string;
   year: number;
+  release_type: string;
   tracks?: Track[];
 };
 
@@ -38,7 +39,7 @@ export const OneLpContainer = styled.div `
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 4px;
+  padding: 10px;
   border-bottom: 1px solid rgba(0,0,0,0.2);
     div:last-child {
       border-bottom: none;   /* ingen linje efter sista */
@@ -96,9 +97,9 @@ const TrackAndLength = styled.ul`
   
 `;
 
-export const LpItem = ({ slug, src, alt, name, year , tracks}: Props) => {
+export const LpItem = ({ slug, src, alt, name, year, tracks, release_type }: Props) => {
   return (
-          <Link to={`/music/${slug}`}>
+    <Link to={`/music/${slug}`}>
     <OneLpContainer>
 
         <InnerLpLeft>
@@ -108,6 +109,8 @@ export const LpItem = ({ slug, src, alt, name, year , tracks}: Props) => {
       <InnerLpRight>
         <div>{name}</div>
         <div>{year}</div>
+        <div>{release_type}</div>
+        
 
         {tracks && tracks.length > 0 && (
           <TrackAndLength>

@@ -90,6 +90,7 @@ return (  <>
             alt={lp.alt}
             name={lp.name}
             year={lp.year}
+            release_type={lp.release_type}
           />
         ))}
       </AllLpContainer>
