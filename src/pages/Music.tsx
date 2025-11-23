@@ -51,11 +51,9 @@ export const OverLpContainerText = styled.div `
   padding-top: 20px;
   width: 360px;
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-      width: 400px;
+      width: 600px;
     }
-    @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
-      width: 500px;
-    }
+
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
       width: 1300px;
       padding-top: 60px;

@@ -36,9 +36,10 @@
       "dec": "december"
     },
     "contact": {
-      "message": "Kontakta"
+      "message": "Kontakta",
+      "message2": ""
   },
     "LpReleaseDate": {
-    "text": "Utgiven:"
+    "text": "Utgiven: "
     }
 }

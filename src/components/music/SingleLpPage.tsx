@@ -5,7 +5,7 @@ import { Banner, BackgroundOriginal } from "../styled/Wrappers";
 import { useLpInfo } from "./useLpInfo";
 import styled from "styled-components";
 import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE } from "../styled/Variables";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 export const SingleLpImage = styled.img`
@@ -13,51 +13,53 @@ export const SingleLpImage = styled.img`
   max-width: 300px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     width: 250px;
+    object-fit: cover;
   }
-    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+  @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
     width: 400px;
+    object-fit: cover;
   }
 `;
 
 export const InfoWrapper = styled.div`
-  //width: 90%;
   width: 300px;
   max-width: 900px;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;  // mellan LP och tracklist
-  background-color: ${WHITE}; // lite kontrast mot bakgrunden
+  gap: 20px;
+  background-color: ${WHITE};
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   color: black;
-  border: 1px solid orange;
+  //border: 1px solid orange;
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     width: 90%;
     flex-direction: row;
     align-items: flex-start;
-    }
-    @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
-      padding-top: 60px;
-
-    }
-    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
-      min-width: 1300px;
-
-    }
-
+  }
+  @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+    padding-top: 60px;
+  }
+  @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+    min-width: 1300px;
+  }
 `;
 
 export const SingleInnerContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
- // border: 1px solid red;
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     margin-left: 20px;
@@ -65,13 +67,11 @@ export const SingleInnerContainer = styled.div`
   @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
     width: 60%;
   }
-
 `;
 
 const TrackList = styled.ul`
   margin-top: 10px;
   padding-left: 0px;
-  //border: 1px solid green;
   list-style: none;
 
   li {
@@ -79,45 +79,97 @@ const TrackList = styled.ul`
     justify-content: space-between;
     align-items: center;
     height: 42px;
-    padding: 0 0;
-
     border-bottom: 1px solid rgba(0,0,0,0.2);
-    //font-size: 16px;
 
-    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
-       height: 60px;
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) { 
+      height: 60px;
     }
   }
-    li:first-child {
-      border-top: 1px solid rgba(0,0,0,0.2);   // linje före första
-    }
-    /*
-      li:last-child {
-      border-bottom: none;   // ingen linje efter sista 
-    }*/
 
-
+  li:first-child {
+    border-top: 1px solid rgba(0,0,0,0.2);
+  }
 `;
 
-export const TrackListContainer = styled.div`     // -------------------- !
+export const TrackListContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  //border: 1px solid red;
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     width: 300px;
     height: 600px;
   }
-    @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+  @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
     width: 400px;
   }
-  @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+  @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
     width: 700px;
   }
-  
 `;
+
+/* ---------------- Modal styling ---------------- */
+
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9000;
+  cursor: zoom-out;
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  padding: 6px 12px;
+  font-size: 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+
+  &:hover {
+    background: white;
+    transform: scale(1.1);
+  }
+`;
+const ModalContent = styled.div`
+  position: relative;
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  cursor: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: calc(90vh - 32px); /* <-- så bilden aldrig blir högre än modalens höjd */
+    border-radius: 8px;
+    display: block;
+  }
+`;
+
+
+
+
 
 
 export const SingleLpPage = () => {
@@ -125,8 +177,14 @@ export const SingleLpPage = () => {
   const lp = useLpInfo().find(x => x.slug === slug);
   const { t } = useTranslation();
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
- 
+  const openModal = (src: string, alt: string) => {
+    setSelectedImage({ src, alt });
+    setIsModalOpen(true);
+  };
+
   if (!lp) {
     return (
       <>
@@ -148,40 +206,79 @@ export const SingleLpPage = () => {
   }
 }, []); // Körs EN gång när sidan laddas
   // ---------------------------------------- End of position code ---------------------------------------------- //
+  
+// Lås body-scroll när modal är öppen + ESC för att stänga
+// eslint-disable-next-line react-hooks/rules-of-hooks
+useEffect(() => {
+  const handleKey = (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      setIsModalOpen(false);
+    }
+  };
+
+  if (isModalOpen) {
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden"; // lås scrolling i bakgrunden
+    window.addEventListener("keydown", handleKey);
+    return () => {
+      document.body.style.overflow = previous; // återställ
+      window.removeEventListener("keydown", handleKey);
+    };
+  }
+
+  // När modal inte är öppen, säkerställ att listener tas bort
+  window.removeEventListener("keydown", handleKey);
+  return;
+}, [isModalOpen]);
 
   return (
     <>
-    <Banner><H2Banner><WhiteLink href= "/music">Music</WhiteLink> - {lp.name}</H2Banner></Banner>
-    <BackgroundOriginal>
-      <InfoWrapper>
-        <SingleLpImage src={lp.src} alt={lp.alt} />
-        <SingleInnerContainer>
-          <H3BlackSmaller>{lp.name}</H3BlackSmaller>
-          
-          <div>
-            {t("LpReleaseDate.text")}
-          {lp.date.day} {t(`months.${lp.date.month}`)} {lp.year}
-          </div>
+      <Banner>
+        <H2Banner><WhiteLink href="/music">Music</WhiteLink> - {lp.name}</H2Banner>
+      </Banner>
 
-          {lp.tracks && lp.tracks.length > 0 && (
-            <TrackListContainer>
-              {/* 
-              <div style={{ fontSize: "20px", fontWeight: 600, marginBottom: "10px" }}>
-                Låtar
-              </div>*/}
-              <TrackList>
-                {lp.tracks.map((track, index) => (
-                  <li key={index}>
-                    {track.title} <span style={{ float: "right" }}>{track.duration}</span>
-                  </li>
-                ))}
-              </TrackList>
-            </TrackListContainer>
-          )}
-        </SingleInnerContainer>
-      </InfoWrapper>
-    </BackgroundOriginal>
+      <BackgroundOriginal>
+        <InfoWrapper>
+          <SingleLpImage
+            src={lp.src}
+            alt={lp.alt}
+            loading="lazy"
+            onClick={() => openModal(lp.src, lp.alt)}
+          />
 
+          <SingleInnerContainer>
+            <H3BlackSmaller>{lp.name}</H3BlackSmaller>
+
+            <div>
+              {t("LpReleaseDate.text")}
+              {lp.date.day} {t(`months.${lp.date.month}`)} {lp.year}
+            </div>
+
+            {lp.tracks && lp.tracks.length > 0 && (
+              <TrackListContainer>
+                <TrackList>
+                  {lp.tracks.map((track, index) => (
+                    <li key={index}>
+                      {track.title}
+                      <span>{track.duration}</span>
+                    </li>
+                  ))}
+                </TrackList>
+              </TrackListContainer>
+            )}
+          </SingleInnerContainer>
+        </InfoWrapper>
+      </BackgroundOriginal>
+
+      {/* ---------------- Modal rendering ---------------- */}
+      {isModalOpen && selectedImage && (
+        <ModalOverlay onClick={() => setIsModalOpen(false)}>
+          <ModalContent onClick={(e) => e.stopPropagation()}>
+            <CloseButton onClick={() => setIsModalOpen(false)}>×</CloseButton>
+            <img src={selectedImage.src} alt={selectedImage.alt} />
+          </ModalContent>
+        </ModalOverlay>
+      )}
     </>
   );
 };

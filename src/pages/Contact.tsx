@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE } from "../components/styled/Variables";
 import CarinaStars from "/carinastars.png"
-import { NewsLpImage } from "./News";
+import { useEffect } from "react";
 
 
 export const Form = styled.form `
@@ -118,8 +118,34 @@ flex-direction: column;
 align-items: center;
 gap: 20px;
 padding-top: 20px;
+//border: 1px solid white;
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+      width: 600px;
+      padding-top: 30px;
+    }
+
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+      width: 700px;
+      padding-top: 60px;
+    }
 `;
 
+export const ContactImage = styled.img `
+ width: 300px;
+ //margin-top: 20px;
+
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+      width: 200px;
+    }
+    
+    @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+      width: 300px;
+    }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+      width: 400px;
+      padding-top: 20px;
+    }
+`;
 export const Contact = () => {
    const { t } = useTranslation();
  /*   const { register, handleSubmit, reset, formState: { errors } } = useForm<Person>();
@@ -150,14 +176,15 @@ export const Contact = () => {
     });
   };*/
 
-    // --------------------- This code enables the page to be in right position when opened ---------------------- // 
-  // It is used together with <div id="top"></div> in index.html.
-  setTimeout(() => {
-    const topElement = document.getElementById("top");
-    if (topElement) {
-      topElement.scrollIntoView({ behavior: "auto" });
-    }
-  }, 0);
+
+  // --------------------- This code enables the page to be in right position when opened ---------------------- // 
+  // It is used together with <div id="top"></div> in index.html. Scrolls to top only with first mount, not in external clicks.
+  useEffect(() => {
+  const topElement = document.getElementById("top");
+  if (topElement) {
+    topElement.scrollIntoView({ behavior: "auto" });
+  }
+}, []); // Körs EN gång när sidan laddas
   // ---------------------------------------- End of position code ---------------------------------------------- //
 
 return (  <>
@@ -166,10 +193,11 @@ return (  <>
   </Banner> 
   <BackgroundOriginal>
     <ContactWrapper>
-    <NewsLpImage src={CarinaStars} loading="lazy"/>
-    <div>{t("contact.message")} <WhiteLink   href="https://mail.google.com/mail/?view=cm&fs=1&to=carina.lakosil@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"> Carina Stars</WhiteLink>.</div>
+    <ContactImage src={CarinaStars} loading="lazy"/>
+      <div>{t("contact.message")} <WhiteLink href="https://mail.google.com/mail/?view=cm&fs=1&to=carina.lakosil@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"> Carina Stars</WhiteLink>.
+      </div>
     </ContactWrapper>
    
    
