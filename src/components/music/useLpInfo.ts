@@ -3,7 +3,7 @@ import AlligatorLp from "../../assets/images/lp/png/sweet_alligator.png"
 import DisappearLp from "../../assets/images/lp/png/disappear.png"
 import ReturnLp from "../../assets/images/lp/png/return_to_the_sun.png"
 import LuckySoulLp from "../../assets/images/lp/png/lucky_soul.png"
-import StjarnogaLp from "../../assets/images/lp/png/stjarnoga.png"
+//import StjarnogaLp from "../../assets/images/lp/png/stjarnoga.png"
 import { SheSaidHeLookedSweet } from "./lyrics/VisionOfLife"
 
 
