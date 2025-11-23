@@ -77,6 +77,23 @@ export const H3Black = styled.h3 `
         font-size: 2rem;
       }
 `;
+export const H3BlackSmaller = styled.h3 `
+    padding: 0;
+    color: ${BLACK};
+    
+    //font-family: Verdana, Geneva, Tahoma, sans-serif;
+    //font-weight: 600;
+    font-style: normal;
+    line-height: 1;
+    text-align: center;
+    margin-top: 0;
+      @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+    text-align: left;
+      }
+      @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+        
+      }
+`;
 
 export const H3White = styled(H3Black) `
     color: ${WHITE};
@@ -84,6 +101,7 @@ export const H3White = styled(H3Black) `
 
 export const BoldBlackText = styled.div `
 font-weight: 600;
+
 `;
 
 // -------------------------- LINKS ---------------------------------- //

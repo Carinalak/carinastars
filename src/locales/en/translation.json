@@ -37,6 +37,9 @@
     },
       "contact": {
         "message": "Contact"
-  }
+    },
+    "LpReleaseDate": {
+      "text": "Release date:"
+    }
   
 }

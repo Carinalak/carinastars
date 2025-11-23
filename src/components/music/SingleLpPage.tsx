@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { BoldBlackText, H2Banner, WhiteLink } from "../styled/Fonts";
+import { H2Banner, H3BlackSmaller, WhiteLink } from "../styled/Fonts";
 import { Banner, BackgroundOriginal } from "../styled/Wrappers";
 import { useLpInfo } from "./useLpInfo";
 import styled from "styled-components";
-import { BREAKPOINT_TABLET, WHITE } from "../styled/Variables";
+import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE } from "../styled/Variables";
 import { useEffect } from "react";
 
 
@@ -16,6 +16,9 @@ export const SingleLpImage = styled.img`
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     width: 250px;
+  }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+    width: 400px;
   }
 `;
 
@@ -32,28 +35,45 @@ export const InfoWrapper = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   color: black;
+  border: 1px solid orange;
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     width: 90%;
     flex-direction: row;
     align-items: flex-start;
-  }
+    }
+    @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+      padding-top: 60px;
+
+    }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+      min-width: 1300px;
+
+    }
+
 `;
 
 export const SingleInnerContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+ // border: 1px solid red;
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     margin-left: 20px;
   }
+  @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+    width: 60%;
+  }
+
 `;
 
 const TrackList = styled.ul`
   margin-top: 10px;
   padding-left: 0px;
+  //border: 1px solid green;
   list-style: none;
+
   li {
     display: flex;
     justify-content: space-between;
@@ -63,7 +83,10 @@ const TrackList = styled.ul`
 
     border-bottom: 1px solid rgba(0,0,0,0.2);
     //font-size: 16px;
-    
+
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+       height: 60px;
+    }
   }
     li:first-child {
       border-top: 1px solid rgba(0,0,0,0.2);   // linje före första
@@ -72,6 +95,7 @@ const TrackList = styled.ul`
       li:last-child {
       border-bottom: none;   // ingen linje efter sista 
     }*/
+
 
 `;
 
@@ -86,6 +110,13 @@ export const TrackListContainer = styled.div`     // -------------------- !
     width: 300px;
     height: 600px;
   }
+    @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+    width: 400px;
+  }
+  @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+    width: 700px;
+  }
+  
 `;
 
 
@@ -120,35 +151,36 @@ export const SingleLpPage = () => {
 
   return (
     <>
-      <Banner><H2Banner><WhiteLink href= "/music">Music</WhiteLink> - {lp.name}</H2Banner></Banner>
-<BackgroundOriginal>
-  <InfoWrapper>
-    <SingleLpImage src={lp.src} alt={lp.alt} />
-    <SingleInnerContainer>
-      <BoldBlackText>{lp.name}</BoldBlackText>
-      
-      <div>
-      {lp.date.day} {t(`months.${lp.date.month}`)} {lp.year}
-      </div>
+    <Banner><H2Banner><WhiteLink href= "/music">Music</WhiteLink> - {lp.name}</H2Banner></Banner>
+    <BackgroundOriginal>
+      <InfoWrapper>
+        <SingleLpImage src={lp.src} alt={lp.alt} />
+        <SingleInnerContainer>
+          <H3BlackSmaller>{lp.name}</H3BlackSmaller>
+          
+          <div>
+            {t("LpReleaseDate.text")}
+          {lp.date.day} {t(`months.${lp.date.month}`)} {lp.year}
+          </div>
 
-      {lp.tracks && lp.tracks.length > 0 && (
-        <TrackListContainer>
-          {/* 
-          <div style={{ fontSize: "20px", fontWeight: 600, marginBottom: "10px" }}>
-            Låtar
-          </div>*/}
-          <TrackList>
-            {lp.tracks.map((track, index) => (
-              <li key={index}>
-                {track.title} <span style={{ float: "right" }}>{track.duration}</span>
-              </li>
-            ))}
-          </TrackList>
-        </TrackListContainer>
-      )}
-    </SingleInnerContainer>
-  </InfoWrapper>
-</BackgroundOriginal>
+          {lp.tracks && lp.tracks.length > 0 && (
+            <TrackListContainer>
+              {/* 
+              <div style={{ fontSize: "20px", fontWeight: 600, marginBottom: "10px" }}>
+                Låtar
+              </div>*/}
+              <TrackList>
+                {lp.tracks.map((track, index) => (
+                  <li key={index}>
+                    {track.title} <span style={{ float: "right" }}>{track.duration}</span>
+                  </li>
+                ))}
+              </TrackList>
+            </TrackListContainer>
+          )}
+        </SingleInnerContainer>
+      </InfoWrapper>
+    </BackgroundOriginal>
 
     </>
   );

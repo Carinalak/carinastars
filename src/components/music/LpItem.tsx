@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { BLACK, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE } from "../styled/Variables";
+import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE } from "../styled/Variables";
 
 type Track = {
   title: string;
@@ -26,6 +26,9 @@ export const LpImage = styled.img `
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
       width: 60px;
     }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+      width: 120px;
+    }
 `;
 
 
@@ -45,6 +48,12 @@ export const OneLpContainer = styled.div `
       width: 550px;
     }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
+    }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+      width: 800px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      gap: 15px;
     }
 `;
 

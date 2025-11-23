@@ -6,6 +6,7 @@ import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET
 import { useLpInfo } from "../components/music/useLpInfo";
 import { LpItem } from "../components/music/LpItem";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 
 export const AllLpContainer = styled.div `      // ------------------------------------- !
@@ -21,17 +22,14 @@ export const AllLpContainer = styled.div `      // -----------------------------
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  //border: 1px solid blue;
+  //border: 1px solid orange;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
       justify-content: start; 
       width: 600px;
-      height: 600px;
-
+      height: 100vh;
       //flex-wrap: wrap;
       //align-items: start;
-
-
       align-items: center; // Gör så att "barnen" bli lika höga.
 
     }/*
@@ -41,21 +39,26 @@ export const AllLpContainer = styled.div `      // -----------------------------
       margin-top: 20px;
       margin-bottom: 20px;
       gap: 15px;
-    }
-    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
-      margin: 0;
     }*/
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+      width: 1300px;
+      padding-top: 60px;
+    }
 `;
 
 export const OverLpContainerText = styled.div `
   color: ${WHITE};
   padding-top: 20px;
   width: 360px;
-        @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-          width: 400px;
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+      width: 400px;
     }
-        @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
-          width: 500px;
+    @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+      width: 500px;
+    }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+      width: 1300px;
+      padding-top: 60px;
     }
 
 `;
@@ -66,13 +69,13 @@ export const Music = () => {
   const { t } = useTranslation();
 
   // --------------------- This code enables the page to be in right position when opened ---------------------- // 
-  // It is used together with <div id="top"></div> in index.html.
-  setTimeout(() => {
-    const topElement = document.getElementById("top");
-    if (topElement) {
-      topElement.scrollIntoView({ behavior: "auto" });
-    }
-  }, 0);
+  // It is used together with <div id="top"></div> in index.html. Scrolls to top only with first mount, not in external clicks.
+  useEffect(() => {
+  const topElement = document.getElementById("top");
+  if (topElement) {
+    topElement.scrollIntoView({ behavior: "auto" });
+  }
+}, []); // Körs EN gång när sidan laddas
   // ---------------------------------------- End of position code ---------------------------------------------- //
 
 return (  <>

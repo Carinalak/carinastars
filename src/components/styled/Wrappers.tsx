@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DARKESTPURPLE } from "./Variables";
+import { BREAKPOINT_BIGGER_DESKTOP, DARKESTPURPLE } from "./Variables";
 import CarinaPic from "../../assets/images/bluebanner.png"
 
 
@@ -28,4 +28,9 @@ export const Banner = styled.div `
   //background-position: 50% 25%;
   background: ${DARKESTPURPLE};
   min-width: 100%;
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+    }
 `;
