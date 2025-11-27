@@ -7,6 +7,7 @@ import { Music } from "./pages/Music";
 import { Contact } from "./pages/Contact";
 import { SingleLpPage } from "./components/music/SingleLpPage";
 import { createBrowserRouter } from "react-router-dom";
+import { Videos } from "./pages/Videos";
 
 
 export const router = createBrowserRouter([
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
                 element: <Music></Music>,
             },
             { path: "/music/:slug", element: <SingleLpPage /> },
+                     {
+                path: "/videos",
+                element: <Videos></Videos>,
+            },
             {
                 path: "/contact",
                 element: <Contact></Contact>,

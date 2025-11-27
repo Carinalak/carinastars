@@ -3,6 +3,7 @@
     "title": "News",
     "titleMusic": "Music - Discography",
     "titleContact": "Contact",
+    "titleVideos": "Videos",
     "article_title1": "Latest Release",
     "article_title2": "About Carina",
     "article_title3": "Music Videos"
@@ -16,6 +17,7 @@
   "menu": {
     "news": "News",
     "music": "Music",
+    "videos": "Videos",
     "contact": "Contact"
   },
   "discography": {

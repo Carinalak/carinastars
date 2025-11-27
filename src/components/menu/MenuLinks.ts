@@ -21,7 +21,9 @@ export const MenuLinks = [
     { path: "/testingtesting", label: "TestingTesting", target: "top" },
     ],
   },
-
+  { path: "/videos", 
+    labelKey: "menu.videos"},
+    
   { path: "/contact", 
     labelKey: "menu.contact"},
 ];

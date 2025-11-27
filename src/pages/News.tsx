@@ -5,6 +5,8 @@ import VisionLp from "../assets/images/lp/png/vision_of_life.png"
 import CarinaReturn from "../assets/images/carina/carina_return.webp"
 import LuckySoulDreaming from "../assets/images/carina/LuckySoulDreaming.jpg"
 import AmISick from "../assets/images/carina/AmISick.jpg"
+//import SinceTheDay from "../assets/images/carina/Since1.jpg"
+//import Jade from "../assets/images/carina/Jade_tuva_dans.jpg"
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, LIGHTPURPLE } from "../components/styled/Variables";
 import { H2Banner, H3Black, H3White, PurpleLink } from "../components/styled/Fonts";
@@ -245,11 +247,13 @@ return (  <>
         <NewsArticleThird>
           <H3White>{t("header.article_title3")}</H3White>
           <NewsArticleTextContainer>
-            <InnerTextCenter><NewsLpImageSecond src={AmISick} loading="lazy"/></InnerTextCenter>
-            <InnerTextCenter><NewsLpImage src={LuckySoulDreaming} loading="lazy"/></InnerTextCenter>
+            <InnerTextCenter><PurpleLink href="https://youtu.be/AMNWrxuRp70" target="_blank" rel="noopener noreferrer"><NewsLpImageSecond src={AmISick} loading="lazy"/></PurpleLink>  </InnerTextCenter>
+            <InnerTextCenter><PurpleLink href="https://youtu.be/BBihZJRHBD4" target="_blank" rel="noopener noreferrer"><NewsLpImage src={LuckySoulDreaming} loading="lazy"/></PurpleLink></InnerTextCenter>
+            {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
+            <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
             <InnerTextLeft>
               {t("news_article_3_part1")}
-              <PurpleLink href="https://www.youtube.com/@carinastars1" target="_blank" rel="noopener noreferrer">
+              <PurpleLink href="/videos">
                 {t("news_article_3_link")}
               </PurpleLink>
               {t("news_article_3_part2")}

@@ -3,6 +3,7 @@
     "title": "Nytt",
     "titleMusic": "Musik - Diskografi",
     "titleContact": "Kontakt",
+    "titleVideos": "Videos",
     "article_title1": "Ny skiva",
     "article_title2": "Om Carina",
     "article_title3": "Musikvideos"
@@ -17,7 +18,9 @@
   "menu": {
     "news": "Nytt",
     "music": "Musik",
+    "videos": "Videos",
     "contact": "Kontakt"
+    
   },
     "discography": {
     "about": "Se alla Carinas utgivningar. Du kan lyssna på Spotify, Itunes och YouTube bland annat. De går även beställa på CD om du kontaktar Carina Stars.",
