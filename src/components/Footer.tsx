@@ -22,7 +22,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 12px;
 
   @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
-    flex-direction: row;
+    gap: 8px;
     height: 100px;
   }
 `;
