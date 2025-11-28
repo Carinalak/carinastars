@@ -9,7 +9,7 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://carinastars.com/carinastars.png</image:loc>
-      <image:caption>Carina Stars is a lyricist and music composer. She has been active since the 90s but released her first album Lucky Soul in 2019.</image:caption>
+      <image:caption>Carina Stars is a lyricist, music composer, singer, and guitarist who also plays other instruments. She has been active since the 90s and released her first album Lucky Soul in 2019.</image:caption>
       <image:title>CarinaStars</image:title>
     </image:image>
   </url>
@@ -21,6 +21,10 @@
   </url>
   <url>
     <loc>https://carinastars.com/music</loc>
+    <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://carinastars.com/videos</loc>
     <priority>0.8</priority>
   </url>
   <url>
