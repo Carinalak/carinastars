@@ -7,6 +7,7 @@ import LuckySoulDreaming from "../assets/images/carina/LuckySoulDreaming.jpg"
 import AmISick from "../assets/images/carina/AmISick.jpg"
 //import SinceTheDay from "../assets/images/carina/Since1.jpg"
 //import Jade from "../assets/images/carina/Jade_tuva_dans.jpg"
+import Stjarnoga from "../assets/images/lp/png/stjarnoga.png"
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, LIGHTPURPLE } from "../components/styled/Variables";
 import { H2Banner, H3Black, H3White, PurpleLink } from "../components/styled/Fonts";
@@ -17,6 +18,7 @@ import { useEffect } from "react";
 export const NewsLpImage = styled.img `
  width: 300px;
  //margin-top: 20px;
+ border-radius: 5px;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
       width: 200px;
@@ -31,6 +33,7 @@ export const NewsLpImageSecond = styled(NewsLpImage) `
 
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
       display: block;
+      border-radius: 5px;
     }
     
 `;
@@ -65,7 +68,7 @@ export const NewsContainer = styled.div `
   width: 100vw;
   //height: 300px;
   border-radius: 5px;
-  margin-top: 60px;
+  margin-top: 5px;
   margin-bottom: 20px;
   padding: 5px;
   color: ${BLACK};
@@ -74,21 +77,19 @@ export const NewsContainer = styled.div `
   justify-content: center;
   align-items: center;
   gap: 10px;
-  //border: 1px solid red;
+  //border: 1px solid white;
 
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
       flex-direction: row;
       flex-wrap: wrap;
       align-items: start;
-      gap: 5px;
       align-items: stretch; // Gör så att "barnen" bli lika höga.
     }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
       margin: 0;
       margin-top: 20px;
       margin-bottom: 20px;
-      gap: 10px;
     }
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
       margin: 0;
@@ -101,7 +102,7 @@ export const NewsArticleFirst = styled.div `
   //background-color: #ffffffa8;
   //background-color: #f5f2f5a8;
   background-color: ${LIGHTERPURPLE};
-  border: 1px solid black;
+  //border: 1px solid black;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -126,7 +127,6 @@ export const NewsArticleSecond = styled(NewsArticleFirst) `
 `;
 
 export const NewsArticleThird = styled(NewsArticleFirst)`
-  //background-color: #344fc8a8;
   background-color: ${LIGHTPURPLE};
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
@@ -145,13 +145,13 @@ export const NewsArticleTextContainer = styled.div `
   margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  //border: 1px solid green;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1px;
+
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){ 
       flex-direction: row;
@@ -176,6 +176,7 @@ export const InnerTextCenter = styled.div `
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}){
     padding-bottom: 10px;
+    padding-top: 15px;
   }
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
       margin-top: 30px;
@@ -185,16 +186,13 @@ export const InnerTextCenter = styled.div `
 export const InnerTextLeft = styled.div `
   display: block;
   white-space: pre-line;
-  //flex-direction: column;
-  //justify-content: left;
   width: 300px;
-  padding-top: 5px;
+  padding-top: 10px;
   padding-bottom: 15px;
-  //align-self: flex-start;
-  //border: 1px solid orange;
+
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
     width: 45%;
-    padding-top: 10px;
+    padding-top: 15px;
   }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}){
 
@@ -226,37 +224,52 @@ return (  <>
   <BackgroundOriginal>
       <NewsContainer>
 
+        <NewsArticleThird>
+          <H3White>{t("article_header.title_NewSingle")}</H3White>
+          <NewsArticleTextContainer>
+            <InnerTextCenter><NewsLpImage src={Stjarnoga} loading="lazy"/></InnerTextCenter>
+            {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
+            <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
+            <InnerTextLeft>
+              {t("news_NewSingle1")}
+
+            </InnerTextLeft>
+
+            </NewsArticleTextContainer>
+
+        </NewsArticleThird>
+
         <NewsArticleFirst>
-          <H3Black>{t("header.article_title1")}</H3Black>
+          <H3Black>{t("article_header.title_LatestRelease")}</H3Black>
           <NewsArticleTextContainer>
           <InnerTextCenter><NewsLpImage src={VisionLp} loading="lazy"/></InnerTextCenter>
-          <InnerTextLeft> {t('news_article_1')}</InnerTextLeft>
+          <InnerTextLeft> {t('news_LatestRelease')}</InnerTextLeft>
           </NewsArticleTextContainer>
         </NewsArticleFirst>
           
 
         <NewsArticleSecond>
-          <H3Black>{t("header.article_title2")}</H3Black>
+          <H3Black>{t("article_header.title_About")}</H3Black>
           <NewsArticleTextContainer>
             <InnerTextCenter><NewsLpImage src={CarinaReturn} /></InnerTextCenter>
-            <InnerTextLeft> {t('news_article_2')}
+            <InnerTextLeft> {t('news_About')}
             </InnerTextLeft>
             </NewsArticleTextContainer>
         </NewsArticleSecond>
 
         <NewsArticleThird>
-          <H3White>{t("header.article_title3")}</H3White>
+          <H3White>{t("article_header.title_MusicVideos")}</H3White>
           <NewsArticleTextContainer>
             <InnerTextCenter><PurpleLink href="https://youtu.be/AMNWrxuRp70" target="_blank" rel="noopener noreferrer"><NewsLpImageSecond src={AmISick} loading="lazy"/></PurpleLink>  </InnerTextCenter>
             <InnerTextCenter><PurpleLink href="https://youtu.be/BBihZJRHBD4" target="_blank" rel="noopener noreferrer"><NewsLpImage src={LuckySoulDreaming} loading="lazy"/></PurpleLink></InnerTextCenter>
             {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
             <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
             <InnerTextLeft>
-              {t("news_article_3_part1")}
+              {t("news_MusicVideos1")}
               <PurpleLink href="/videos">
-                {t("news_article_3_link")}
+                {t("news_MusicVideos2")}
               </PurpleLink>
-              {t("news_article_3_part2")}
+              {t("news_MusicVideos3")}
             </InnerTextLeft>
 
             </NewsArticleTextContainer>

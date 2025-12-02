@@ -3,12 +3,12 @@ import AlligatorLp from "../../assets/images/lp/png/sweet_alligator.png"
 import DisappearLp from "../../assets/images/lp/png/disappear.png"
 import ReturnLp from "../../assets/images/lp/png/return_to_the_sun.png"
 import LuckySoulLp from "../../assets/images/lp/png/lucky_soul.png"
-//import StjarnogaLp from "../../assets/images/lp/png/stjarnoga.png"
+import StjarnogaLp from "../../assets/images/lp/png/stjarnoga.png"
 import { SheSaidHeLookedSweet } from "./lyrics/VisionOfLife"
 
 
 const LpInfo = [
-  /*
+  
   { 
     slug: "stjarnoga", 
     src: StjarnogaLp, 
@@ -18,9 +18,10 @@ const LpInfo = [
     alt: "Stjärnöga",
     release_type: "Single",
     tracks: [
-      { title: "Stjärnöga", duration: "3:20" }
+      { title: "Stjärnöga", duration: "3:20", spotifyUrl:"" }
     ],
-  },*/
+  },
+
   { 
     slug: "vision-of-life", 
     src: VisionLp, 
@@ -30,11 +31,11 @@ const LpInfo = [
     alt: "Vision of Life",
     release_type: "EP",
     tracks: [
-      { title: "Vision of Life", duration: "3:46" },
-      { title: "Angelwings", duration: "2:12" },
-      { title: "She Said He Looked Sweet", duration: "3:15", lyrics: SheSaidHeLookedSweet },
-      { title: "Tears of a Wizard", duration: "3:27" },
-      { title: "Niagara Falls", duration: "3:20" },
+      { title: "Vision of Life", duration: "3:46", spotifyUrl: "https://open.spotify.com/track/0GsGdnpvJJtZgPrSe5tNlZ?si=2c979029817f43eb" },
+      { title: "Angelwings", duration: "2:12", spotifyUrl: "https://open.spotify.com/track/7iG8mTFH9yK5sDWlRwtl8X?si=7c3fb15fcea84426" },
+      { title: "She Said He Looked Sweet", duration: "3:15", lyrics: SheSaidHeLookedSweet, spotifyUrl: "https://open.spotify.com/track/0iocGtgSIFUkbKVQBZfI0d?si=59f49a83f00c4543" },
+      { title: "Tears of a Wizard", duration: "3:27", spotifyUrl: "https://open.spotify.com/track/15Loda7Nsj5HId1e6xWfZt?si=dfbbe9dbbb144c76" },
+      { title: "Niagara Falls", duration: "3:20", spotifyUrl: "https://open.spotify.com/track/2rKdwPl9WhHeYKNIsXHers?si=3b5b376b62ad49be" },
     ],
   },
   { 
@@ -46,9 +47,9 @@ const LpInfo = [
     alt: "Sweet Alligator",
     release_type: "Single",
     tracks: [
-      { title: "Sweet Alligator", duration: "3:12" },
-      { title: "You Won't Walk Alone", duration: "2:45" },
-      { title: "Am I sick?", duration: "2:50" }
+      { title: "Sweet Alligator", duration: "3:12", spotifyUrl: "https://open.spotify.com/track/7EdTuK94PZzy240uOB1fVg?si=90a1c0f2c2724698"  },
+      { title: "You Won't Walk Alone", duration: "2:45", spotifyUrl: "https://open.spotify.com/track/4To4EcAOtKFVTHSu2hwCy2?si=2fd46c6aef9a479f"  },
+      { title: "Am I sick?", duration: "2:50", spotifyUrl: "https://open.spotify.com/track/6Eei5gtPD08HwgxHtaYQJv?si=d81931132ba64c88"  }
     ],
   },
   { 
@@ -60,7 +61,7 @@ const LpInfo = [
     date: { day: 15, month: "jun" },
     year: 2022, 
     tracks: [
-      { title: "Disappear", duration: "4:24" }
+      { title: "Disappear", duration: "4:24", spotifyUrl: "https://open.spotify.com/track/0QOV3ozrXMk7ZtPqRxfuxM?si=9d1ea7040bf74ecc"  }
     ],
 
   },
@@ -73,11 +74,11 @@ const LpInfo = [
     alt: "Return to the Sun",
     release_type: "Single",
     tracks: [
-      { title: "Return to the Sun", duration: "3:15" },
-      { title: "Little Polly", duration: "2:25" },
-      { title: "The World Around", duration: "3:06" },
-      { title: "Castle of Tears", duration: "3:06" },
-      { title: "Moving out", duration: "1:08" }
+      { title: "Return to the Sun", duration: "3:15", spotifyUrl: "https://open.spotify.com/track/3AavflZ49iMovQIO2cOQP9?si=c7c389a7d28b4f9c"  },
+      { title: "Little Polly", duration: "2:25", spotifyUrl: "https://open.spotify.com/track/73Pi7ZiNRxaXUUZV9YMDLh?si=949bc6c304b24d8a"  },
+      { title: "The World Around", duration: "3:06", spotifyUrl: "https://open.spotify.com/track/765WPQignKdCLUQoWgeqeY?si=107c847276de41e0"  },
+      { title: "Castle of Tears", duration: "3:06", spotifyUrl: "https://open.spotify.com/track/63aD3A7ybgKOzzhrdk4ZXl?si=935da11fc9e34c52"  },
+      { title: "Moving out", duration: "1:08", spotifyUrl: "https://open.spotify.com/track/2Mg94RVR8HdHE44y6CdO7k?si=fd9ab9f7cfd04d73"  }
     ],
 
   },
@@ -90,15 +91,14 @@ const LpInfo = [
     alt: "Lucky Soul",
     release_type: "Album",
     tracks: [
-      { title: "Lucky Soul", duration: "2:35" },
-      { title: "Since the Day I came Back", duration: "2:37" },
-      { title: "Jade", duration: "4:29" },
-      { title: "Crown of Sun", duration: "2:30" },
-      { title: "Lilla tjej", duration: "3:46" },
-      { title: "Albin", duration: "3:27" },
-      { title: "Hösten är här", duration: "3:28" }
-    ],
-
+      { title: "Lucky Soul", duration: "2:35", spotifyUrl: "https://open.spotify.com/track/6X6Z3FebwwEDtFUjLxoWVo?si=894a6953a9354f58"  },
+      { title: "Since the Day I came Back", duration: "2:37", spotifyUrl: "https://open.spotify.com/track/4SlzPeoG9nVHUlytUnvfGd?si=f7d745b3c009470a"  },
+      { title: "Jade", duration: "4:29", spotifyUrl: "https://open.spotify.com/track/0TIDYbP82cSSJmuGzPPN4d?si=593eba27eb174a38"  },
+      { title: "Crown of Sun", duration: "2:30", spotifyUrl: "https://open.spotify.com/track/2d1WRo0uNvg2uLJMl0jLCY?si=58cebfbb4ef44fb1"  },
+      { title: "Lilla tjej", duration: "3:46", spotifyUrl: "https://open.spotify.com/track/3OvKUikQ9hbrKtm4HKJh9h?si=578aceeacb594e73"  },
+      { title: "Albin", duration: "3:27", spotifyUrl: "https://open.spotify.com/track/35cAWpubfcxDrrRPhz3qAv?si=f32f2c9230cf4934"  },
+      { title: "Hösten är här", duration: "3:28", spotifyUrl: "https://open.spotify.com/track/4Gv0q5LLLznmzi6yLrtfcp?si=14fec8e474224d37" }
+    ]
   },
 
 

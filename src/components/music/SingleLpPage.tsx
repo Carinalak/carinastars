@@ -6,6 +6,8 @@ import { useLpInfo } from "./useLpInfo";
 import styled from "styled-components";
 import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE_TRANSPARENT } from "../styled/Variables";
 import { useEffect, useState } from "react";
+import PlayArrow from "../../assets/icons/play-arrow.png"
+import { NewsLpImage } from "../../pages/News";
 
 
 export const SingleLpImage = styled.img`
@@ -28,6 +30,30 @@ export const SingleLpImage = styled.img`
     object-fit: cover;
   }
 `;
+
+export const PlayArrowImage = styled.img `
+ width: 20px;
+ border-radius: 3px;
+ margin-right: 5px;
+
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+       margin-right: 10px;
+    }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+    
+    }
+`;
+
+export const NewsLpImageSecond = styled(NewsLpImage) `
+  display: none;
+
+    @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+      display: block;
+      border-radius: 5px;
+    }
+    
+`;
+
 
 export const InfoWrapper = styled.div`
   width: 300px;
@@ -112,6 +138,12 @@ export const TrackListContainer = styled.div`
   }
 `;
 
+export const TrackRow = styled.div`
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ 
+ `;
 /* ---------------- Modal styling ---------------- */
 
 const ModalOverlay = styled.div`
@@ -258,8 +290,19 @@ useEffect(() => {
               <TrackListContainer>
                 <TrackList>
                   {lp.tracks.map((track, index) => (
+                    
                     <li key={index}>
+                      <TrackRow>
+                      {track.spotifyUrl && (
+                        <button
+                          onClick={() => window.open(track.spotifyUrl, "_blank")}
+                          style={{ cursor: "pointer", background: "none", border: "none", fontSize: "18px" }}
+                        >
+                          <PlayArrowImage src={PlayArrow} loading="lazy" />
+                        </button>
+                      )}
                       {track.title}
+                      </TrackRow>
                       <span>{track.duration}</span>
                     </li>
                   ))}
