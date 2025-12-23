@@ -80,7 +80,7 @@ export const Videos = () => {
       <BackgroundOriginal>
         <AllVideoWrapper>
 
-          {/* VIDEO 1 */}
+          {/* VIDEO 1 Lucky Soul */}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe
@@ -93,7 +93,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 2 */}
+          {/* VIDEO 2 Am I Sick */}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe
@@ -106,7 +106,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 3 */}
+          {/* VIDEO 3 Since the Day I Came Back*/}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe
@@ -119,7 +119,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-                    {/* VIDEO 4 */}
+          {/* VIDEO 4 Crown of Sun*/}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe 
@@ -132,7 +132,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 5 */}
+          {/* VIDEO 5 Jade */}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe 
@@ -145,7 +145,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
           
-          {/* VIDEO 6 */}
+          {/* VIDEO 6 Hösten är här */}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe
@@ -158,7 +158,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 7 */}
+          {/* VIDEO 7 Albin */}
           <OneVideoWrapper>
             <ResponsiveVideo>
             <iframe 
@@ -171,7 +171,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 8 */}
+          {/* VIDEO 8 Lilla Tjej*/}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe 
@@ -185,15 +185,28 @@ export const Videos = () => {
           </OneVideoWrapper>
 
           
-          {/* VIDEO 9 */}
+          {/* VIDEO 9 Disappear*/}
           <OneVideoWrapper>
             <ResponsiveVideo>
              <iframe width="560" height="315" src="https://www.youtube.com/embed/oXNBJT2FwO0?si=SufVBiIdCsgSETY6" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </ResponsiveVideo>
           </OneVideoWrapper>
 
+
+          {/* VIDEO 10 Girl*/}
+          <OneVideoWrapper>
+            <ResponsiveVideo>
+              
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/bRiwf8TejzE?si=hVPBC17FiIrffIEw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            </ResponsiveVideo>
+          </OneVideoWrapper>
+
+
+
         </AllVideoWrapper>
       </BackgroundOriginal>
+
+      
     </>
   );
 };
