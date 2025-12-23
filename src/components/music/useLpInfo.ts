@@ -18,7 +18,7 @@ const LpInfo = [
     alt: "Stjärnöga",
     release_type: "Single",
     tracks: [
-      { title: "Stjärnöga", duration: "3:20", spotifyUrl:"" }
+      { title: "Stjärnöga", duration: "3:20", spotifyUrl:"https://open.spotify.com/track/3iaN9qbGOVGxo5y1LFD0lq?si=ce30163f83ff4d5d" },
     ],
   },
 

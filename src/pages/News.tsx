@@ -201,7 +201,11 @@ export const InnerTextLeft = styled.div `
         margin-top: 30px;
     }
 `;
-
+export const ItalicText = styled.div`
+  font-style: italic;
+  white-space: pre-line;
+  opacity: 0.85;
+`;
 
 export const News = () => {
   const { t } = useTranslation();
@@ -232,6 +236,10 @@ return (  <>
             <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
             <InnerTextLeft>
               {t("news_NewSingle1")}
+
+              <ItalicText>
+               {t("news_NewSingle2")}
+              </ItalicText>
 
             </InnerTextLeft>
 
