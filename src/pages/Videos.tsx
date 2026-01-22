@@ -80,7 +80,15 @@ export const Videos = () => {
       <BackgroundOriginal>
         <AllVideoWrapper>
 
-          {/* VIDEO 1 Lucky Soul */}
+          {/* VIDEO 1 Girl*/}
+          <OneVideoWrapper>
+            <ResponsiveVideo>
+              
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/bRiwf8TejzE?si=hVPBC17FiIrffIEw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            </ResponsiveVideo>
+          </OneVideoWrapper>
+
+          {/* VIDEO 2 Lucky Soul */}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe
@@ -93,7 +101,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 2 Am I Sick */}
+          {/* VIDEO 3 Am I Sick */}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe
@@ -106,7 +114,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 3 Since the Day I Came Back*/}
+          {/* VIDEO 4 Since the Day I Came Back*/}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe
@@ -119,7 +127,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 4 Crown of Sun*/}
+          {/* VIDEO 5 Crown of Sun*/}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe 
@@ -132,7 +140,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 5 Jade */}
+          {/* VIDEO 6 Jade */}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe 
@@ -145,7 +153,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
           
-          {/* VIDEO 6 Hösten är här */}
+          {/* VIDEO 7 Hösten är här */}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe
@@ -158,7 +166,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 7 Albin */}
+          {/* VIDEO 8 Albin */}
           <OneVideoWrapper>
             <ResponsiveVideo>
             <iframe 
@@ -171,7 +179,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 8 Lilla Tjej*/}
+          {/* VIDEO 9 Lilla Tjej*/}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe 
@@ -185,19 +193,10 @@ export const Videos = () => {
           </OneVideoWrapper>
 
           
-          {/* VIDEO 9 Disappear*/}
+          {/* VIDEO 10 Disappear*/}
           <OneVideoWrapper>
             <ResponsiveVideo>
              <iframe width="560" height="315" src="https://www.youtube.com/embed/oXNBJT2FwO0?si=SufVBiIdCsgSETY6" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-            </ResponsiveVideo>
-          </OneVideoWrapper>
-
-
-          {/* VIDEO 10 Girl*/}
-          <OneVideoWrapper>
-            <ResponsiveVideo>
-              
-             <iframe width="560" height="315" src="https://www.youtube.com/embed/bRiwf8TejzE?si=hVPBC17FiIrffIEw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </ResponsiveVideo>
           </OneVideoWrapper>
 

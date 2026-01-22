@@ -4,11 +4,23 @@ import DisappearLp from "../../assets/images/lp/png/disappear.png"
 import ReturnLp from "../../assets/images/lp/png/return_to_the_sun.png"
 import LuckySoulLp from "../../assets/images/lp/png/lucky_soul.png"
 import StjarnogaLp from "../../assets/images/lp/png/stjarnoga.png"
+import GirlLp from "../../assets/images/lp/png/Girl.png"
 import { SheSaidHeLookedSweet } from "./lyrics/VisionOfLife"
 
 
 const LpInfo = [
-  
+    { 
+    slug: "girl", 
+    src: GirlLp, 
+    name: "Girl", 
+    date: { day: 22, month: "jan" },
+    year: 2026, 
+    alt: "Girl",
+    release_type: "Single",
+    tracks: [
+      { title: "Girl", duration: "01:50", spotifyUrl:"https://open.spotify.com/track/1nmSFmUUy0qfRsXwObBaJG?si=1739b6c1abe94f4b" },
+    ],
+  },
   { 
     slug: "stjarnoga", 
     src: StjarnogaLp, 

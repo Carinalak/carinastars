@@ -7,7 +7,7 @@ import LuckySoulDreaming from "../assets/images/carina/LuckySoulDreaming.jpg"
 import AmISick from "../assets/images/carina/AmISick.jpg"
 //import SinceTheDay from "../assets/images/carina/Since1.jpg"
 //import Jade from "../assets/images/carina/Jade_tuva_dans.jpg"
-import Stjarnoga from "../assets/images/lp/png/stjarnoga.png"
+import Girl from "../assets/images/lp/png/Girl.png"
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, LIGHTPURPLE } from "../components/styled/Variables";
 import { H2Banner, H3Black, H3White, PurpleLink } from "../components/styled/Fonts";
@@ -35,7 +35,15 @@ export const NewsLpImageSecond = styled(NewsLpImage) `
       display: block;
       border-radius: 5px;
     }
-    
+`;
+export const NewsImage = styled(NewsLpImage) `
+
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+      width: 600px;
+    }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+      width: 800px;
+    }
 `;
 
 export const BackImg = styled.div`
@@ -128,6 +136,7 @@ export const NewsArticleSecond = styled(NewsArticleFirst) `
 
 export const NewsArticleThird = styled(NewsArticleFirst)`
   background-color: ${LIGHTPURPLE};
+    
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
     width: 600px;
@@ -230,10 +239,11 @@ return (  <>
 
         <NewsArticleThird>
           <H3White>{t("article_header.title_NewSingle")}</H3White>
+          
           <NewsArticleTextContainer>
-            <InnerTextCenter><NewsLpImage src={Stjarnoga} loading="lazy"/></InnerTextCenter>
-            {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
-            <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
+            <InnerTextCenter><PurpleLink href="https://open.spotify.com/track/1nmSFmUUy0qfRsXwObBaJG?si=2424b026bc464894" target="_blank" rel="noopener noreferrer"><NewsLpImage src={Girl} loading="lazy"/></PurpleLink></InnerTextCenter>
+              {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
+              <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
             <InnerTextLeft>
               {t("news_NewSingle1")}
 
@@ -244,7 +254,6 @@ return (  <>
             </InnerTextLeft>
 
             </NewsArticleTextContainer>
-
         </NewsArticleThird>
 
         <NewsArticleFirst>

@@ -37,7 +37,7 @@ return (
       <a href="https://www.instagram.com/carinastars/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
       {/*<a href="https://www.tiktok.com/search?q=carina%20stars&t=1761372933835" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTiktok} /></a>*/}
     </div>
-    <div>Copyright &copy; Carina Stars 2025 All rights reserved</div>
+    <div>Copyright &copy; Carina Stars 2025-2026 All rights reserved</div>
   </FooterContainer>
 );
 }
