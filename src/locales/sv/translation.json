@@ -33,7 +33,7 @@
     
   },
     "discography": {
-    "about": "Se alla Carinas utgivningar. Du kan lyssna på Spotify, Itunes och YouTube bland annat. De går även beställa på CD om du kontaktar Carina Stars.",
+    "about": "Se alla Carinas utgivningar. Du hittar dem på alla streamingtjänster. De går även beställa på CD om du kontaktar Carina Stars.",
     "ReleaseType": "Utgivningsformat: "
   },
       "months": {
@@ -56,5 +56,13 @@
   },
     "LpReleaseDate": {
     "text": "Utgiven: "
+    },
+
+    "releaseType": {
+      "single": "Singel",
+      "ep": "EP",
+      "album": "Album"
     }
+    
 }
+

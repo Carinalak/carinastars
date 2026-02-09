@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET } from "../styled/Variables";
+import { useTranslation } from "react-i18next";
 
 type Track = {
   title: string;
@@ -96,10 +97,12 @@ const TrackAndLength = styled.ul`
     height: 42px;
     padding: 0 0;
   }
-  
 `;
 
+
 export const LpItem = ({ slug, src, alt, name, year, tracks, release_type }: Props) => {
+  const { t } = useTranslation();
+  
   return (
     <Link to={`/music/${slug}`}>
     <OneLpContainer>
@@ -111,7 +114,9 @@ export const LpItem = ({ slug, src, alt, name, year, tracks, release_type }: Pro
       <InnerLpRight>
         <div>{name}</div>
         <div>{year}</div>
-        <div>{release_type}</div>
+          <div>
+            {t(`releaseType.${release_type}`)}
+          </div>
         
 
         {tracks && tracks.length > 0 && (

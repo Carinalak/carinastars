@@ -12,6 +12,7 @@ const LyricsWrapper = styled.div`
 type Props = {
   title: string;
   lyrics: string;
+
 };
 
 export const LyricsDisplay = ({ title, lyrics }: Props) => {
@@ -19,6 +20,7 @@ export const LyricsDisplay = ({ title, lyrics }: Props) => {
     <LyricsWrapper>
       <h3>{title}</h3>
       <p>{lyrics}</p>
+
     </LyricsWrapper>
   );
 };

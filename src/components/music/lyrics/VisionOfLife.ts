@@ -49,6 +49,7 @@ Aaah
 outro
 Just a Vision of Life
 `;
+
 export const AngelwingsLyrics = `
 Angelwings (Wonderful Friend)
 (Text & Musik: Carina Lakosil 4 juli 1993) 
@@ -191,6 +192,7 @@ He cries 'cause he can see his people dying
 They looked his mouth and threw away the key
 They looked his mouth and threw away the key
 `;
+
 export const NiagaraFallsLyrics = `
 Niagara falls
 (Text & Musik: Carina Lakosil, 16 feb 1995)
