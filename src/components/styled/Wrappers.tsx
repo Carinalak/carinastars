@@ -73,7 +73,6 @@ export const Banner = styled.div `
   align-items: left;
   justify-content: left;
   padding-top: 0;
-
   background: ${DARKESTPURPLE};
   min-width: 100%;
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BREAKPOINT_TABLET, BREAKPOINT_DESKTOP, WHITE, BLACK, LIGHTPURPLE } from "./Variables";
+import { BREAKPOINT_TABLET, BREAKPOINT_DESKTOP, WHITE, BLACK, LIGHTPURPLE, LIGHTERPURPLE } from "./Variables";
 
 export const H1White = styled.h1 `
     padding: 0;
@@ -79,13 +79,14 @@ export const H3Black = styled.h3 `
 `;
 export const H3BlackSmaller = styled.h3 `
     padding: 0;
+    margin: 0;
     color: ${BLACK};
     
     //font-family: Verdana, Geneva, Tahoma, sans-serif;
     //font-weight: 600;
     font-style: normal;
-   margin-bottom: 0;
-    text-align: center;
+    margin-bottom: 0;
+    text-align: left;
     margin-top: 0;
       @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     text-align: left;
@@ -138,7 +139,40 @@ export const WhiteLink = styled.a`
   }
 `;
 
+export const LinkSpan = styled('span').withConfig({
+  shouldForwardProp: (prop) => prop !== 'disabled',
+})<{ disabled?: boolean }>`
+  cursor: ${({ disabled }) => (disabled ? "default" : "pointer")};
+  color: inherit;         /* behåll originalfärg */
+  text-decoration: none;  /* normalt ingen underline */
 
+  &:hover,
+  &:focus {
+    text-decoration: ${({ disabled }) => (disabled ? "none" : "underline")};
+    text-decoration-color: ${({ disabled }) => (disabled ? "inherit" : LIGHTERPURPLE)};
+    text-decoration-thickness: 1px; /* valfri tjocklek på underline */
+    text-underline-offset: 2px;     /* flytta underline lite nedåt */
+  }
+`;
+
+/*
+
+export const LinkSpan = styled('span').withConfig({
+  shouldForwardProp: (prop) => prop !== 'disabled',
+})<{ disabled?: boolean }>`
+  cursor: ${({ disabled }) => (disabled ? "default" : "pointer")};
+  color: inherit;          // behåll originalfärg 
+  text-decoration: none;   // normalt ingen underline 
+
+  &:hover,
+  &:focus {
+    color: ${({ disabled }) => (disabled ? "inherit" : LIGHTPURPLE)} !important;
+    text-decoration: ${({ disabled }) => (disabled ? "none" : "underline")} !important;
+  }
+`;
+
+
+*/
 /*
 export const WhiteLink = styled(Link)`
   && {

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { H2Banner, H3BlackSmaller, WhiteLink } from "../styled/Fonts";
+import { H2Banner, H3BlackSmaller, LinkSpan, WhiteLink } from "../styled/Fonts";
 import { Banner, BackgroundOriginal, BackgroundAlbum } from "../styled/Wrappers";
 import { useLpInfo } from "./useLpInfo";
 import styled from "styled-components";
@@ -8,6 +8,8 @@ import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE
 import { useEffect, useState } from "react";
 import PlayArrow from "../../assets/icons/play-arrow.png"
 import { NewsLpImage } from "../../pages/News";
+import { LyricsDisplay } from "./lyrics/LyricsDisplay";
+
 
 
 export const SingleLpImage = styled.img`
@@ -31,7 +33,7 @@ export const SingleLpImage = styled.img`
   }
 `;
 
-export const PlayArrowImage = styled.img `
+export const PlayArrowImage = styled.img`
  width: 20px;
  border-radius: 3px;
  margin-right: 5px;
@@ -44,7 +46,7 @@ export const PlayArrowImage = styled.img `
     }
 `;
 
-export const NewsLpImageSecond = styled(NewsLpImage) `
+export const NewsLpImageSecond = styled(NewsLpImage)`
   display: none;
 
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
@@ -54,6 +56,21 @@ export const NewsLpImageSecond = styled(NewsLpImage) `
     
 `;
 
+export const InfoInnerWrapper = styled.div`
+display: flex;
+flex-direction: column;
+padding-top: 20px;
+align-items: center;
+justify-content: center;
+width: 100%;
+gap: 30px;
+
+  @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 20px;
+  }
+`;
 
 export const InfoWrapper = styled.div`
   width: 300px;
@@ -65,7 +82,9 @@ export const InfoWrapper = styled.div`
   justify-content: center;
   gap: 20px;
   background-color: ${WHITE_TRANSPARENT};
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 150px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   color: black;
@@ -74,11 +93,13 @@ export const InfoWrapper = styled.div`
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     width: 90%;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
+    padding-bottom: 200px;
+
   }
   @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
-    padding-top: 60px;
+   // padding-top: 60px;
   }
   @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
     min-width: 1300px;
@@ -92,11 +113,13 @@ export const SingleInnerContainer = styled.div`
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     margin-left: 20px;
+
   }
   @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
     width: 60%;
   }
 `;
+    
 
 const TrackList = styled.ul`
   margin-top: 10px;
@@ -108,16 +131,25 @@ const TrackList = styled.ul`
     justify-content: space-between;
     align-items: center;
     height: 42px;
+    width: 270px;
     border-bottom: 1px solid rgba(0,0,0,0.2);
+
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) { 
+      width: 300px;  
+    }
 
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) { 
       height: 60px;
+      width: 400px;  
     }
   }
 
   li:first-child {
     border-top: 1px solid rgba(0,0,0,0.2);
   }
+    li:last-child {
+    margin-bottom: 20px;
+    }
 `;
 
 export const TrackListContainer = styled.div`
@@ -128,10 +160,12 @@ export const TrackListContainer = styled.div`
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     width: 300px;
-    height: 600px;
+    //height: 600px;
   }
   @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
     width: 400px;
+    max-height: 600px;
+    overflow-y: auto;
   }
   @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
     width: 700px;
@@ -202,13 +236,21 @@ const ModalContent = styled.div`
   }
 `;
 
+type TrackWithLyrics = {
+  title: string;
+  lyrics?: string;
+  duration: string;
+};
+
 
 
 export const SingleLpPage = () => {
   const { slug } = useParams();
   const lp = useLpInfo().find(x => x.slug === slug);
   const { t } = useTranslation();
+  
 
+  const [selectedTrack, setSelectedTrack] = useState<TrackWithLyrics | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
@@ -271,6 +313,7 @@ useEffect(() => {
 
       <BackgroundAlbum bg={lp.src}>
         <InfoWrapper>
+          <InfoInnerWrapper>
           <SingleLpImage
             src={lp.src}
             alt={lp.alt}
@@ -290,30 +333,51 @@ useEffect(() => {
             </div>
 
             {lp.tracks && lp.tracks.length > 0 && (
-              <TrackListContainer>
-                <TrackList>
-                  {lp.tracks.map((track, index) => (
-                    
-                    <li key={index}>
-                      <TrackRow>
-                      {track.spotifyUrl && (
-                        <button
-                          onClick={() => window.open(track.spotifyUrl, "_blank")}
-                          style={{ cursor: "pointer", background: "none", border: "none", fontSize: "18px" }}
-                        >
-                          <PlayArrowImage src={PlayArrow} loading="lazy" />
-                        </button>
-                      )}
-                      {track.title}
-                      </TrackRow>
-                      <span>{track.duration}</span>
-                    </li>
-                  ))}
-                </TrackList>
-              </TrackListContainer>
+              <>
+                <TrackListContainer>
+                  <TrackList>
+                    {lp.tracks.map((track, index) => (
+                      <li key={index}>
+                        <TrackRow>
+                          {track.spotifyUrl && (
+                            <button
+                              onClick={() => window.open(track.spotifyUrl, "_blank")}
+                              style={{ cursor: "pointer", background: "none", border: "none" }}
+                            >
+                              <PlayArrowImage src={PlayArrow} />
+                            </button>
+                          )}
+
+                          <LinkSpan
+                              disabled={!track.lyrics}
+                              onClick={() => track.lyrics && setSelectedTrack(track)}
+                          >
+                            {track.title}
+                          </LinkSpan>
+                        </TrackRow>
+
+                        <span>{track.duration}</span>
+                      </li>
+                    ))}
+                  </TrackList>
+
+                </TrackListContainer>
+              </>
             )}
+
           </SingleInnerContainer>
+          </InfoInnerWrapper>
+
+            {selectedTrack?.lyrics && (
+              <LyricsDisplay
+                title={selectedTrack.title}
+                lyrics={selectedTrack.lyrics}
+                //info={`Info: ${selectedTrack.duration}`}
+              />
+            )}
+
         </InfoWrapper>
+
       </BackgroundAlbum>
 
       {/* ---------------- Modal rendering ---------------- */}
