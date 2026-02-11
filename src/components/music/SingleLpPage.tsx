@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import PlayArrow from "../../assets/icons/play-arrow.png"
 import { NewsLpImage } from "../../pages/News";
 import { LyricsDisplay } from "./lyrics/LyricsDisplay";
+import { useRef } from "react";
 
 
 
@@ -94,7 +95,7 @@ export const InfoWrapper = styled.div`
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
     width: 90%;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding-bottom: 200px;
 
   }
@@ -255,25 +256,15 @@ export const SingleLpPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
+  const lyricsRef = useRef<HTMLDivElement | null>(null);
   const openModal = (src: string, alt: string) => {
     setSelectedImage({ src, alt });
     setIsModalOpen(true);
   };
 
-  if (!lp) {
-    return (
-      <>
-        <Banner><H2Banner>Hittades inte</H2Banner></Banner>
-        <BackgroundOriginal>
-          <InfoWrapper>Ingen skiva hittades för {slug}</InfoWrapper>
-        </BackgroundOriginal>
-      </>
-    );
-  }
-
   // --------------------- This code enables the page to be in right position when opened ---------------------- // 
   // It is used together with <div id="top"></div> in index.html. Scrolls to top only with first mount, not in external clicks.
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+
   useEffect(() => {
   const topElement = document.getElementById("top");
   if (topElement) {
@@ -283,7 +274,6 @@ export const SingleLpPage = () => {
   // ---------------------------------------- End of position code ---------------------------------------------- //
   
 // Lås body-scroll när modal är öppen + ESC för att stänga
-// eslint-disable-next-line react-hooks/rules-of-hooks
 useEffect(() => {
   const handleKey = (e: KeyboardEvent) => {
     if (e.key === "Escape") {
@@ -305,6 +295,28 @@ useEffect(() => {
   window.removeEventListener("keydown", handleKey);
   return;
 }, [isModalOpen]);
+ 
+ useEffect(() => {
+  if (selectedTrack && lyricsRef.current) {
+    lyricsRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+}, [selectedTrack]);
+
+
+
+  if (!lp) {
+    return (
+      <>
+        <Banner><H2Banner>Hittades inte</H2Banner></Banner>
+        <BackgroundOriginal>
+          <InfoWrapper>Ingen skiva hittades för {slug}</InfoWrapper>
+        </BackgroundOriginal>
+      </>
+    );
+  }
 
   return (
     <>
@@ -369,13 +381,14 @@ useEffect(() => {
           </SingleInnerContainer>
           </InfoInnerWrapper>
 
-            {selectedTrack?.lyrics && (
-              <LyricsDisplay
-                title={selectedTrack.title}
-                lyrics={selectedTrack.lyrics}
-                //info={`Info: ${selectedTrack.duration}`}
-              />
-            )}
+           {selectedTrack?.lyrics && (
+  <div ref={lyricsRef}>
+    <LyricsDisplay
+      title={selectedTrack.title}
+      lyrics={selectedTrack.lyrics}
+    />
+  </div>
+)}
 
         </InfoWrapper>
 

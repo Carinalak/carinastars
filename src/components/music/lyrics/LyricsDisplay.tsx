@@ -6,8 +6,9 @@ const LyricsWrapper = styled.div`
   //padding: 15px;
   background-color:  transparent;
   white-space: pre-wrap; /* behåller radbrytningar i lyrics */
-  width: 90%;
+  //width: 300px;
   align-self: center;
+  justify-content: center;
   //border: 1px solid red;
   padding-bottom: 30px;
 `;
