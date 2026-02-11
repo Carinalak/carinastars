@@ -40,12 +40,13 @@ export const BackgroundAlbum = styled.div<{ bg: string }>`
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;
+  //align-items: center;
   justify-content: center;
   padding-top: 20px;
 
 
-  /* valfritt: gör bakgrunden dimmad */
+
+  /* gör bakgrunden dimmad */
   position: relative;
 
   &::before {
@@ -62,7 +63,7 @@ export const BackgroundAlbum = styled.div<{ bg: string }>`
     z-index: 2;
   }
       @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
-        padding-top: 40px;
+        padding-top: 30px;
     }
 `;
 

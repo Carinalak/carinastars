@@ -99,10 +99,11 @@ export const InfoWrapper = styled.div`
 
   }
   @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
-   // padding-top: 60px;
+   padding-top: 60px;
   }
   @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
     min-width: 1300px;
+    padding-top: 20px;
   }
 `;
 
