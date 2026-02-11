@@ -18,6 +18,41 @@ export const BackgroundOriginal = styled.div `
       padding-top: 40px;
     }
 `;
+export const BackgroundImage = styled.div `
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("/we_linger_on_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+  padding-top: 20px;
+
+
+  /* gör bakgrunden dimmad */
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+  /* så att innehållet ligger över overlayen */
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+      @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+        padding-top: 30px;
+    }
+
+  
+`;
 
 /*
 export const BackgroundAlbum = styled.div `
@@ -43,7 +78,6 @@ export const BackgroundAlbum = styled.div<{ bg: string }>`
   //align-items: center;
   justify-content: center;
   padding-top: 20px;
-
 
 
   /* gör bakgrunden dimmad */

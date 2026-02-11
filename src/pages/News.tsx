@@ -1,5 +1,5 @@
 
-import { BackgroundOriginal, Banner } from "../components/styled/Wrappers";
+import { BackgroundImage, Banner } from "../components/styled/Wrappers";
 import BackgroundJade from "../assets/images/background/Jade_akustisk_back.webp"
 import VisionLp from "../assets/images/lp/png/vision_of_life.png"
 import CarinaReturn from "../assets/images/carina/carina_return.webp"
@@ -8,6 +8,7 @@ import AmISick from "../assets/images/carina/AmISick.jpg"
 //import SinceTheDay from "../assets/images/carina/Since1.jpg"
 //import Jade from "../assets/images/carina/Jade_tuva_dans.jpg"
 import Girl from "../assets/images/lp/png/Girl.png"
+import WeLingerOn from "../assets/images/lp/png/we_linger_on.png"
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, LIGHTPURPLE } from "../components/styled/Variables";
 import { H2Banner, H3Black, H3White, PurpleLink } from "../components/styled/Fonts";
@@ -234,9 +235,26 @@ return (  <>
   <Banner>
     <H2Banner>{t("header.title")}</H2Banner>
   </Banner> 
-  <BackgroundOriginal>
+  <BackgroundImage>
       <NewsContainer>
+        <NewsArticleThird>
+          <H3White>{t("article_header.title_WeLingerOn")}</H3White>
+          
+          <NewsArticleTextContainer>
+            <InnerTextCenter><PurpleLink href="https://open.spotify.com/track/1oCNNaxxYalZkEIZfYLZ1C?si=f5d0d564eea24a5d" target="_blank" rel="noopener noreferrer"><NewsLpImage src={WeLingerOn} loading="lazy"/></PurpleLink></InnerTextCenter>
+              {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
+              <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
+            <InnerTextLeft>
+              {t("news_WeLingerOn1")}
 
+              <ItalicText>
+               {t("news_WeLingerOn2")}
+              </ItalicText>
+
+            </InnerTextLeft>
+
+            </NewsArticleTextContainer>
+        </NewsArticleThird>
         <NewsArticleThird>
           <H3White>{t("article_header.title_NewSingle")}</H3White>
           
@@ -295,7 +313,7 @@ return (  <>
       </NewsContainer>
         <BackImg />
 
-  </BackgroundOriginal>
+  </BackgroundImage>
 </>
  
 )};
