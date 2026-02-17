@@ -28,7 +28,7 @@ Makes them true
 
 Is this a Vision of Life
 Is this a vision of a happy life
-hook
+
 Aaah
 
 We are all wandering
