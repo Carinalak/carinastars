@@ -9,6 +9,7 @@ import AmISick from "../assets/images/carina/AmISick.jpg"
 //import Jade from "../assets/images/carina/Jade_tuva_dans.jpg"
 import Girl from "../assets/images/lp/png/Girl.png"
 import WeLingerOn from "../assets/images/lp/png/we_linger_on.png"
+import IThinkIllGoMadLP from "../assets/images/lp/png/I_think_Ill_go_mad.png"
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, LIGHTPURPLE } from "../components/styled/Variables";
 import { H2Banner, H3Black, H3White, PurpleLink } from "../components/styled/Fonts";
@@ -190,7 +191,16 @@ export const InnerTextCenter = styled.div `
   }
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
       margin-top: 30px;
+
     }
+`;
+
+export const NewsDate = styled.div`
+  display: flex;
+  align-items: left;
+  color: white;
+  padding-bottom: 10px;
+  width: 90%;
 `;
 
 export const InnerTextLeft = styled.div `
@@ -238,8 +248,29 @@ return (  <>
   <BackgroundImage>
       <NewsContainer>
         <NewsArticleThird>
-          <H3White>{t("article_header.title_WeLingerOn")}</H3White>
+          <H3White>{t("article_header.title_IThinkIllGoMad")}</H3White>
+          {/*<NewsDate><div>{t("article_date.date_IThinkIllGoMad")}</div></NewsDate>*/}
           
+          <NewsArticleTextContainer>
+            <InnerTextCenter><PurpleLink href="" target="_blank" rel="noopener noreferrer"><NewsLpImage src={IThinkIllGoMadLP} loading="lazy"/></PurpleLink></InnerTextCenter>
+              {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
+              <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
+            <InnerTextLeft>
+              {t("news_IThinkIllGoMad1")}
+
+              <ItalicText>
+               {t("news_IThinkIllGoMad2")}
+              </ItalicText>
+
+            </InnerTextLeft>
+
+            </NewsArticleTextContainer>
+        </NewsArticleThird>
+
+
+{/* --------------------------- NEWS - We Linger on & Girl ------------------------------- */}
+        <NewsArticleFirst>
+          <H3Black>{t("article_header.title_WeLingerOn")}</H3Black>
           <NewsArticleTextContainer>
             <InnerTextCenter><PurpleLink href="https://open.spotify.com/track/1oCNNaxxYalZkEIZfYLZ1C?si=f5d0d564eea24a5d" target="_blank" rel="noopener noreferrer"><NewsLpImage src={WeLingerOn} loading="lazy"/></PurpleLink></InnerTextCenter>
               {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
@@ -254,10 +285,10 @@ return (  <>
             </InnerTextLeft>
 
             </NewsArticleTextContainer>
-        </NewsArticleThird>
-        <NewsArticleThird>
-          <H3White>{t("article_header.title_NewSingle")}</H3White>
-          
+        </NewsArticleFirst>
+
+        <NewsArticleSecond>
+          <H3Black>{t("article_header.title_NewSingle")}</H3Black>
           <NewsArticleTextContainer>
             <InnerTextCenter><PurpleLink href="https://open.spotify.com/track/1nmSFmUUy0qfRsXwObBaJG?si=2424b026bc464894" target="_blank" rel="noopener noreferrer"><NewsLpImage src={Girl} loading="lazy"/></PurpleLink></InnerTextCenter>
               {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
@@ -272,7 +303,9 @@ return (  <>
             </InnerTextLeft>
 
             </NewsArticleTextContainer>
-        </NewsArticleThird>
+        </NewsArticleSecond>
+
+{/* --------------------------- NEWS - Vision of Life on & About ------------------------------- */}
 
         <NewsArticleFirst>
           <H3Black>{t("article_header.title_LatestRelease")}</H3Black>
@@ -281,7 +314,6 @@ return (  <>
           <InnerTextLeft> {t('news_LatestRelease')}</InnerTextLeft>
           </NewsArticleTextContainer>
         </NewsArticleFirst>
-          
 
         <NewsArticleSecond>
           <H3Black>{t("article_header.title_About")}</H3Black>

@@ -41,7 +41,7 @@ const LpInfo: Lp[] = [
     alt: "I Think i'll Go Mad",
     release_type: "single",
     tracks: [
-      { title: "I Think I'll Go Mad", duration: "03:05", spotifyUrl:"" },
+      { title: "I Think I'll Go Mad", duration: "03:05", spotifyUrl:"https://open.spotify.com/track/0DNdGzUfWpSDoMw5RFV8nf?si=74bfbe1c30ab48fd" },
     ],
   },
       { 
