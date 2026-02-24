@@ -9,7 +9,7 @@ import WeLingerOnLp from "../../assets/images/lp/png/we_linger_on.png"
 import IThinkIllGoMadLp from "../../assets/images/lp/png/I_think_Ill_go_mad.png"
 import { SheSaidHeLookedSweet } from "./lyrics/VisionOfLife"
 import { VisionOfLifeLyrics } from "./lyrics/VisionOfLife"
-import { IThinkIllGoMadLyrics } from "./lyrics/Singles"
+import { IThinkIllGoMadLyrics, WeLingerOnLyrics } from "./lyrics/Singles"
 
 export type Track = {
   title: string;
@@ -54,7 +54,7 @@ const LpInfo: Lp[] = [
     alt: "We Linger On",
     release_type: "single",
     tracks: [
-      { title: "We Linger On", duration: "03:43", spotifyUrl:"https://open.spotify.com/track/1oCNNaxxYalZkEIZfYLZ1C?si=f5d0d564eea24a5d" },
+      { title: "We Linger On", duration: "03:43", lyrics: WeLingerOnLyrics, spotifyUrl:"https://open.spotify.com/track/1oCNNaxxYalZkEIZfYLZ1C?si=f5d0d564eea24a5d" },
     ],
   },
     { 

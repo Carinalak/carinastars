@@ -52,3 +52,44 @@ I think I'll go mad
 Yeah
 
 `;
+
+
+export const WeLingerOnLyrics =`
+Take me to the sky where birds do fly
+Sometimes in my dreams, I see you there
+You are resting now in white fluffy light
+Nothing will disturb your calm
+
+We were all born into children
+We are all dressed up as men
+We linger on
+
+Life's like a shadow on the water
+Floating slow under the sky
+We linger on
+
+Take me to the sky where birds do fly
+Sometimes in my dreams, I see you there
+You are resting now in white fluffy light
+Nothing will disturb your calm
+
+To me your soul is like a rainbow
+Hovering over this town
+We linger on
+
+The Universe goes round in circles
+Everything goes round and round
+We linger on
+
+Take me to the sky where birds do fly
+Sometimes in my dreams, I see you there
+You are resting now in white fluffy light
+Nothing will disturb your calm
+
+The Universe goes round in circles
+Everything goes round and round
+We linger on
+
+aaahhh
+
+`;
