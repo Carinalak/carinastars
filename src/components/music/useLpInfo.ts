@@ -9,6 +9,7 @@ import WeLingerOnLp from "../../assets/images/lp/png/we_linger_on.png"
 import IThinkIllGoMadLp from "../../assets/images/lp/png/I_think_Ill_go_mad.png"
 import { SheSaidHeLookedSweet } from "./lyrics/VisionOfLife"
 import { VisionOfLifeLyrics } from "./lyrics/VisionOfLife"
+import { IThinkIllGoMadLyrics } from "./lyrics/Singles"
 
 export type Track = {
   title: string;
@@ -41,7 +42,7 @@ const LpInfo: Lp[] = [
     alt: "I Think i'll Go Mad",
     release_type: "single",
     tracks: [
-      { title: "I Think I'll Go Mad", duration: "03:05", spotifyUrl:"https://open.spotify.com/track/0DNdGzUfWpSDoMw5RFV8nf?si=74bfbe1c30ab48fd" },
+      { title: "I Think I'll Go Mad", duration: "03:05", lyrics: IThinkIllGoMadLyrics, spotifyUrl:"https://open.spotify.com/track/0DNdGzUfWpSDoMw5RFV8nf?si=74bfbe1c30ab48fd" },
     ],
   },
       { 
