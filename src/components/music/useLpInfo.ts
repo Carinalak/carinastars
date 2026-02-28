@@ -7,7 +7,7 @@ import StjarnogaLp from "../../assets/images/lp/png/stjarnoga.png"
 import GirlLp from "../../assets/images/lp/png/Girl.png"
 import WeLingerOnLp from "../../assets/images/lp/png/we_linger_on.png"
 import IThinkIllGoMadLp from "../../assets/images/lp/png/I_think_Ill_go_mad.png"
-import { SheSaidHeLookedSweet } from "./lyrics/VisionOfLife"
+import { AngelwingsLyrics, SheSaidHeLookedSweetLyrics } from "./lyrics/VisionOfLife"
 import { VisionOfLifeLyrics } from "./lyrics/VisionOfLife"
 import { IThinkIllGoMadLyrics, WeLingerOnLyrics } from "./lyrics/Singles"
 
@@ -92,8 +92,8 @@ const LpInfo: Lp[] = [
     release_type: "ep",
     tracks: [
       { title: "Vision of Life", duration: "3:46", spotifyUrl: "https://open.spotify.com/track/0GsGdnpvJJtZgPrSe5tNlZ?si=2c979029817f43eb", lyrics: VisionOfLifeLyrics, author: "Carina Lakosil, 9 april 1999" },
-      { title: "Angelwings", duration: "2:12", spotifyUrl: "https://open.spotify.com/track/7iG8mTFH9yK5sDWlRwtl8X?si=7c3fb15fcea84426", author:"Carina Lakosil 4 juli 1993" },
-      { title: "She Said He Looked Sweet", duration: "3:15", lyrics: SheSaidHeLookedSweet, spotifyUrl: "https://open.spotify.com/track/0iocGtgSIFUkbKVQBZfI0d?si=59f49a83f00c4543", author: "Carina Lakosil, 9 april 1999" },
+      { title: "Angelwings", duration: "2:12", lyrics: AngelwingsLyrics, spotifyUrl: "https://open.spotify.com/track/7iG8mTFH9yK5sDWlRwtl8X?si=7c3fb15fcea84426", author:"Carina Lakosil 4 juli 1993" },
+      { title: "She Said He Looked Sweet", duration: "3:15", lyrics: SheSaidHeLookedSweetLyrics, spotifyUrl: "https://open.spotify.com/track/0iocGtgSIFUkbKVQBZfI0d?si=59f49a83f00c4543", author: "Carina Lakosil, 9 april 1999" },
       { title: "Tears of a Wizard", duration: "3:27", spotifyUrl: "https://open.spotify.com/track/15Loda7Nsj5HId1e6xWfZt?si=dfbbe9dbbb144c76", author: "Carina Lakosil, 9 april 1999" },
       { title: "Niagara Falls", duration: "3:20", spotifyUrl: "https://open.spotify.com/track/2rKdwPl9WhHeYKNIsXHers?si=3b5b376b62ad49be", author: "Carina Lakosil, 16 feb 1995" },
     ],

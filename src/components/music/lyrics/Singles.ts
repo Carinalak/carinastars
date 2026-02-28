@@ -33,11 +33,9 @@ Na na na na na na na
 
 Well I'm sitting here chained to this chair
 Play with my hair, the teacher looks at me
-feels like he stares
-oh, I'm so bored
-
-I think I'll go 
-I think I'll go
+Feels like he stares
+Oh, I'm so bored
+I think I'll go, I think I'll go
 
 I think I'll go 
 I think I'll go mad
@@ -48,8 +46,7 @@ I think I'll go mad
 Na na na na
 Na na na na na na na
 
-I think I'll go mad
-Yeah
+I think I'll go mad, yeah
 
 `;
 

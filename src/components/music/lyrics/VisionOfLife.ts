@@ -80,9 +80,18 @@ You gotta hold on
 'Cause you are lovely
 Don't have to be
 Like everyone else
+
+You gotta hold on
+Yeah hold on
+You are to good to be gone
+You gotta hold on
+'Cause you are lovely
+Don't have to be
+Like everyone else
+
 `;
 
-export const SheSaidHeLookedSweet = `
+export const SheSaidHeLookedSweetLyrics = `
 Han är faktiskt ganska sööööt måste jag säga
 Näää?
 Jo!
