@@ -246,31 +246,12 @@ return (  <>
     <H2Banner>{t("header.title")}</H2Banner>
   </Banner> 
   <BackgroundImage>
+    {/* --------------------------- NEWS - We Linger on ------------------------------- */}
       <NewsContainer>
         <NewsArticleThird>
-          <H3White>{t("article_header.title_IThinkIllGoMad")}</H3White>
+          <H3White>{t("article_header.title_WeLingerOn")}</H3White>
           {/*<NewsDate><div>{t("article_date.date_IThinkIllGoMad")}</div></NewsDate>*/}
           
-          <NewsArticleTextContainer>
-            <InnerTextCenter><PurpleLink href="" target="_blank" rel="noopener noreferrer"><NewsLpImage src={IThinkIllGoMadLP} loading="lazy"/></PurpleLink></InnerTextCenter>
-              {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
-              <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
-            <InnerTextLeft>
-              {t("news_IThinkIllGoMad1")}
-
-              <ItalicText>
-               {t("news_IThinkIllGoMad2")}
-              </ItalicText>
-
-            </InnerTextLeft>
-
-            </NewsArticleTextContainer>
-        </NewsArticleThird>
-
-
-{/* --------------------------- NEWS - We Linger on & Girl ------------------------------- */}
-        <NewsArticleFirst>
-          <H3Black>{t("article_header.title_WeLingerOn")}</H3Black>
           <NewsArticleTextContainer>
             <InnerTextCenter><PurpleLink href="https://open.spotify.com/track/1oCNNaxxYalZkEIZfYLZ1C?si=f5d0d564eea24a5d" target="_blank" rel="noopener noreferrer"><NewsLpImage src={WeLingerOn} loading="lazy"/></PurpleLink></InnerTextCenter>
               {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
@@ -279,7 +260,28 @@ return (  <>
               {t("news_WeLingerOn1")}
 
               <ItalicText>
-               {t("news_WeLingerOn2")}
+                {t("news_WeLingerOn2")}
+              </ItalicText>
+
+            </InnerTextLeft>
+
+            </NewsArticleTextContainer>
+        </NewsArticleThird>
+
+
+{/* --------------------------- NEWS - I Think I'll go mad & Girl ------------------------------- */}
+        <NewsArticleFirst>
+          <H3Black>{t("article_header.title_IThinkIllGoMad")}</H3Black>
+          <NewsArticleTextContainer>
+            <InnerTextCenter><PurpleLink href="https://open.spotify.com/track/0DNdGzUfWpSDoMw5RFV8nf?si=7fcd4a7700e643fa" target="_blank" rel="noopener noreferrer"><NewsLpImage src={IThinkIllGoMadLP} loading="lazy"/></PurpleLink></InnerTextCenter>
+              {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
+              <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
+            <InnerTextLeft>
+              
+                {t("news_IThinkIllGoMad1")}
+              <ItalicText>
+                 {t("news_IThinkIllGoMad2")}
+            
               </ItalicText>
 
             </InnerTextLeft>

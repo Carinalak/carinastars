@@ -4,7 +4,7 @@ Na na na na na na na
 
 Well I'm sitting here chained to this chair
 Play with my hair, the teacher looks at me
-feels like he stares
+Feels like he stares
 This bores me so, I think I'll go mad
 
 When I grow up and have a son
