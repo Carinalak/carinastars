@@ -77,10 +77,10 @@
       "single": "Singel",
       "ep": "Ep",
       "lp": "Lp",
-      "newest": "Nyast",
-      "oldest": "Äldst",
-      "nameAsc": "Namn A - Ö",
-      "nameDesc": "Namn Ö - A"
+      "newest": "Senaste releasen",
+      "oldest": "Äldsta releasen",
+      "nameAsc": "Titel A - Ö",
+      "nameDesc": "Titel Ö - A"
     }
   }
 
