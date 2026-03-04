@@ -317,7 +317,7 @@ useEffect(() => {
       </>
     );
   }
-  const releaseDateObj = new Date(lp.releaseDate);
+  //const releaseDateObj = new Date(lp.releaseDate);
   return (
     <>
       <Banner>
