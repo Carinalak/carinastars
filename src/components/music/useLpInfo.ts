@@ -7,9 +7,10 @@ import StjarnogaLp from "../../assets/images/lp/png/stjarnoga.png"
 import GirlLp from "../../assets/images/lp/png/Girl.png"
 import WeLingerOnLp from "../../assets/images/lp/png/we_linger_on.png"
 import IThinkIllGoMadLp from "../../assets/images/lp/png/I_think_Ill_go_mad.png"
+import LollipopTeensLp from "../../assets/images/lp/png/lollipop_teens.png"
 import { AngelwingsLyrics, SheSaidHeLookedSweetLyrics } from "./lyrics/VisionOfLife"
 import { VisionOfLifeLyrics } from "./lyrics/VisionOfLife"
-import { IThinkIllGoMadLyrics, WeLingerOnLyrics } from "./lyrics/Singles"
+import { GirlLyrics, IThinkIllGoMadLyrics, LollipopTeensLyrics, StjarnogaLyrics, WeLingerOnLyrics } from "./lyrics/Singles"
 
 export type Track = {
   title: string;
@@ -23,8 +24,8 @@ export type Lp = {
   slug: string;
   src: string;
   name: string;
-  date: { day: number; month: string };
   year: number;
+  releaseDate: string;
   alt: string;
   release_type: string;
   tracks: Track[];
@@ -34,11 +35,23 @@ export type Lp = {
 
 const LpInfo: Lp[] = [
   { 
+    slug: "Lollipop-Teens", 
+    src: LollipopTeensLp, 
+    name: "Lollipop Teens", 
+    year: 2026, 
+    releaseDate: "2026-03-18",
+    alt: "Lollipop Teens",
+    release_type: "single",
+    tracks: [
+      { title: "Lollipop Teens", duration: "02:54", lyrics: LollipopTeensLyrics, spotifyUrl:"" },
+    ],
+  },
+  { 
     slug: "I-think-I'll-go-mad", 
     src: IThinkIllGoMadLp, 
     name: "I Think I'll Go Mad", 
-    date: { day: 23, month: "feb" },
     year: 2026, 
+    releaseDate: "2026-02-23",
     alt: "I Think i'll Go Mad",
     release_type: "single",
     tracks: [
@@ -49,8 +62,8 @@ const LpInfo: Lp[] = [
     slug: "we-linger-on", 
     src: WeLingerOnLp, 
     name: "We Linger On", 
-    date: { day: 11, month: "feb" },
     year: 2026, 
+    releaseDate: "2026-02-11",
     alt: "We Linger On",
     release_type: "single",
     tracks: [
@@ -61,24 +74,24 @@ const LpInfo: Lp[] = [
     slug: "girl", 
     src: GirlLp, 
     name: "Girl", 
-    date: { day: 22, month: "jan" },
     year: 2026, 
+    releaseDate: "2026-01-22",
     alt: "Girl",
     release_type: "single",
     tracks: [
-      { title: "Girl", duration: "01:50", spotifyUrl:"https://open.spotify.com/track/1nmSFmUUy0qfRsXwObBaJG?si=1739b6c1abe94f4b" },
+      { title: "Girl", duration: "01:50", lyrics: GirlLyrics, spotifyUrl:"https://open.spotify.com/track/1nmSFmUUy0qfRsXwObBaJG?si=1739b6c1abe94f4b" },
     ],
   },
   { 
     slug: "stjarnoga", 
     src: StjarnogaLp, 
     name: "Stjärnöga", 
-    date: { day: 23, month: "dec" },
     year: 2025, 
+    releaseDate: "2025-12-23",
     alt: "Stjärnöga",
     release_type: "single",
     tracks: [
-      { title: "Stjärnöga", duration: "3:20", spotifyUrl:"https://open.spotify.com/track/3iaN9qbGOVGxo5y1LFD0lq?si=ce30163f83ff4d5d" },
+      { title: "Stjärnöga", duration: "3:20",  lyrics: StjarnogaLyrics, spotifyUrl:"https://open.spotify.com/track/3iaN9qbGOVGxo5y1LFD0lq?si=ce30163f83ff4d5d" },
     ],
   },
 
@@ -86,8 +99,8 @@ const LpInfo: Lp[] = [
     slug: "vision-of-life", 
     src: VisionLp, 
     name: "Vision of Life", 
-    date: { day: 12, month: "sep" },
     year: 2025, 
+    releaseDate: "2025-09-12",
     alt: "Vision of Life",
     release_type: "ep",
     tracks: [
@@ -102,8 +115,8 @@ const LpInfo: Lp[] = [
     slug: "sweet-alligator", 
     src: AlligatorLp, 
     name: "Sweet Alligator", 
-    date: { day: 15, month: "nov" },
     year: 2023, 
+    releaseDate: "2023-11-15",
     alt: "Sweet Alligator",
     release_type: "single",
     tracks: [
@@ -118,8 +131,8 @@ const LpInfo: Lp[] = [
     name: "Disappear", 
     alt: "Disappear",
     release_type: "single",
-    date: { day: 15, month: "jun" },
     year: 2022, 
+    releaseDate: "2022-06-15",
     tracks: [
       { title: "Disappear", duration: "4:24", spotifyUrl: "https://open.spotify.com/track/0QOV3ozrXMk7ZtPqRxfuxM?si=9d1ea7040bf74ecc"  }
     ],
@@ -129,10 +142,10 @@ const LpInfo: Lp[] = [
     slug: "return-to-the-sun", 
     src: ReturnLp, 
     name: "Return to the sun", 
-    date: { day: 9, month: "oct" },
     year: 2019, 
+    releaseDate: "2019-10-09",
     alt: "Return to the Sun",
-    release_type: "single",
+    release_type: "ep",
     tracks: [
       { title: "Return to the Sun", duration: "3:15", spotifyUrl: "https://open.spotify.com/track/3AavflZ49iMovQIO2cOQP9?si=c7c389a7d28b4f9c"  },
       { title: "Little Polly", duration: "2:25", spotifyUrl: "https://open.spotify.com/track/73Pi7ZiNRxaXUUZV9YMDLh?si=949bc6c304b24d8a"  },
@@ -146,10 +159,10 @@ const LpInfo: Lp[] = [
     slug: "lucky-soul", 
     src: LuckySoulLp, 
     name: "Lucky Soul",
-    date: { day: 8, month: "apr" },
     year: 2019, 
+    releaseDate: "2019-04-08",
     alt: "Lucky Soul",
-    release_type: "album",
+    release_type: "lp",
     tracks: [
       { title: "Lucky Soul", duration: "2:35", spotifyUrl: "https://open.spotify.com/track/6X6Z3FebwwEDtFUjLxoWVo?si=894a6953a9354f58"  },
       { title: "Since the Day I came Back", duration: "2:37", spotifyUrl: "https://open.spotify.com/track/4SlzPeoG9nVHUlytUnvfGd?si=f7d745b3c009470a"  },

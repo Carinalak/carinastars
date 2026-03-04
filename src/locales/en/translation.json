@@ -61,8 +61,18 @@
     },
     "releaseType": {
       "single": "Single",
-      "ep": "EP",
-      "album": "Album"
+      "ep": "Ep",
+      "lp": "Lp"
+    },
+    "dropdown": {
+      "all": "Show all",
+      "single": "Single",
+      "ep": "Ep",
+      "lp": "Lp",
+      "newest": "Latest releases",
+      "oldest": "Oldest releases",
+      "nameAsc": "Release title A - Y",
+      "nameDesc": "Release title Y - A"
     }
-  
+
 }

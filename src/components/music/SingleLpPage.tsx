@@ -317,7 +317,7 @@ useEffect(() => {
       </>
     );
   }
-
+  const releaseDateObj = new Date(lp.releaseDate);
   return (
     <>
       <Banner>
@@ -337,13 +337,12 @@ useEffect(() => {
           <SingleInnerContainer>
             <H3BlackSmaller>{lp.name}</H3BlackSmaller>
 
-            <div>
-              {t("LpReleaseDate.text")}
-              {lp.date.day} {t(`months.${lp.date.month}`)} {lp.year} <br />
-              {t("discography.ReleaseType")}
-              {t(`releaseType.${lp.release_type}`)}  
-              <br /> 
-            </div>
+        <div>
+          {t("LpReleaseDate.text")}
+          {lp.releaseDate} <br />
+          {t("discography.ReleaseType")}
+          {t(`releaseType.${lp.release_type}`)}
+        </div>
 
             {lp.tracks && lp.tracks.length > 0 && (
               <>

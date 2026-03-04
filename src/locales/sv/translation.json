@@ -42,7 +42,7 @@
     
   },
     "discography": {
-    "about": "Se alla Carinas utgivningar. Du hittar dem på alla streamingtjänster. De går även beställa på CD om du kontaktar Carina Stars.",
+    "about": "Se alla Carinas utgivningar. Du hittar dem på alla streamingtjänster. Vissa går även att beställa på CD om du kontaktar Carina Stars.",
     "ReleaseType": "Utgivningsformat: "
   },
       "months": {
@@ -69,9 +69,18 @@
 
     "releaseType": {
       "single": "Singel",
-      "ep": "EP",
-      "album": "Album"
+      "ep": "Ep",
+      "lp": "Lp"
+    },
+    "dropdown": {
+      "all": "Visa alla",
+      "single": "Singel",
+      "ep": "Ep",
+      "lp": "Lp",
+      "newest": "Nyast",
+      "oldest": "Äldst",
+      "nameAsc": "Namn A - Ö",
+      "nameDesc": "Namn Ö - A"
     }
-    
-}
+  }
 

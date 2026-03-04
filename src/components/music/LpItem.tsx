@@ -14,6 +14,7 @@ type Props = {
   alt: string;
   name: string;
   year: number;
+  releaseDate: string;
   release_type: string;
   tracks?: Track[];
 };

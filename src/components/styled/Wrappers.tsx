@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BREAKPOINT_BIGGER_DESKTOP, DARKESTPURPLE } from "./Variables";
+import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_TABLET, DARKESTPURPLE } from "./Variables";
 
 
 export const BackgroundOriginal = styled.div `
@@ -116,4 +116,24 @@ export const Banner = styled.div `
         padding-bottom: 10px;
         //margin-bottom: 40px;
     }
+`;
+
+export const DropdownWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  gap: 10px; 
+  //border: 1px solid white;
+  padding-top: 0;
+  padding-bottom: 20px;
+  //border: 1px solid red;
+
+
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+      flex-direction: row;
+      gap: 20px; 
+      margin-bottom: 5px;
+  }
 `;

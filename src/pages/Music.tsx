@@ -1,99 +1,179 @@
 import { H2Banner } from "../components/styled/Fonts";
-import { Banner, BackgroundOriginal } from "../components/styled/Wrappers";
-
+import {
+  Banner,
+  BackgroundOriginal,
+  DropdownWrapper,
+} from "../components/styled/Wrappers";
+import {
+  DiscographyDropdown,
+  type ReleaseFilter,
+} from "../components/music/DiscographyDropdown";
 import styled from "styled-components";
-import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE } from "../components/styled/Variables";
+import {
+  BLACK,
+  BREAKPOINT_BIGGER_DESKTOP,
+  BREAKPOINT_TABLET,
+  WHITE,
+} from "../components/styled/Variables";
 import { useLpInfo } from "../components/music/useLpInfo";
 import { LpItem } from "../components/music/LpItem";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { SortDropdown, type SortOrder } from "../components/music/SortDropdown";
 
+/* ================================
+   Styled Components
+================================ */
 
-export const AllLpContainer = styled.div `      // ------------------------------------- !
+export const AllLpContainer = styled.div`
   background-color: ${WHITE};
   width: 350px;
-  height: auto;
   border-radius: 5px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 5px;
+  margin: 20px 0;
+  padding: 10px;
   color: ${BLACK};
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  //border: 1px solid red;
+  align-items: stretch;
 
-    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-      justify-content: start; 
-      width: 600px;
-      //height: 100vh;
-      //flex-wrap: wrap;
-      //align-items: start;
-      align-items: center; // Gör så att "barnen" bli lika höga.
+  @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+    width: 600px;
+    align-items: center;
+  }
 
-    }/*
-    @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
-      grid-template-columns: repeat(3, 200px); 
-      margin: 0;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      gap: 15px;
-    }*/
-    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
-      width: 1300px;
-      padding-top: 60px;
-    }
+  @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+    width: 1300px;
+    padding-top: 60px;
+  }
 `;
 
-export const OverLpContainerText = styled.div `
+export const OverLpContainerText = styled.div`
   color: ${WHITE};
   padding-top: 20px;
   width: 360px;
-    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-      width: 600px;
-    }
 
-    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
-      width: 1300px;
-      padding-top: 60px;
-    }
+  @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+    width: 600px;
+  }
 
+  @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+    width: 1300px;
+    padding-top: 60px;
+  }
 `;
 
+/* ================================
+   Component
+================================ */
 
 export const Music = () => {
+  const [sortBy, setSortBy] = useState<ReleaseFilter>("all");
+
   const lps = useLpInfo();
   const { t } = useTranslation();
+  const [sortOrder, setSortOrder] = useState<SortOrder>("newest");
+  const { i18n } = useTranslation();
 
-  // --------------------- This code enables the page to be in right position when opened ---------------------- // 
-  // It is used together with <div id="top"></div> in index.html. Scrolls to top only with first mount, not in external clicks.
+  /* Scroll to top on mount */
   useEffect(() => {
-  const topElement = document.getElementById("top");
-  if (topElement) {
-    topElement.scrollIntoView({ behavior: "auto" });
-  }
-}, []); // Körs EN gång när sidan laddas
-  // ---------------------------------------- End of position code ---------------------------------------------- //
+    document.getElementById("top")?.scrollIntoView({ behavior: "auto" });
+  }, []);
 
-return (  <>
-  <Banner><H2Banner>{t("header.titleMusic")}</H2Banner></Banner> 
-  <BackgroundOriginal>
-    <OverLpContainerText> {t("discography.about")}
-    </OverLpContainerText>
-     <AllLpContainer>
-        {lps.map(lp => (
-          <LpItem
-            key={lp.slug}
-            slug={lp.slug}
-            src={lp.src}
-            alt={lp.alt}
-            name={lp.name}
-            year={lp.year}
-            release_type={lp.release_type}
-          />
-        ))}
-      </AllLpContainer>
-  </BackgroundOriginal></>
- 
-)};
+  /* ================================
+     Filtering + Sorting (memoized)
+  ================================= */
+
+const filteredLps = useMemo(() => {
+  const filtered =
+    sortBy === "all"
+      ? lps
+      : lps.filter(lp => lp.release_type === sortBy);
+
+  const sorted = [...filtered];
+
+  switch (sortOrder) {
+    case "newest":
+      return sorted.sort(
+        (a, b) =>
+          new Date(b.releaseDate).getTime() -
+          new Date(a.releaseDate).getTime()
+      );
+
+    case "oldest":
+      return sorted.sort(
+        (a, b) =>
+          new Date(a.releaseDate).getTime() -
+          new Date(b.releaseDate).getTime()
+      );
+
+    case "nameAsc":
+      return sorted.sort((a, b) =>
+        a.name.localeCompare(b.name, undefined, {
+          sensitivity: "base",
+        })
+      );
+
+    case "nameDesc":
+      return sorted.sort((a, b) =>
+        b.name.localeCompare(a.name, undefined, {
+          sensitivity: "base",
+        })
+      );
+
+    default:
+      return sorted;
+  }
+}, [lps, sortBy, sortOrder]);
+
+  return (
+    <>
+      <Banner>
+        <H2Banner>{t("header.titleMusic")}</H2Banner>
+      </Banner>
+
+      <BackgroundOriginal>
+        <OverLpContainerText>
+          {t("discography.about")}
+        </OverLpContainerText>
+
+        <AllLpContainer>
+          <DropdownWrapper>
+         {/*  {t("discography.filterLabel") ?? "Filter:"} */}  
+            <DiscographyDropdown
+              sortBy={sortBy}
+              setSortBy={setSortBy}
+            />
+            <SortDropdown
+              sortOrder={sortOrder}
+              setSortOrder={setSortOrder}
+              />
+            </DropdownWrapper>
+
+          {filteredLps.map(lp => {
+            const formattedDate = new Date(lp.releaseDate).toLocaleDateString(
+              i18n.language,
+              {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              }
+            );
+
+            return (
+              <LpItem
+                key={lp.slug}
+                slug={lp.slug}
+                src={lp.src}
+                year={new Date(lp.releaseDate).getFullYear()}
+                alt={lp.alt}
+                name={lp.name}
+                releaseDate={formattedDate}
+                release_type={lp.release_type}
+              />
+            );
+          })}
+        </AllLpContainer>
+      </BackgroundOriginal>
+    </>
+  );
+};

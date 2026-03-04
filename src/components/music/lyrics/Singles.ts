@@ -1,3 +1,37 @@
+export const LollipopTeensLyrics =`
+I see Lollipop Teens wearing wornout jeans
+Giggle like horses and talk like machines
+Boogie Sugar Lucy and a boy named Roy
+Went on a stroll and they never came home
+
+Everybody sings yeah, everybody wins, yeah	
+Everybody jumps yeah, everybody bumps, yeah
+
+Little Scarlet Harry is already married
+To his computer, no couple is cuter
+Ramona’s chewing gum, sittin’ in the sun
+Her toungue is so pink of all strawberry ink
+
+Everybody sings yeah, everybody wins, yeah
+Everybody jumps yeah, everybody bumps, yeah
+
+I see Lollipop Teens wearing wornout jeans
+Giggle like horses and talk like machines
+
+Everybody sings yeah, everybody wins, yeah
+Everybody jumps yeah, everybody bumps, yeah
+
+(Lollipop teens, Lollipop teens)
+Lollipop teens yeah(Lollipop teens)
+Lollipop teens (Lollipop teens)
+
+Everybody sings yeah, everybody wins, yeah
+Everybody jumps yeah, everybody bumps, yeah
+
+(Lollipop teens, Lollipop teens)
+(Lollipop teens, Lollipop ooooooo)
+`;
+
 export const IThinkIllGoMadLyrics =`
 Na na na na
 Na na na na na na na
@@ -88,5 +122,76 @@ Everything goes round and round
 We linger on
 
 aaahhh
+
+`;
+
+export const GirlLyrics =`
+Oh God
+High in your fields above earth
+Come and be real for us
+You with your mind
+Oh yes you are
+Beautifully fine
+
+Oh Girl
+Electric witch you are limp
+In society's ditch you are
+Visually fine
+Oh yes you are
+But mentally dying
+
+Boy
+Just like a boat you are sunk
+But somehow you float you do
+Mentally weak
+Oh yes you are
+But so much you speak
+
+Oh Girl
+Electric witch you are limp
+In society's ditch you are
+Visually fine
+Oh yes you are
+But mentally dying
+
+Oh God
+High in your fields above earth
+Come and be real for us
+You with your mind
+Oh yes you are
+Beautifully fine
+
+`;
+
+export const StjarnogaLyrics =`
+Stjärnöga, du har färdats långt
+En över tusen världars kosmonaut
+Ett universum bor i dig
+
+Stjärnöga, hur hamna du här
+Av alla tusen världar du har sett
+Så valde du den här
+
+Stjärnöga, Stjärnöga
+
+Stjärnöga, säg mig hur du gör
+När du samlar alla änglar runt dig
+De följer dina spår
+
+Stjärnöga, jag ser en ängel
+Den breder ut sina vingar
+och sluter dem runt dig
+
+Stjärnöga, Stjärnöga
+
+Du flyger högt över stan
+Du såg mig när jag var ett barn
+Du är ett barn till ett barn
+Spinner de eviga själarnas garn
+
+Stjärnöga (Du hälsar på i änglarnas värld)
+Stjärnöga (Sjunger så vackert i änglarnas kör)
+
+
 
 `;
