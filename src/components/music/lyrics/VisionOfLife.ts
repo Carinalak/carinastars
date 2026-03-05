@@ -40,7 +40,7 @@ Everyone smiles and says
 
 Is this a Vision of Life
 Is this a vision of a happy life
-hook
+
 Aaah
 
 Just a Vision of Life
