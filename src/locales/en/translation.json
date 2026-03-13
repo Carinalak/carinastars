@@ -69,8 +69,8 @@
       "single": "Single",
       "ep": "Ep",
       "lp": "Lp",
-      "newest": "Latest releases",
-      "oldest": "Oldest releases",
+      "newest": "Latest release",
+      "oldest": "Oldest release",
       "nameAsc": "Release title A - Y",
       "nameDesc": "Release title Y - A"
     }
