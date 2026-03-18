@@ -43,7 +43,7 @@ const LpInfo: Lp[] = [
     alt: "Lollipop Teens",
     release_type: "single",
     tracks: [
-      { title: "Lollipop Teens", duration: "02:54", lyrics: LollipopTeensLyrics, spotifyUrl:"" },
+      { title: "Lollipop Teens", duration: "02:54", lyrics: LollipopTeensLyrics, spotifyUrl:"https://open.spotify.com/track/2pHzO41o1dpiqxgvwcJnaf?si=74e2e5afb67549ac" },
     ],
   },
   { 

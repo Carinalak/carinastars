@@ -22,7 +22,7 @@ Everybody sings yeah, everybody wins, yeah
 Everybody jumps yeah, everybody bumps, yeah
 
 (Lollipop teens, Lollipop teens)
-Lollipop teens yeah(Lollipop teens)
+Lollipop teens yeah (Lollipop teens)
 Lollipop teens (Lollipop teens)
 
 Everybody sings yeah, everybody wins, yeah
