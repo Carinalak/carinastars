@@ -9,7 +9,7 @@ Everybody jumps yeah, everybody bumps, yeah
 
 Little Scarlet Harry is already married
 To his computer, no couple is cuter
-Ramona’s chewing gum, sittin’ in the sun
+Ramona's chewing gum, sittin' in the sun
 Her tongue is so pink of all strawberry ink
 
 Everybody sings yeah, everybody wins, yeah

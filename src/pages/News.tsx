@@ -10,6 +10,7 @@ import AmISick from "../assets/images/carina/AmISick.jpg"
 import Girl from "../assets/images/lp/png/Girl.png"
 import WeLingerOn from "../assets/images/lp/png/we_linger_on.png"
 import IThinkIllGoMadLP from "../assets/images/lp/png/I_think_Ill_go_mad.png"
+import StandingAllAloneLP from "../assets/images/lp/png/Standing_All_Alone.png"
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, LIGHTPURPLE } from "../components/styled/Variables";
 import { H2Banner, H3Black, H3White, PurpleLink } from "../components/styled/Fonts";
@@ -246,27 +247,48 @@ return (  <>
     <H2Banner>{t("header.title")}</H2Banner>
   </Banner> 
   <BackgroundImage>
-    {/* --------------------------- NEWS - We Linger on ------------------------------- */}
-      <NewsContainer>
+    <NewsContainer>
+  {/* --------------------------- NEWS - Standing All Alone ------------------------------- */}
+
         <NewsArticleThird>
-          <H3White>{t("article_header.title_WeLingerOn")}</H3White>
+          <H3White>{t("article_header.title_StandingAllAlone")}</H3White>
           {/*<NewsDate><div>{t("article_date.date_IThinkIllGoMad")}</div></NewsDate>*/}
           
           <NewsArticleTextContainer>
-            <InnerTextCenter><PurpleLink href="https://open.spotify.com/track/1oCNNaxxYalZkEIZfYLZ1C?si=f5d0d564eea24a5d" target="_blank" rel="noopener noreferrer"><NewsLpImage src={WeLingerOn} loading="lazy"/></PurpleLink></InnerTextCenter>
+            <InnerTextCenter><PurpleLink href="" target="_blank" rel="noopener noreferrer"><NewsLpImage src={StandingAllAloneLP} loading="lazy"/></PurpleLink></InnerTextCenter>
               {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
               <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
             <InnerTextLeft>
-              {t("news_WeLingerOn1")}
+              {t("news_StandingAllAlone1")}
 
               <ItalicText>
-                {t("news_WeLingerOn2")}
+                {t("news_StandingAllAlone2")}
               </ItalicText>
 
             </InnerTextLeft>
 
             </NewsArticleTextContainer>
         </NewsArticleThird>
+
+{/* --------------------------- NEWS - About & Vision of Life ------------------------------- */}
+
+        <NewsArticleFirst>
+          <H3Black>{t("article_header.title_About")}</H3Black>
+          <NewsArticleTextContainer>
+          <InnerTextCenter><NewsLpImage src={CarinaReturn} loading="lazy"/></InnerTextCenter>
+          <InnerTextLeft> {t('news_About')}</InnerTextLeft>
+          </NewsArticleTextContainer>
+        </NewsArticleFirst>
+
+        <NewsArticleSecond>
+          <H3Black>{t("article_header.title_LatestRelease")}</H3Black>
+          <NewsArticleTextContainer>
+            <InnerTextCenter><PurpleLink href="https://open.spotify.com/album/2mPBUxqzcQNn8TMjDQeuyO?si=-w679RAQR2-nyNx7ylkxqg" target="_blank" rel="noopener noreferrer"><NewsLpImage src={VisionLp} /></PurpleLink></InnerTextCenter>
+            <InnerTextLeft> {t('news_LatestRelease')}
+            </InnerTextLeft>
+            </NewsArticleTextContainer>
+        </NewsArticleSecond>
+{/* --------------------------- END  NEWS -About & Vision of Life ------------------------------- */}
 
 
 {/* --------------------------- NEWS - I Think I'll go mad & Girl ------------------------------- */}
@@ -307,25 +329,30 @@ return (  <>
             </NewsArticleTextContainer>
         </NewsArticleSecond>
 
-{/* --------------------------- NEWS - Vision of Life on & About ------------------------------- */}
+    {/* --------------------------- NEWS - We Linger on ------------------------------- */}
 
-        <NewsArticleFirst>
-          <H3Black>{t("article_header.title_LatestRelease")}</H3Black>
+        <NewsArticleThird>
+          <H3White>{t("article_header.title_WeLingerOn")}</H3White>
+          {/*<NewsDate><div>{t("article_date.date_IThinkIllGoMad")}</div></NewsDate>*/}
+          
           <NewsArticleTextContainer>
-          <InnerTextCenter><NewsLpImage src={VisionLp} loading="lazy"/></InnerTextCenter>
-          <InnerTextLeft> {t('news_LatestRelease')}</InnerTextLeft>
-          </NewsArticleTextContainer>
-        </NewsArticleFirst>
+            <InnerTextCenter><PurpleLink href="https://open.spotify.com/track/1oCNNaxxYalZkEIZfYLZ1C?si=f5d0d564eea24a5d" target="_blank" rel="noopener noreferrer"><NewsLpImage src={WeLingerOn} loading="lazy"/></PurpleLink></InnerTextCenter>
+              {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
+              <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
+            <InnerTextLeft>
+              {t("news_WeLingerOn1")}
 
-        <NewsArticleSecond>
-          <H3Black>{t("article_header.title_About")}</H3Black>
-          <NewsArticleTextContainer>
-            <InnerTextCenter><NewsLpImage src={CarinaReturn} /></InnerTextCenter>
-            <InnerTextLeft> {t('news_About')}
+              <ItalicText>
+                {t("news_WeLingerOn2")}
+              </ItalicText>
+
             </InnerTextLeft>
-            </NewsArticleTextContainer>
-        </NewsArticleSecond>
 
+            </NewsArticleTextContainer>
+        </NewsArticleThird>
+
+
+{/* --------------------------- NEWS - Music videos ------------------------------- */}
         <NewsArticleThird>
           <H3White>{t("article_header.title_MusicVideos")}</H3White>
           <NewsArticleTextContainer>

@@ -21,7 +21,7 @@ export const BackgroundOriginal = styled.div `
 export const BackgroundImage = styled.div `
   min-height: 100vh;
   width: 100%;
-  background-image: url("/we_linger_on_background.png");
+  background-image: url("/Standing_All_Alone_background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
