@@ -67,7 +67,8 @@
       "message2": ""
   },
     "LpReleaseDate": {
-    "text": "Utgiven: "
+    "text": "Utgiven: ",
+    "SeeLyrics":"Gå till låttexter"
     },
 
     "releaseType": {

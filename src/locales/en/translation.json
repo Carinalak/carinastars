@@ -60,7 +60,8 @@
         "message": "Contact"
     },
     "LpReleaseDate": {
-      "text": "Release date: "
+      "text": "Release date: ",
+      "SeeLyrics":"See Lyrics to the songs"
     },
     "releaseType": {
       "single": "Single",

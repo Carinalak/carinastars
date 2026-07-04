@@ -30,6 +30,8 @@ export type Lp = {
   releaseDate: string;
   alt: string;
   release_type: string;
+  spotifyAlbumUrl?: string;
+  lyrics?: string;
   tracks: Track[];
 };
 
@@ -44,14 +46,16 @@ const LpInfo: Lp[] = [
     releaseDate: "2026-05-29",
     alt: "Standing All Alone",
     release_type: "lp",
+    spotifyAlbumUrl:"https://open.spotify.com/album/7idoGVxUrt3XuaYmwX2baT?si=Aiv841NhQ5OOp4teCkVFSQ",
+    lyrics: StandingAllAloneLyrics,
         tracks: [
-      { title: "Standing All Alone", duration: "02.59", lyrics: StandingAllAloneLyrics, spotifyUrl:"https://open.spotify.com/track/7Msxp2bFeNoohN0TsI8vuM?si=cd8e2c96bf2a424a", author: "Carina Lakosil, 1988"},
-      { title: "Going Home", duration: "03.01", lyrics: GoingHomeLyrics, spotifyUrl: "https://open.spotify.com/track/792WTGG8fSS1YN9hIXZPVc?si=fba0f250cb9f4066", author: "Carina Lakosil, 20 jan 1995"},
+      { title: "Standing All Alone", duration: "02:59", lyrics: StandingAllAloneLyrics, spotifyUrl:"https://open.spotify.com/track/7Msxp2bFeNoohN0TsI8vuM?si=cd8e2c96bf2a424a", author: "Carina Lakosil, 1988"},
+      { title: "Going Home", duration: "03:01", lyrics: GoingHomeLyrics, spotifyUrl: "https://open.spotify.com/track/792WTGG8fSS1YN9hIXZPVc?si=fba0f250cb9f4066", author: "Carina Lakosil, 20 jan 1995"},
       { title: "Am I sick?", duration: "2:50", lyrics: AmISickLyrics, spotifyUrl: "https://open.spotify.com/track/6HPuvKVJYp3IaMmYNrVpxC?si=c183e19c19cf4071"  },
       { title: "You Won't Walk Alone", duration: "2:45", lyrics: YouWontWalkAloneLyrics, spotifyUrl: "https://open.spotify.com/track/3BmyfbKRJieIVDgb4KwhOy?si=482aa4bfbc714958", author: "Carina Lakosil, 1997 & 2020"  },
-      { title: "Walk the Streets", duration: "02.45", lyrics: WalkTheStreetsLyrics, spotifyUrl: "https://open.spotify.com/track/30QPfQZtnLWGzR6P5TPMzN?si=2db509d373f842fd", author: "Carina Lakosil, 1 maj 1994" },
+      { title: "Walk the Streets", duration: "02:45", lyrics: WalkTheStreetsLyrics, spotifyUrl: "https://open.spotify.com/track/30QPfQZtnLWGzR6P5TPMzN?si=2db509d373f842fd", author: "Carina Lakosil, 1 maj 1994" },
       { title: "Sweet Alligator", duration: "3:12", lyrics: SweetAlligatorLyrics, spotifyUrl: "https://open.spotify.com/track/5FJFY31A9XA9G9hSjCZyPP?si=9603a77de5ea4131", author: "Carina Lakosil, 30 april 1993"  },
-      { title: "I'm Changing", duration: "02.41", lyrics: ImChangingLyrics, spotifyUrl: "https://open.spotify.com/track/6vV6jY7DUmPAMW8I3IB0An?si=2a6c9ae2d5414cf0", author: "Carina Lakosil, 1 juni 1994" },
+      { title: "I'm Changing", duration: "02:41", lyrics: ImChangingLyrics, spotifyUrl: "https://open.spotify.com/track/6vV6jY7DUmPAMW8I3IB0An?si=2a6c9ae2d5414cf0", author: "Carina Lakosil, 1 juni 1994" },
       { title: "Lollipop Teens", duration: "02:54", lyrics: LollipopTeensLyrics, spotifyUrl:"https://open.spotify.com/track/19p7fTClkQg2YKYDdcPRMc?si=0fa7b24a80fb44d3" },
       { title: "We Linger On", duration: "03:43", lyrics: WeLingerOnLyrics, spotifyUrl:"https://open.spotify.com/track/3H29AIdPggBmdBtBTtscdc?si=8310f689b71d46f0" },
       { title: "I Think I'll Go Mad", duration: "03:05", lyrics: IThinkIllGoMadLyrics, spotifyUrl:"https://open.spotify.com/track/4rIXRd0k1JqZTctCOh0cps?si=3f1e477950c54d65" },        

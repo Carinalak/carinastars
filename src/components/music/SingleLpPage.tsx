@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { H2Banner, H3BlackSmaller, LinkSpan, WhiteLink } from "../styled/Fonts";
+import { H2Banner, H3BlackSmaller, WhiteLink } from "../styled/Fonts";
 import { Banner, BackgroundOriginal, BackgroundAlbum } from "../styled/Wrappers";
 import { useLpInfo } from "./useLpInfo";
 import styled from "styled-components";
@@ -35,6 +35,19 @@ export const SingleLpImage = styled.img`
 `;
 
 export const PlayArrowImage = styled.img`
+ width: 20px;
+ border-radius: 3px;
+ margin-right: 5px;
+
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+       margin-right: 10px;
+    }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+    
+    }
+`;
+
+export const LyricsIconImage = styled.img`
  width: 20px;
  border-radius: 3px;
  margin-right: 5px;
@@ -178,6 +191,7 @@ export const TrackRow = styled.div`
  display: flex;
  flex-direction: row;
  align-items: center;
+ justify-content: center;
  
  `;
 /* ---------------- Modal styling ---------------- */
@@ -251,8 +265,8 @@ export const SingleLpPage = () => {
   const lp = useLpInfo().find(x => x.slug === slug);
   const { t } = useTranslation();
   
-
-  const [selectedTrack, setSelectedTrack] = useState<TrackWithLyrics | null>(null);
+  //const [selectedTrack, setSelectedTrack] = useState<TrackWithLyrics | null>(null);
+  const [selectedTrack] = useState<TrackWithLyrics | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
@@ -335,13 +349,23 @@ useEffect(() => {
           />
 
           <SingleInnerContainer>
-            <H3BlackSmaller>{lp.name}</H3BlackSmaller>
-
+            <H3BlackSmaller> 
+                            <button
+                onClick={() => window.open(lp.spotifyAlbumUrl, "_blank")}
+                style={{ cursor: "pointer", background: "none", border: "none" }}
+              >
+                <PlayArrowImage src={PlayArrow} />
+              </button>
+              {lp.name}
+            </H3BlackSmaller>
         <div>
           {t("LpReleaseDate.text")}
           {lp.releaseDate} <br />
           {t("discography.ReleaseType")}
-          {t(`releaseType.${lp.release_type}`)}
+          {t(`releaseType.${lp.release_type}`)}   <br />
+          
+          
+
         </div>
 
             {lp.tracks && lp.tracks.length > 0 && (
@@ -357,15 +381,11 @@ useEffect(() => {
                               style={{ cursor: "pointer", background: "none", border: "none" }}
                             >
                               <PlayArrowImage src={PlayArrow} />
+                          
                             </button>
                           )}
+                          {track.title}
 
-                          <LinkSpan
-                              disabled={!track.lyrics}
-                              onClick={() => track.lyrics && setSelectedTrack(track)}
-                          >
-                            {track.title}
-                          </LinkSpan>
                         </TrackRow>
 
                         <span>{track.duration}</span>
