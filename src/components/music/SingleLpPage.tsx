@@ -378,13 +378,13 @@ useEffect(() => {
                           {track.spotifyUrl && (
                             <button
                               onClick={() => window.open(track.spotifyUrl, "_blank")}
-                              style={{ cursor: "pointer", background: "none", border: "none" }}
+                              style={{ cursor: "pointer", background: "none", border: "none", display: "flex", alignItems: "center", fontSize: "1rem" }}
                             >
                               <PlayArrowImage src={PlayArrow} />
-                          
+                          {track.title}
                             </button>
                           )}
-                          {track.title}
+                          
 
                         </TrackRow>
 
