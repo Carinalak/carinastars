@@ -350,12 +350,7 @@ useEffect(() => {
 
           <SingleInnerContainer>
             <H3BlackSmaller> 
-                            <button
-                onClick={() => window.open(lp.spotifyAlbumUrl, "_blank")}
-                style={{ cursor: "pointer", background: "none", border: "none" }}
-              >
-                <PlayArrowImage src={PlayArrow} />
-              </button>
+
               {lp.name}
             </H3BlackSmaller>
         <div>
