@@ -80,7 +80,19 @@ export const Videos = () => {
       <BackgroundOriginal>
         <AllVideoWrapper>
 
-          {/* VIDEO 1 Girl*/}
+          {/* VIDEO 1 Jade */}
+          <OneVideoWrapper>
+            <ResponsiveVideo>
+              <iframe 
+                  src="https://www.youtube.com/embed/tyqiQGH2LOk?si=hSGVVs_qZ37liGBO" 
+                  title="YouTube video player" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen>
+                </iframe>
+            </ResponsiveVideo>
+          </OneVideoWrapper>
+          {/* VIDEO 2 Girl*/}
           <OneVideoWrapper>
             <ResponsiveVideo>
               
@@ -88,7 +100,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 2 Lucky Soul */}
+          {/* VIDEO 3 Lucky Soul */}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe
@@ -101,7 +113,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 3 Am I Sick */}
+          {/* VIDEO 4 Am I Sick */}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe
@@ -114,7 +126,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 4 Since the Day I Came Back*/}
+          {/* VIDEO 5 Since the Day I Came Back*/}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe
@@ -127,7 +139,7 @@ export const Videos = () => {
             </ResponsiveVideo>
           </OneVideoWrapper>
 
-          {/* VIDEO 5 Crown of Sun*/}
+          {/* VIDEO 6 Crown of Sun*/}
           <OneVideoWrapper>
             <ResponsiveVideo>
               <iframe 
@@ -137,19 +149,6 @@ export const Videos = () => {
                 referrerPolicy="strict-origin-when-cross-origin" 
                 allowFullScreen>
               </iframe>
-            </ResponsiveVideo>
-          </OneVideoWrapper>
-
-          {/* VIDEO 6 Jade */}
-          <OneVideoWrapper>
-            <ResponsiveVideo>
-              <iframe 
-                  src="https://www.youtube.com/embed/tyqiQGH2LOk?si=hSGVVs_qZ37liGBO" 
-                  title="YouTube video player" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerPolicy="strict-origin-when-cross-origin" 
-                  allowFullScreen>
-                </iframe>
             </ResponsiveVideo>
           </OneVideoWrapper>
           
@@ -191,7 +190,6 @@ export const Videos = () => {
               </iframe>
             </ResponsiveVideo>
           </OneVideoWrapper>
-
           
           {/* VIDEO 10 Disappear*/}
           <OneVideoWrapper>

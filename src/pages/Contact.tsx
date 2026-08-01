@@ -194,7 +194,7 @@ return (  <>
   <BackgroundOriginal>
     <ContactWrapper>
     <ContactImage src={CarinaStars} loading="lazy"/>
-      <div><WhiteLink href="https://mail.google.com/mail/?view=cm&fs=1&to=carina.starsmusic@gmail.com"
+      <div><WhiteLink href="https://mail.google.com/mail/?view=cm&fs=1&to=carina.lakosil@gmail.com"
         target="_blank"
         rel="noopener noreferrer"> Carina Stars</WhiteLink>.
       </div>
