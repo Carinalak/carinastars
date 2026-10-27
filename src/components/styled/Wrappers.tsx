@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_TABLET, DARKESTPURPLE } from "./Variables";
+import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, DARKESTPURPLE, WHITE } from "./Variables";
 
 
 export const BackgroundOriginal = styled.div `
@@ -50,9 +50,8 @@ export const BackgroundImage = styled.div `
       @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
         padding-top: 30px;
     }
-
-  
 `;
+
 
 /*
 export const BackgroundAlbum = styled.div `
@@ -136,4 +135,32 @@ export const DropdownWrapper = styled.div`
       gap: 20px; 
       margin-bottom: 5px;
   }
+`;
+
+export const ContactFormWrapper= styled.div `
+    color: ${WHITE};
+    font-family: Arial, Helvetica, sans-serif;
+    //font-weight: 600;
+    font-style: normal;
+    text-align: left;
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 14px;
+    line-height: normal;
+    //border: 1px solid white;
+    outline: none;
+    padding: 20;
+    width: 320px;
+   // border-radius: 5px;
+   padding-bottom: 20px;
+    
+        @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+          width: 410px;
+        }
+        @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+          width: 470px;
+        }
+        @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+          width: 480px;
+        }
 `;

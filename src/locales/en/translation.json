@@ -57,11 +57,11 @@
       "dec": "December"
     },
       "contact": {
-        "message": "Contact"
+       "message": "Feel free to write me a message, I would love that! If you want to buy some of my CDs, let me know!"
     },
     "LpReleaseDate": {
       "text": "Release date: ",
-      "SeeLyrics":"See Lyrics to the songs"
+      "SeeLyrics": "See Lyrics to the songs"
     },
     "releaseType": {
       "single": "Single",

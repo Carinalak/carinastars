@@ -12,6 +12,9 @@
   font-style: normal;
   /*background-image: url("/I_think_Ill_go_mad_background.png");*/
   /*color: #FFFFFF;*/
+  overflow-x: hidden;
+  width: 100%;
+
 
 body {
   margin: 0;
@@ -19,6 +22,8 @@ body {
   place-items: center;*/
   min-width: 100vw;
   /*min-height: 100vh;*/
+  overflow-x: hidden;
+  width: 100%;
 
 }
 a {

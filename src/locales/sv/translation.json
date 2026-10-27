@@ -63,12 +63,11 @@
       "dec": "december"
     },
     "contact": {
-      "message": "Kontakta",
-      "message2": ""
+      "message": "Välkommen att skriva ett meddelande till mig! Om du är intresserad av att köpa någon av mina CD-skivor kan du fråga här."
   },
     "LpReleaseDate": {
-    "text": "Utgiven: ",
-    "SeeLyrics":"Gå till låttexter"
+     "text": "Utgiven: ",
+     "SeeLyrics":"Gå till låttexter"
     },
 
     "releaseType": {

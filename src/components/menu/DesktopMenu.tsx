@@ -31,7 +31,7 @@ export const DesktopNav = styled.nav`
     flex-direction: column;
     width: auto;
     padding-left: 20px;
-    padding-right: 30px;
+    padding-right: 40px;
     //border: 1px solid red;
     align-items: flex-end;
     

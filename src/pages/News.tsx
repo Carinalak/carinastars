@@ -16,7 +16,29 @@ import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET
 import { H2Banner, H3Black, H3White, PurpleLink } from "../components/styled/Fonts";
 import { useTranslation } from 'react-i18next';
 import { useEffect } from "react";
+import HeadphoneStarLogo from "../assets/images/headphonestar.png";
 
+
+export const LogoImage = styled.img `
+ width: 45px;
+ height: auto;
+ //margin-top: 20px;
+padding-top: 0px;
+padding-bottom: 20px;;
+
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+      width: 50px;
+    }
+    
+    @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+      width: 50px;
+    }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+      padding-top: 25px;
+      width: 90px;
+      padding-top: 20px;
+    }
+`;
 
 export const NewsLpImage = styled.img `
  width: 300px;
@@ -251,7 +273,7 @@ return (  <>
   {/* --------------------------- NEWS - Standing All Alone ------------------------------- */}
 
         <NewsArticleThird>
-          <H3White>{t("article_header.title_StandingAllAlone")}</H3White>
+          <H3White>{t("article_header.title_StandingAllAlone")} </H3White>
           {/*<NewsDate><div>{t("article_date.date_IThinkIllGoMad")}</div></NewsDate>*/}
           
           <NewsArticleTextContainer>
@@ -268,6 +290,7 @@ return (  <>
             </InnerTextLeft>
 
             </NewsArticleTextContainer>
+            <LogoImage src={HeadphoneStarLogo} loading="lazy"/>
         </NewsArticleThird>
 
 {/* --------------------------- NEWS - About & Vision of Life ------------------------------- */}

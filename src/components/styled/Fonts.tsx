@@ -194,3 +194,18 @@ export const WhiteLink = styled(Link)`
   }
 `;*/
 // -------------------------- END LINKS -------------------------------- //
+
+// -------------------------- Ordinary text -------------------------------- //
+
+export const WhiteFontNormal= styled.div `
+    padding: 0;
+    margin: 0;
+    color: ${WHITE};
+    font-family: Arial, Helvetica, sans-serif;
+    //font-weight: 600;
+    font-style: normal;
+    text-align: left;
+    margin-top: 0;
+`;
+
+// -------------------------- End Ordinary text -------------------------------- //
