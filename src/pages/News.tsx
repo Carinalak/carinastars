@@ -385,7 +385,7 @@ return (  <>
             <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
             <InnerTextLeft>
               {t("news_MusicVideos1")}
-              <PurpleLink href="/videos">
+              <PurpleLink href="https://www.youtube.com/channel/UCEyZ9frD4s1VmFoYOk4sM8w" target="_blank" rel="noopener noreferrer">
                 {t("news_MusicVideos2")}
               </PurpleLink>
               {t("news_MusicVideos3")}
