@@ -259,8 +259,8 @@ export const Contact = () => {
 {isSent ? (
   <div style={{ textAlign: 'center', padding: '20px', color: WHITE }}>
      <ContactImage src={CarinaStars} loading="lazy"></ContactImage>
-    <h3>Message was sent successfully</h3>
-    <Button type="button" onClick={() => setIsSent(false)}>Go Back</Button>
+    <h3>{t("contact.success")}</h3>
+    <Button type="button" onClick={() => setIsSent(false)}>{t("contact.goback")}</Button>
   </div>
 ) : (
   <div>
@@ -270,7 +270,7 @@ export const Contact = () => {
       <input
         className="contactInput"
         type="text"
-        placeholder="Name"
+        placeholder={t("contact.name")}
         {...register("name", {
           required: "Name required",
           pattern: {
@@ -300,7 +300,7 @@ export const Contact = () => {
     <div>
       <textarea
         className="contactTextArea"
-        placeholder="Write a message to Carina"
+        placeholder={t("contact.message2")}
         {...register("message", {
           required: "Message required",
           minLength: {
@@ -313,10 +313,10 @@ export const Contact = () => {
     </div>
 
     <ButtonWrapper>
-      <Button type="button" onClick={handleClear}>Rensa</Button>
+      <Button type="button" onClick={handleClear}>{t("contact.clear")}</Button>
       <Button type="submit" disabled={loading}>
-        {loading ? "Skickar..." : "Skicka"}
-      </Button>
+        {loading ? t("contact.sending") : t("contact.send")}
+      </Button> 
     </ButtonWrapper>
   </Form>
   </div>

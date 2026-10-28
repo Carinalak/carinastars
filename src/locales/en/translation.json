@@ -57,7 +57,14 @@
       "dec": "December"
     },
       "contact": {
-       "message": "Feel free to write me a message, I would love that! If you want to buy some of my CDs, let me know!"
+       "message": "Feel free to write me a message, I would love that! If you want to buy some of my CDs, let me know!",
+       "name": "Name",
+       "message2": "Write a message to Carina",
+       "send": "Send",
+       "clear": "Clear",
+       "sending": "Sending...",
+       "success": "Message was sent successfully",
+       "goback": "Go Back"
     },
     "LpReleaseDate": {
       "text": "Release date: ",

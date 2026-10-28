@@ -63,8 +63,16 @@
       "dec": "december"
     },
     "contact": {
-      "message": "Välkommen att skriva ett meddelande till mig! Om du är intresserad av att köpa någon av mina CD-skivor kan du fråga här."
-  },
+      "message": "Välkommen att skriva ett meddelande till mig! Om du är intresserad av att köpa någon av mina CD-skivor kan du fråga här.",
+      "name": "Namn",
+      "message2": "Skriv ett meddelande till Carina",
+      "send": "Skicka",
+      "clear": "Rensa",
+      "sending": "Skickar...",
+      "success": "Tack för ditt meddelande!",
+       "goback": "Tillbaka"
+  
+    },
     "LpReleaseDate": {
      "text": "Utgiven: ",
      "SeeLyrics":"Gå till låttexter"
