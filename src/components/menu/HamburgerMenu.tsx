@@ -7,8 +7,6 @@ import { MenuLinks } from './MenuLinks';
 import { LanguageFlag } from '../LanguageFlag';
 import { useTranslation } from 'react-i18next';
 
-
-
 const Flag = styled.div`
   display: flex;
   flex-direction: column;
