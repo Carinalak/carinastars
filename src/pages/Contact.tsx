@@ -114,7 +114,7 @@ export const Button = styled.button`
   padding: 0.5rem;
   margin: 0.5rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   background-color: ${DARKPINK};
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -272,7 +272,7 @@ export const Contact = () => {
         type="text"
         placeholder={t("contact.name")}
         {...register("name", {
-          required: "Name required",
+          required: t("contact.required-name"),
           pattern: {
             value: /^[A-Za-zåäöÅÄÖ\s]+$/, 
             message: "Only letters and spaces are allowed"
@@ -287,7 +287,7 @@ export const Contact = () => {
         type="email"
         placeholder="Email"
         {...register("email", {
-          required: "Email required",
+          required: t("contact.required-email"),
           pattern: {
             value: /^[^@\s]+@[^@\s]+\.[^@\s]+$/,
             message: "Please enter a valid email address"
@@ -302,7 +302,7 @@ export const Contact = () => {
         className="contactTextArea"
         placeholder={t("contact.message2")}
         {...register("message", {
-          required: "Message required",
+          required: t("contact.required-message"),
           minLength: {
             value: 5,
             message: "Message must be at least 5 characters"

@@ -37,6 +37,7 @@
     "music": "Music",
     "videos": "Videos",
     "contact": "Contact"
+
   },
   "discography": {
     "about": "See all of Carina’s releases. They are available on all streaming services and some of them can also be ordered on CD if you contact Carina Stars.",
@@ -60,6 +61,9 @@
        "message": "Feel free to write me a message, I would love that! If you want to buy some of my CDs, let me know!",
        "name": "Name",
        "message2": "Write a message to Carina",
+       "required-name":"Name required",
+       "required-email":"Email required",
+       "required-message":"Message required",
        "send": "Send",
        "clear": "Clear",
        "sending": "Sending...",

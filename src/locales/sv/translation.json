@@ -42,7 +42,7 @@
     "music": "Musik",
     "videos": "Videos",
     "contact": "Kontakt"
-    
+  
   },
     "discography": {
     "about": "Se alla Carinas utgivningar. Du hittar dem på alla streamingtjänster. Några går även att beställa på CD om du kontaktar Carina Stars.",
@@ -66,6 +66,9 @@
       "message": "Välkommen att skriva ett meddelande till mig! Om du är intresserad av att köpa någon av mina CD-skivor kan du fråga här.",
       "name": "Namn",
       "message2": "Skriv ett meddelande till Carina",
+      "required-name":"Obligatoriskt fält: Namn",
+      "required-email":"Obligatoriskt fält: Email",
+     "required-message":"Meddelande är obligatoriskt",
       "send": "Skicka",
       "clear": "Rensa",
       "sending": "Skickar...",
