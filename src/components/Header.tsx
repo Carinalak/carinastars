@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { WHITE } from "./styled/Variables";
+import { BREAKPOINT_TABLET, WHITE } from "./styled/Variables";
 import { NavigationContainer, DesktopMenu } from "./menu/DesktopMenu";
 import { HamburgerMenu } from "./menu/HamburgerMenu";
 //import { HeaderTitle } from "./styled/Fonts";
@@ -29,7 +29,7 @@ align-items: center;
 
 const LogoLink = styled.a`
   display: flex;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
   cursor: pointer;
 `;
@@ -38,13 +38,15 @@ const LogoImage = styled.img`
 display: block;
 //position: relative;
 //width: 60px;
-width: 300px;
+width: 250px;
 height: auto;
 padding: 0;
 margin: 0;
 //border: 1px solid red;
 
-
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+     width: 300px;
+    }
  `;
 
 export const Header = () => {
