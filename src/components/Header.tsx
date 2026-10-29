@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BREAKPOINT_BIGGER_DESKTOP, WHITE } from "./styled/Variables";
+import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_TABLET, WHITE } from "./styled/Variables";
 import { NavigationContainer, DesktopMenu } from "./menu/DesktopMenu";
 import { HamburgerMenu } from "./menu/HamburgerMenu";
 //import { HeaderTitle } from "./styled/Fonts";
@@ -43,6 +43,10 @@ padding: 0;
 margin: 0;
 //border: 1px solid red;
 
+
+    @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+     padding-left: 10px;
+    }
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
      width: 330px;
     }
