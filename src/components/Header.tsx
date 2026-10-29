@@ -37,12 +37,11 @@ const LogoImage = styled.img`
 display: block;
 //position: relative;
 //width: 60px;
-width: 305px;
+width: 302px;
 height: auto;
 padding: 0;
 margin: 0;
 //border: 1px solid red;
-
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
      padding-left: 10px;
