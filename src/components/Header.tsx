@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_TABLET, WHITE } from "./styled/Variables";
+import { BREAKPOINT_BIGGER_DESKTOP, WHITE } from "./styled/Variables";
 import { NavigationContainer, DesktopMenu } from "./menu/DesktopMenu";
 import { HamburgerMenu } from "./menu/HamburgerMenu";
 //import { HeaderTitle } from "./styled/Fonts";
@@ -37,7 +37,7 @@ const LogoImage = styled.img`
 display: block;
 //position: relative;
 //width: 60px;
-width: 300px;
+width: 350px;
 height: auto;
 padding: 0;
 margin: 0;
