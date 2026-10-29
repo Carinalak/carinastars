@@ -37,7 +37,7 @@ const LogoImage = styled.img`
 display: block;
 //position: relative;
 //width: 60px;
-width: 310px;
+width: 305px;
 height: auto;
 padding: 0;
 margin: 0;
