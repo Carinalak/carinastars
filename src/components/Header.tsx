@@ -37,14 +37,14 @@ const LogoImage = styled.img`
 display: block;
 //position: relative;
 //width: 60px;
-width: 300px;
+width: 310px;
 height: auto;
 padding: 0;
 margin: 0;
 //border: 1px solid red;
 
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
-     width: 350px;
+     width: 330px;
     }
  `;
 
