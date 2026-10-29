@@ -16,9 +16,8 @@ export const NavigationContainer = styled.section`
   //width: 100%;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-      margin-top: 10px;
-      align-items: baseline;
-
+      //margin-top: 10px;
+      //align-items: baseline;
     }
 
 `;

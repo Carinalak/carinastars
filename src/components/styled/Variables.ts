@@ -20,6 +20,8 @@ export const LIGHTERPURPLE = "#c5a1d7ff"; // hover on links
 export const EVENLIGHTERPURPLE = "#efd4fdff"; // hover on links
 export const DARKPINK = "#e120a7ff"; // hover on links, buttoncolor
 export const LIGHTPINK = "rgb(234, 125, 201)"; 
+export const DARKPINKSTAR = "#dd5498"; 
+export const LIGHTPINKSTAR = "#f4bfd9"; 
 export const REDERROR = "#ff4d4d";
 
 

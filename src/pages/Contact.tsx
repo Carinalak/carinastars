@@ -2,8 +2,8 @@ import { H2Banner } from "../components/styled/Fonts";
 import { BackgroundOriginal, Banner, ContactFormWrapper } from "../components/styled/Wrappers";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, DARKPINK, LIGHTPINK, LIGHTPURPLE, REDERROR, WHITE } from "../components/styled/Variables";
-import CarinaStars from "/carinastars.png";
+import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, DARKPINK, LIGHTPINKSTAR, LIGHTPURPLE, REDERROR, WHITE } from "../components/styled/Variables";
+import LittleStar from "../assets/images/starlight_rund2mindre.png";
 import { useEffect, useState } from "react";
 import type { Person } from "../components/models/Person";
 import { useForm } from "react-hook-form";
@@ -131,7 +131,7 @@ export const Button = styled.button`
     color: ${BLACK};
   }
   &:active {
-    background-color: ${LIGHTPINK};
+    background-color: ${LIGHTPINKSTAR};
     color: ${WHITE};
   }
   @media screen and (min-width: ${BREAKPOINT_TABLET}) {
@@ -258,7 +258,7 @@ export const Contact = () => {
 
 {isSent ? (
   <div style={{ textAlign: 'center', padding: '20px', color: WHITE }}>
-     <ContactImage src={CarinaStars} loading="lazy"></ContactImage>
+     <ContactImage src={LittleStar} loading="lazy"></ContactImage>
     <h3>{t("contact.success")}</h3>
     <Button type="button" onClick={() => setIsSent(false)}>{t("contact.goback")}</Button>
   </div>
