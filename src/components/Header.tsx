@@ -4,7 +4,6 @@ import { NavigationContainer, DesktopMenu } from "./menu/DesktopMenu";
 import { HamburgerMenu } from "./menu/HamburgerMenu";
 //import { HeaderTitle } from "./styled/Fonts";
 //import { NavigationContainer, DesktopMenu } from "./Menu/DesktopMenu"
-//import { HamburgerMenu } from "./Menu/HamburgerMenu"
 //import { LogoTitle } from "./styled/Fonts"
 import CarinaStarsLogo from "/Logo_foto_text.png";
 

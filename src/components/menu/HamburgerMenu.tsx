@@ -7,6 +7,20 @@ import { MenuLinks } from './MenuLinks';
 import { LanguageFlag } from '../LanguageFlag';
 import { useTranslation } from 'react-i18next';
 
+
+
+const Flag = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  z-index: 100;
+  max-width: 100vw;
+  padding-top: 20px;
+  padding-left: 10px;
+
+`;
+
 const MenuContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,7 +28,6 @@ const MenuContainer = styled.div`
   position: relative;
   z-index: 100;
   max-width: 100vw;
-
 `;
 
 const HamburgerButton = styled.div`
@@ -222,9 +235,7 @@ export const HamburgerMenu = () => {
   return (
     <MenuContainer>
   <MenuHeader>
-    <div className="language-flag">
-      <LanguageFlag /> 
-    </div>
+
     <HamburgerButton onClick={toggleMenu} className={isOpen ? 'open' : ''}>
       <div className="line"></div>
       <div className="line"></div>
@@ -272,6 +283,12 @@ export const HamburgerMenu = () => {
           </li>
         ))}
 
+
+    <Flag className="language-flag">
+      <LanguageFlag /> 
+    </Flag>
+
+    
       </MenuList>
 
     </MenuContainer>
