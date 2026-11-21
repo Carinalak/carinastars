@@ -1,5 +1,5 @@
 import { Trans, useTranslation } from "react-i18next";
-import { H2Banner, PurpleLink, WhiteLink } from "../components/styled/Fonts";
+import { H2Banner, WhiteLink } from "../components/styled/Fonts";
 import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE_TRANSPARENT2 } from "../components/styled/Variables";
 import { BackgroundOriginal, Banner, VideoTextWrapper } from "../components/styled/Wrappers";
 import { useEffect } from "react";
