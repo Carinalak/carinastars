@@ -5,7 +5,7 @@ import VisionLp from "../assets/images/lp/png/vision_of_life.png"
 import CarinaReturn from "../assets/images/carina/carina_return.webp"
 import LuckySoulDreaming from "../assets/images/carina/LuckySoulDreaming.jpg"
 import AmISick from "../assets/images/carina/AmISick.jpg"
-//import ReturnVideo from "../assets/images/carina/Miniatyr_Return.jpg"
+import ReturnVideo from "../assets/images/carina/Miniatyr_Return.jpg"
 //import SinceTheDay from "../assets/images/carina/Since1.jpg"
 //import Jade from "../assets/images/carina/Jade_tuva_dans.jpg"
 import Girl from "../assets/images/lp/png/Girl.png"
@@ -15,7 +15,7 @@ import StandingAllAloneLP from "../assets/images/lp/png/Standing_All_Alone.png"
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, LIGHTPURPLE } from "../components/styled/Variables";
 import { H2Banner, H3Black, H3White, PurpleLink } from "../components/styled/Fonts";
-import {  useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { useEffect } from "react";
 import HeadphoneStarLogo from "../assets/images/headphonestar.png";
 import { Calendar } from "lucide-react";
@@ -64,16 +64,16 @@ export const NewsLpImageSecond = styled(NewsLpImage) `
     }
 `;
 export const NewsImage = styled.img `  // Om du ändrar width här, så ändra det även i BigTextImgWrapperLeft så att det är samma
-      width: 400px;
+      width: 300px;
       border-radius: 5px;
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-      width: 550px;
+      width: 350px;
     }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
-      width: 700px;
+      width: 500px;
     }
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
-      width: 800px;
+      width: 700px;
     }
 `;
 
@@ -252,21 +252,21 @@ export const InnerTextCenter = styled.div `
 export const BigTextImgWrapperLeft = styled.div `  // samma längd som bilden, anv på Return-video
   display: block;
   white-space: pre-line;
-  width: 400px;
+  width: 300px;
   padding-top: 5px;
   padding-bottom: 15px;
   //border: 1px solid green;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
-    width: 550px;
+    width: 350px;
     padding-top: 0px;
   }
     @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
-      width: 700px;
+      width: 500px;
     }
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
         margin-top: 10px;
-        width: 800px;
+        width: 700px;
     }
 `;
 
@@ -334,7 +334,32 @@ return (  <>
   </Banner> 
   <BackgroundImage>
     <NewsContainer>
-    
+      {/* --------------------------- NEWS - New Video - Return to the sun ------------------------------- */}
+
+        <NewsArticleThird>
+          <H3White>{t("article_header.title_Video_Return")} </H3White>
+          <NewsDate>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <Calendar size={16} />
+                <time dateTime="2026-11-21">2026-11-21</time>
+            </div>
+          </NewsDate>
+          
+          <NewsArticleTextContainerRows>
+            <InnerTextCenter><PurpleLink href="https://youtu.be/VCqcpzOtLz8?si=m3Ze-Ua_mq2jNjD7" target="_blank" rel="noopener noreferrer"><NewsImage src={ReturnVideo} loading="lazy"/></PurpleLink>  </InnerTextCenter>
+            
+            <BigTextImgWrapperLeft>
+              <Trans
+                i18nKey="news_Video_Return"
+                components={{
+                  1: <PurpleLink href="https://youtu.be/VCqcpzOtLz8?si=m3Ze-Ua_mq2jNjD7" target="_blank" rel="noreferrer" />
+                }}
+              />
+            </BigTextImgWrapperLeft>
+
+            </NewsArticleTextContainerRows>
+            <LogoImage src={HeadphoneStarLogo} loading="lazy"/>
+        </NewsArticleThird>
 
   {/* --------------------------- NEWS - Standing All Alone ------------------------------- */}
 

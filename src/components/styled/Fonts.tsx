@@ -97,7 +97,11 @@ export const H3BlackSmaller = styled.h3 `
 `;
 
 export const H3White = styled(H3Black) `
-    color: ${WHITE};
+  color: ${WHITE};
+  //line-height: 1.3;
+  //white-space: pre-line;  // Gör så att det fungerar att ha radbrytning (\n) i texten
+
+    
 `;
 
 export const BoldBlackText = styled.div `
