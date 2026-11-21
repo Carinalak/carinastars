@@ -1,7 +1,7 @@
-import { useTranslation } from "react-i18next";
-import { H2Banner } from "../components/styled/Fonts";
+import { Trans, useTranslation } from "react-i18next";
+import { H2Banner, PurpleLink, WhiteLink } from "../components/styled/Fonts";
 import { BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, WHITE_TRANSPARENT2 } from "../components/styled/Variables";
-import { BackgroundOriginal, Banner } from "../components/styled/Wrappers";
+import { BackgroundOriginal, Banner, VideoTextWrapper } from "../components/styled/Wrappers";
 import { useEffect } from "react";
 import styled from "styled-components";
 
@@ -63,13 +63,15 @@ export const ResponsiveVideo = styled.div`
 export const Videos = () => {
   const { t } = useTranslation();
 
-  /* Scroll to top on load */
+      // --------------------- This code enables the page to be in right position when opened ---------------------- // 
+  // It is used together with <div id="top"></div> in index.html. Scrolls to top only with first mount, not in external clicks.
   useEffect(() => {
-    const topElement = document.getElementById("top");
-    if (topElement) {
-      topElement.scrollIntoView({ behavior: "auto" });
-    }
-  }, []);
+  const topElement = document.getElementById("top");
+  if (topElement) {
+    topElement.scrollIntoView({ behavior: "auto" });
+  }
+}, []); // Körs EN gång när sidan laddas
+  // ---------------------------------------- End of position code ---------------------------------------------- //
 
   return (
     <>
@@ -79,7 +81,26 @@ export const Videos = () => {
 
       <BackgroundOriginal>
         <AllVideoWrapper>
-
+          <VideoTextWrapper>
+              <Trans
+                i18nKey="VideoMessage"
+                components={{
+                  1: <WhiteLink href="https://www.youtube.com/@CarinaStarsOfficial" target="_blank" rel="noreferrer" />
+                }}
+              />
+          </VideoTextWrapper>
+          {/* VIDEO Return to the sun */}
+          <OneVideoWrapper>
+            <ResponsiveVideo>
+              <iframe
+                src="https://www.youtube.com/embed/VCqcpzOtLz8?si=m3Ze-Ua_mq2jNjD7" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen>
+              </iframe>
+            </ResponsiveVideo>
+          </OneVideoWrapper>
           {/* VIDEO 1 Jade */}
           <OneVideoWrapper>
             <ResponsiveVideo>

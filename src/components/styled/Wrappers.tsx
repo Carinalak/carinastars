@@ -164,3 +164,33 @@ export const ContactFormWrapper= styled.div `
           width: 480px;
         }
 `;
+
+export const VideoTextWrapper= styled.div `
+    color: ${WHITE};
+    font-family: Arial, Helvetica, sans-serif;
+    //font-weight: 600;
+    font-style: normal;
+    text-align: left;
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 14px;
+    line-height: normal;
+    //border: 1px solid white;
+    outline: none;
+    padding: 20;
+    width: 320px;
+   // border-radius: 5px;
+   padding-bottom: 0;
+   width: 100%;
+   max-width: 350px; /* Mobilbredd */
+    
+        @media screen and (min-width: ${BREAKPOINT_TABLET}) {
+          max-width: 450px; /* Desktop/tablet */
+        }
+        @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+          max-width: 550px; /* Desktop/tablet */
+        }
+        @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}) {
+          max-width: 700px; /* Desktop/tablet */
+        }
+`;

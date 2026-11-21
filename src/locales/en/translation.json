@@ -6,6 +6,7 @@
     "titleVideos": "Videos"
   },
    "article_header": {
+    "title_Video_Return": "Return to the sun - New video",
     "title_StandingAllAlone": "Latest Release",
     "title_WeLingerOn": "We Linger On",
     "title_NewSingle": "Girl - A T.Rex cover",
@@ -15,9 +16,10 @@
     "title_IThinkIllGoMad": "I Think I'll Go Mad"
 
   },
-      "article_date": {
-      "date_IThinkIllGoMad": "23 February 2026"
+  "article_date": {
+  "date_IThinkIllGoMad": "23 February 2026"
   },
+  "news_Video_Return":"There’s a new video out on YouTube! Carina has recorded one of her songs from 2019, <1>\"Return to the Sun\"</1>. Go check it out, give it a thumbs up, and subscribe to her channel so you don’t miss more great videos in the future!",
   "news_StandingAllAlone1": "\"Standing All Alone\" has been released. It contains ten tracks, some of which are familiar from previously released singles, and some are completely new\" \n\n",
   "news_StandingAllAlone2": "\"Standing all alone \n And trying to remember \n Remember his face \n The last time I ever saw him \n But I just can't \n Oh no\"",
   "news_IThinkIllGoMad1": "This song is about being bored in the classroom, and the restless feeling of being stuck somewhere you don’t want to be.\n\n",
@@ -70,6 +72,8 @@
        "success": "Message was sent successfully",
        "goback": "Go Back"
     },
+    "VideoMessage": "Carina Stars has made a collection of videos. They are available on her <1>YouTube channel</1>. Go check them out, give them a thumbs up, and subscribe so you don't miss more great videos in the future. Of course, you can watch them here too.",
+    
     "LpReleaseDate": {
       "text": "Release date: ",
       "SeeLyrics": "See Lyrics to the songs"

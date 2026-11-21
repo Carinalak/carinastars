@@ -5,6 +5,7 @@ import VisionLp from "../assets/images/lp/png/vision_of_life.png"
 import CarinaReturn from "../assets/images/carina/carina_return.webp"
 import LuckySoulDreaming from "../assets/images/carina/LuckySoulDreaming.jpg"
 import AmISick from "../assets/images/carina/AmISick.jpg"
+import ReturnVideo from "../assets/images/carina/Miniatyr_Return.jpg"
 //import SinceTheDay from "../assets/images/carina/Since1.jpg"
 //import Jade from "../assets/images/carina/Jade_tuva_dans.jpg"
 import Girl from "../assets/images/lp/png/Girl.png"
@@ -14,9 +15,10 @@ import StandingAllAloneLP from "../assets/images/lp/png/Standing_All_Alone.png"
 import styled from "styled-components";
 import { BLACK, BREAKPOINT_BIGGER_DESKTOP, BREAKPOINT_DESKTOP, BREAKPOINT_TABLET, LIGHTERPURPLE, LIGHTPURPLE } from "../components/styled/Variables";
 import { H2Banner, H3Black, H3White, PurpleLink } from "../components/styled/Fonts";
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { useEffect } from "react";
 import HeadphoneStarLogo from "../assets/images/headphonestar.png";
+import { Calendar } from "lucide-react";
 
 
 export const LogoImage = styled.img `
@@ -61,10 +63,14 @@ export const NewsLpImageSecond = styled(NewsLpImage) `
       border-radius: 5px;
     }
 `;
-export const NewsImage = styled(NewsLpImage) `
-
+export const NewsImage = styled.img `  // Om du ändrar width här, så ändra det även i BigTextImgWrapperLeft så att det är samma
+      width: 400px;
+      border-radius: 5px;
     @media screen and (min-width: ${BREAKPOINT_TABLET}) {
-      width: 600px;
+      width: 550px;
+    }
+    @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+      width: 700px;
     }
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
       width: 800px;
@@ -185,6 +191,7 @@ export const NewsArticleTextContainer = styled.div `
   justify-content: center;
   align-items: center;
   gap: 1px;
+  border: 1px solid black;
 
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){ 
@@ -193,6 +200,28 @@ export const NewsArticleTextContainer = styled.div `
       margin-right: 5%;
       gap: 5%;
       align-items: start;
+    }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+      height: 500px;
+    }
+`;
+export const NewsArticleTextContainerRows = styled.div ` 
+  width: 95%;
+  height: 80%;
+  background-color: #ffffffa8;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  border: 1px solid black;
+
+    @media screen and (min-width: ${BREAKPOINT_TABLET}){ 
+      
     }
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
       height: 500px;
@@ -207,9 +236,10 @@ export const InnerTextCenter = styled.div `
   padding-top: 10px;
   padding-bottom: 0;
   //align-self: flex-start;
+  //border: 1px solid red;
 
   @media screen and (min-width: ${BREAKPOINT_TABLET}){
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     padding-top: 15px;
   }
     @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
@@ -218,12 +248,44 @@ export const InnerTextCenter = styled.div `
     }
 `;
 
-export const NewsDate = styled.div`
+
+export const BigTextImgWrapperLeft = styled.div `  // samma längd som bilden, anv på Return-video
+  display: block;
+  white-space: pre-line;
+  width: 400px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  //border: 1px solid green;
+
+    @media screen and (min-width: ${BREAKPOINT_TABLET}){
+    width: 550px;
+    padding-top: 0px;
+  }
+    @media screen and (min-width: ${BREAKPOINT_DESKTOP}) {
+      width: 700px;
+    }
+    @media screen and (min-width: ${BREAKPOINT_BIGGER_DESKTOP}){ 
+        margin-top: 10px;
+        width: 800px;
+    }
+`;
+
+
+export const NewsDate = styled.div` 
   display: flex;
   align-items: left;
   color: white;
   padding-bottom: 10px;
   width: 90%;
+  font-size: 12px;
+`;
+export const NewsDateBlack = styled.div` 
+  display: flex;
+  align-items: left;
+  color: black;
+  padding-bottom: 10px;
+  width: 90%;
+  font-size: 12px;
 `;
 
 export const InnerTextLeft = styled.div `
@@ -232,6 +294,7 @@ export const InnerTextLeft = styled.div `
   width: 300px;
   padding-top: 10px;
   padding-bottom: 15px;
+  //border: 1px solid blue;
 
     @media screen and (min-width: ${BREAKPOINT_TABLET}){
     width: 45%;
@@ -244,6 +307,7 @@ export const InnerTextLeft = styled.div `
         margin-top: 30px;
     }
 `;
+
 export const ItalicText = styled.div`
   font-style: italic;
   white-space: pre-line;
@@ -270,12 +334,43 @@ return (  <>
   </Banner> 
   <BackgroundImage>
     <NewsContainer>
+      {/* --------------------------- NEWS - New Video - Return to the sun ------------------------------- */}
+
+        <NewsArticleThird>
+          <H3White>{t("article_header.title_Video_Return")} </H3White>
+          <NewsDate>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <Calendar size={16} />
+                <time dateTime="2026-11-21">2026-11-21</time>
+            </div>
+          </NewsDate>
+          
+          <NewsArticleTextContainerRows>
+            <InnerTextCenter><PurpleLink href="https://youtu.be/VCqcpzOtLz8?si=m3Ze-Ua_mq2jNjD7" target="_blank" rel="noopener noreferrer"><NewsImage src={ReturnVideo} loading="lazy"/></PurpleLink>  </InnerTextCenter>
+            
+            <BigTextImgWrapperLeft>
+              <Trans
+                i18nKey="news_Video_Return"
+                components={{
+                  1: <PurpleLink href="https://youtu.be/VCqcpzOtLz8?si=m3Ze-Ua_mq2jNjD7" target="_blank" rel="noreferrer" />
+                }}
+              />
+            </BigTextImgWrapperLeft>
+
+            </NewsArticleTextContainerRows>
+            <LogoImage src={HeadphoneStarLogo} loading="lazy"/>
+        </NewsArticleThird>
+
   {/* --------------------------- NEWS - Standing All Alone ------------------------------- */}
 
         <NewsArticleThird>
           <H3White>{t("article_header.title_StandingAllAlone")} </H3White>
-          {/*<NewsDate><div>{t("article_date.date_IThinkIllGoMad")}</div></NewsDate>*/}
-          
+          <NewsDate>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Calendar size={16} />
+              <time dateTime="2026-05-29">2026-05-29</time>
+            </div>
+          </NewsDate>
           <NewsArticleTextContainer>
             <InnerTextCenter><PurpleLink href="" target="_blank" rel="noopener noreferrer"><NewsLpImage src={StandingAllAloneLP} loading="lazy"/></PurpleLink></InnerTextCenter>
               {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
@@ -317,10 +412,16 @@ return (  <>
 {/* --------------------------- NEWS - I Think I'll go mad & Girl ------------------------------- */}
         <NewsArticleFirst>
           <H3Black>{t("article_header.title_IThinkIllGoMad")}</H3Black>
+          <NewsDateBlack>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <Calendar size={16} />
+                <time dateTime="2026-02-26">2026-02-26</time>
+            </div>
+          </NewsDateBlack>
           <NewsArticleTextContainer>
+
             <InnerTextCenter><PurpleLink href="https://open.spotify.com/track/0DNdGzUfWpSDoMw5RFV8nf?si=7fcd4a7700e643fa" target="_blank" rel="noopener noreferrer"><NewsLpImage src={IThinkIllGoMadLP} loading="lazy"/></PurpleLink></InnerTextCenter>
-              {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
-              <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
+
             <InnerTextLeft>
               
                 {t("news_IThinkIllGoMad1")}
@@ -333,40 +434,51 @@ return (  <>
 
             </NewsArticleTextContainer>
         </NewsArticleFirst>
-
+    {/* --------------------------- NEWS - We Linger On ------------------------------- */}
         <NewsArticleSecond>
-          <H3Black>{t("article_header.title_NewSingle")}</H3Black>
-          <NewsArticleTextContainer>
-            <InnerTextCenter><PurpleLink href="https://open.spotify.com/track/1nmSFmUUy0qfRsXwObBaJG?si=2424b026bc464894" target="_blank" rel="noopener noreferrer"><NewsLpImage src={Girl} loading="lazy"/></PurpleLink></InnerTextCenter>
-              {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
-              <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
-            <InnerTextLeft>
-              {t("news_NewSingle1")}
-
-              <ItalicText>
-               {t("news_NewSingle2")}
-              </ItalicText>
-
-            </InnerTextLeft>
-
-            </NewsArticleTextContainer>
-        </NewsArticleSecond>
-
-    {/* --------------------------- NEWS - We Linger on ------------------------------- */}
-
-        <NewsArticleThird>
-          <H3White>{t("article_header.title_WeLingerOn")}</H3White>
-          {/*<NewsDate><div>{t("article_date.date_IThinkIllGoMad")}</div></NewsDate>*/}
           
+          <H3Black>{t("article_header.title_WeLingerOn")}</H3Black>
+          <NewsDateBlack>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Calendar size={16} />
+              <time dateTime="2026-02-11">2026-02-11</time>
+            </div>
+          </NewsDateBlack>
           <NewsArticleTextContainer>
             <InnerTextCenter><PurpleLink href="https://open.spotify.com/track/1oCNNaxxYalZkEIZfYLZ1C?si=f5d0d564eea24a5d" target="_blank" rel="noopener noreferrer"><NewsLpImage src={WeLingerOn} loading="lazy"/></PurpleLink></InnerTextCenter>
-              {/*<InnerTextCenter><NewsLpImageSecond src={SinceTheDay} loading="lazy"/></InnerTextCenter>
-              <InnerTextCenter><NewsLpImage src={Jade} loading="lazy"/></InnerTextCenter>*/}
+
             <InnerTextLeft>
               {t("news_WeLingerOn1")}
 
               <ItalicText>
                 {t("news_WeLingerOn2")}
+              </ItalicText>
+
+            </InnerTextLeft>
+
+            </NewsArticleTextContainer>
+         
+        </NewsArticleSecond>
+
+    {/* --------------------------- NEWS - Girl ------------------------------- */}
+
+        <NewsArticleThird>
+          <H3White>{t("article_header.title_NewSingle")}</H3White>
+                    <NewsDate>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Calendar size={16} />
+              <time dateTime="2026-01-22">2026-01-22</time>
+            </div>
+          </NewsDate>
+
+ <NewsArticleTextContainer>
+            <InnerTextCenter><PurpleLink href="https://open.spotify.com/track/1nmSFmUUy0qfRsXwObBaJG?si=2424b026bc464894" target="_blank" rel="noopener noreferrer"><NewsLpImage src={Girl} loading="lazy"/></PurpleLink></InnerTextCenter>
+
+            <InnerTextLeft>
+              {t("news_NewSingle1")}
+
+              <ItalicText>
+               {t("news_NewSingle2")}
               </ItalicText>
 
             </InnerTextLeft>

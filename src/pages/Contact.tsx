@@ -186,6 +186,7 @@ export const Contact = () => {
 }, []); // Körs EN gång när sidan laddas
   // ---------------------------------------- End of position code ---------------------------------------------- //
 
+  
   const [isSent, setIsSent] = useState(false);
   // 1. Skapa hooken först så att reset och register existerar
   const { register, handleSubmit, reset, formState: { errors } } = useForm<Person>();

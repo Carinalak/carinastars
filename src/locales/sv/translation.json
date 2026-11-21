@@ -10,6 +10,7 @@
   },
 
    "article_header": {
+    "title_Video_Return": "Return to the sun - ny video",
     "title_StandingAllAlone": "Senaste releasen",
     "title_WeLingerOn": "We Linger On",
     "title_NewSingle": "Girl - En T.Rex cover",
@@ -19,8 +20,9 @@
     "title_IThinkIllGoMad": "I Think I'll Go Mad"
   },
     "article_date": {
-      "date_IThinkIllGoMad": "23 februari 2026"
+    "date_IThinkIllGoMad": "23 februari 2026"
     },
+  "news_Video_Return":"Nu finns det en ny video på YouTube. Carina har spelat in en av sina låtar från 2019, <1>\"Return to the sun\"</1>. Gå in och titta, tumma upp och prenumerera på hennes YouTube-kanal så du inte missar fler fantastiska videos i framtiden.",
   "news_StandingAllAlone1": "Nu har det nya albumet \"Standing All Alone\" kommit ut. Det finns tio låtar på plattan, några känns igen från singlar som getts ut och några är helt nya.\n\n",
   "news_StandingAllAlone2": "\"Standing all alone \n And trying to remember \n Remember his face \n The last time I ever saw him \n But I just can't \n Oh no\"",
   "news_IThinkIllGoMad1":"Denna låt handlar om att vara riktigt skoltrött och att man bara vill komma ut från klassrummet så fort det bara går. Känslan av att vara fast någonstans där man inte vill vara.\n\n",
@@ -42,7 +44,6 @@
     "music": "Musik",
     "videos": "Videos",
     "contact": "Kontakt"
-  
   },
     "discography": {
     "about": "Se alla Carinas utgivningar. Du hittar dem på alla streamingtjänster. Några går även att beställa på CD om du kontaktar Carina Stars.",
@@ -68,14 +69,16 @@
       "message2": "Skriv ett meddelande till Carina",
       "required-name":"Obligatoriskt fält: Namn",
       "required-email":"Obligatoriskt fält: Email",
-     "required-message":"Meddelande är obligatoriskt",
+      "required-message":"Meddelande är obligatoriskt",
       "send": "Skicka",
       "clear": "Rensa",
       "sending": "Skickar...",
       "success": "Tack för ditt meddelande!",
-       "goback": "Tillbaka"
-  
+      "goback": "Tillbaka"
     },
+
+    "VideoMessage": "Carina Stars har gjort en del videos. De finns på hennes <1>YouTube-kanal</1>, gå in och titta, tumma upp och prenumerera på den, så du inte missar fler fantastiska videos i framtiden. Du kan självklart även titta på dem här.",
+    
     "LpReleaseDate": {
      "text": "Utgiven: ",
      "SeeLyrics":"Gå till låttexter"
@@ -96,5 +99,7 @@
       "nameAsc": "Titel A - Ö",
       "nameDesc": "Titel Ö - A"
     }
+
+
   }
 

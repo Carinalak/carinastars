@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BREAKPOINT_TABLET, BREAKPOINT_DESKTOP, WHITE, BLACK, LIGHTPURPLE, LIGHTERPURPLE } from "./Variables";
+import { BREAKPOINT_TABLET, BREAKPOINT_DESKTOP, WHITE, BLACK, LIGHTPURPLE, LIGHTERPURPLE, DARKPINKSTAR } from "./Variables";
 
 export const H1White = styled.h1 `
     padding: 0;
@@ -114,7 +114,7 @@ export const PurpleLink = styled.a`
   cursor: pointer;
 
   &:hover {
-    color: ${BLACK} !important;
+    color: ${DARKPINKSTAR} !important;
     text-decoration: underline !important;
   }
   &:focus {
@@ -130,7 +130,7 @@ export const WhiteLink = styled.a`
   cursor: pointer;
 
   &:hover {
-    color: ${LIGHTPURPLE} !important;
+    color: ${DARKPINKSTAR} !important;
     text-decoration: none !important;
   }
   &:focus {
